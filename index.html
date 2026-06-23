@@ -1,0 +1,1715 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wireless Connect LLC — Locally owned phone repair, iPhone screen replacement & computer repair in Seattle, WA since 2011. Walk-ins welcome at 14723 Aurora Ave N.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a2233">
+  <link rel="canonical" href="https://wirelessconnectllc.com/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wirelessconnectllc.com/">
+  <meta property="og:title" content="Wireless Connect LLC — Phone & Computer Repair | Seattle, WA">
+  <meta property="og:description" content="Seattle's trusted repair specialists since 2011. iPhone, Android, and computer repair. Walk-ins welcome on Aurora Ave N.">
+  <meta property="og:site_name" content="Wireless Connect LLC">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wireless Connect LLC — Phone & Computer Repair | Seattle, WA">
+  <meta name="twitter:description" content="Seattle's trusted repair specialists since 2011. Walk-ins welcome.">
+
+  <title>Wireless Connect LLC — Phone & Computer Repair | Seattle, WA</title>
+
+  <!-- Schema.org Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Wireless Connect LLC",
+    "description": "Locally owned mobile phone repair, iPhone screen replacement, and computer repair shop in Seattle, WA since 2011.",
+    "url": "https://wirelessconnectllc.com/",
+    "telephone": "+12066195401",
+    "email": "gofixwireless@gmail.com",
+    "foundingDate": "2011",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14723 Aurora Ave N",
+      "addressLocality": "Seattle",
+      "addressRegion": "WA",
+      "postalCode": "98133",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.7234,
+      "longitude": -122.3457
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "10:00",
+        "closes": "19:00"
+      }
+    ],
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "ratingCount": "120"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    /* ═══════════════════════════════════════════════════════════
+       LIGHT NEUMORPHISM DESIGN SYSTEM
+       Base: #E4EBF5  |  Dark shadow: #B8C4D4  |  Light shadow: #FFFFFF
+    ═══════════════════════════════════════════════════════════ */
+    :root {
+      --nm-base:   #E4EBF5;
+      --nm-dark:   #B5C0D0;
+      --nm-light:  #FFFFFF;
+      --nm-deep:   #D8E2F0;   /* slightly deeper tint for alternate sections */
+
+      --sh-raise:  8px 8px 18px var(--nm-dark), -6px -6px 18px var(--nm-light);
+      --sh-raise-sm: 4px 4px 10px var(--nm-dark), -3px -3px 10px var(--nm-light);
+      --sh-raise-lg: 14px 14px 32px var(--nm-dark), -10px -10px 32px var(--nm-light);
+      --sh-inset:  inset 5px 5px 11px var(--nm-dark), inset -4px -4px 11px var(--nm-light);
+      --sh-inset-sm: inset 3px 3px 7px var(--nm-dark), inset -2px -2px 7px var(--nm-light);
+      --sh-flat:   3px 3px 6px var(--nm-dark), -2px -2px 6px var(--nm-light);
+
+      --accent:    #1D4ED8;
+      --accent2:   #2563EB;
+      --accent-dk: #1E40AF;
+      --accent-glow: rgba(29,78,216,0.18);
+      --success:   #059669;
+      --warning:   #D97706;
+
+      --text-1:    #0F172A;
+      --text-2:    #334155;
+      --text-3:    #64748B;
+
+      --divider:   rgba(0,0,0,0.08);
+      --ring:      rgba(29,78,216,0.22);
+
+      --max-w: 1200px;
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--nm-base);
+      color: var(--text-1);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+    button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    ul, ol { list-style: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    section { padding: 6.5rem 0; }
+    section:nth-child(even) { background: var(--nm-deep); }
+
+    /* ── Typography ── */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.875rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .section-h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--text-1);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-2);
+      margin-top: 0.75rem;
+      max-width: 520px;
+    }
+    .text-center { text-align: center; }
+    .text-center .section-label { justify-content: center; }
+    .text-center .section-sub { margin-left: auto; margin-right: auto; }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 0.8rem 1.75rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      min-height: 48px;
+      transition: box-shadow 0.2s, transform 0.15s, background 0.2s;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dk) 100%);
+      box-shadow: 6px 6px 16px var(--nm-dark), -3px -3px 10px var(--nm-light), 0 0 22px var(--accent-glow);
+    }
+    .btn-primary:hover {
+      box-shadow: 4px 4px 12px var(--nm-dark), -2px -2px 8px var(--nm-light), 0 0 34px var(--accent-glow);
+      transform: translateY(-2px);
+    }
+    .btn-primary:active {
+      box-shadow: inset 3px 3px 8px rgba(0,0,0,0.35), inset -2px -2px 6px rgba(255,255,255,0.04);
+      transform: translateY(0);
+    }
+    .btn-ghost {
+      color: var(--text-1);
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise);
+    }
+    .btn-ghost:hover {
+      box-shadow: var(--sh-inset);
+      color: var(--accent2);
+      transform: translateY(-1px);
+    }
+    .btn-ghost:active { box-shadow: var(--sh-inset); transform: none; }
+
+    .btn svg { flex-shrink: 0; }
+
+    /* ── Neumorphic card base ── */
+    .nm-card {
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.7);
+    }
+    .nm-card-deep {
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.7);
+    }
+    .nm-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: var(--sh-inset-sm);
+      background: var(--nm-base);
+      position: relative;
+      overflow: hidden;
+    }
+    .nm-icon::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, transparent 60%);
+      border-radius: inherit;
+    }
+    .nm-icon svg {
+      width: 22px; height: 22px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      filter: drop-shadow(0 0 5px var(--accent-glow));
+      position: relative;
+      z-index: 1;
+    }
+    .nm-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ══════════════════════════════════════
+       HEADER
+    ══════════════════════════════════════ */
+    #site-header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(228, 235, 245, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 4px 20px var(--nm-dark), 0 1px 0 var(--divider);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      gap: 1.5rem;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      text-decoration: none;
+    }
+    .logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));
+      transition: filter 0.2s, opacity 0.2s;
+    }
+    .logo:hover .logo-img {
+      filter: drop-shadow(0 2px 6px rgba(29,78,216,0.25)) brightness(1.05);
+      opacity: 0.88;
+    }
+    .footer-brand .logo-img {
+      height: 50px;
+    }
+
+    /* Primary nav */
+    .primary-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.125rem;
+    }
+    .primary-nav a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-2);
+      padding: 0.45rem 0.875rem;
+      border-radius: 9px;
+      position: relative;
+      transition: color 0.2s, box-shadow 0.2s;
+    }
+    .primary-nav a:hover {
+      color: var(--text-1);
+      box-shadow: var(--sh-inset-sm);
+    }
+    .primary-nav a[aria-current="page"] {
+      color: var(--accent);
+      box-shadow: var(--sh-inset-sm);
+    }
+    .primary-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 0.875rem;
+      right: 0.875rem;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+    .primary-nav a:hover::after,
+    .primary-nav a[aria-current="page"]::after { transform: scaleX(1); }
+
+    /* Header CTA */
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+    .header-hours {
+      font-size: 0.75rem;
+      color: var(--text-3);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .header-hours .dot {
+      width: 6px; height: 6px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--success);
+      flex-shrink: 0;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: var(--nm-base);
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 11px;
+      box-shadow: var(--sh-raise-sm);
+      min-width: 44px; min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      transition: box-shadow 0.2s;
+    }
+    .hamburger:active { box-shadow: var(--sh-inset-sm); }
+    .hamburger span {
+      display: block;
+      width: 20px; height: 2px;
+      background: var(--text-2);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); background: var(--accent); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: var(--accent); }
+
+    /* Mobile drawer */
+    .mobile-drawer {
+      position: fixed;
+      top: 70px; left: 0; right: 0;
+      background: var(--nm-base);
+      box-shadow: 0 16px 36px var(--nm-dark);
+      padding: 1.25rem 1.5rem 2rem;
+      z-index: 199;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-6px);
+      transition: opacity 0.22s ease, transform 0.22s ease;
+    }
+    .mobile-drawer.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .mobile-drawer a {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text-2);
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      transition: box-shadow 0.2s, color 0.2s;
+    }
+    .mobile-drawer a:hover { color: var(--text-1); box-shadow: var(--sh-inset-sm); }
+    .mobile-drawer .btn { margin-top: 0.5rem; justify-content: center; font-size: 1rem; border-radius: 14px; }
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 5rem 0 4rem;
+      overflow: hidden;
+    }
+    /* Background device pattern */
+    .device-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.045;
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 55% 1fr;
+      gap: 3rem;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow .pill {
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      border-radius: 999px;
+      padding: 0.3rem 0.75rem;
+      font-size: 0.7rem;
+      color: var(--success);
+      letter-spacing: 0.08em;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .hero-eyebrow .pill::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--success);
+      flex-shrink: 0;
+    }
+    .hero-h1 {
+      font-size: clamp(2.4rem, 5.5vw, 4.25rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.08;
+      margin-bottom: 1.5rem;
+      color: var(--text-1);
+    }
+    .hero-h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-2);
+      line-height: 1.72;
+      margin-bottom: 2.25rem;
+      max-width: 500px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.875rem;
+      margin-bottom: 2.5rem;
+    }
+    .trust-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.625rem;
+    }
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-2);
+      padding: 0.4rem 0.875rem;
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      border-radius: 999px;
+      transition: box-shadow 0.2s, color 0.2s;
+    }
+    .trust-pill:hover { box-shadow: var(--sh-inset-sm); color: var(--text-1); }
+    .trust-pill::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--success);
+      flex-shrink: 0;
+    }
+
+    /* ── Phone Mockup ── */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .phone-wrap {
+      position: relative;
+    }
+    .phone-glow {
+      position: absolute;
+      width: 260px; height: 260px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(29,78,216,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .phone {
+      position: relative;
+      z-index: 1;
+      width: 220px; height: 440px;
+      background: var(--nm-base);
+      box-shadow: 18px 18px 44px var(--nm-dark), -10px -10px 34px var(--nm-light), inset 0 1px 0 rgba(255,255,255,0.8);
+      border-radius: 38px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 14px 12px;
+    }
+    .phone-pill {
+      width: 60px; height: 6px;
+      background: var(--nm-base);
+      box-shadow: var(--sh-inset-sm);
+      border-radius: 3px;
+      margin-bottom: 14px;
+    }
+    .phone-screen {
+      flex: 1;
+      width: 100%;
+      background: var(--nm-deep);
+      box-shadow: var(--sh-inset);
+      border-radius: 26px;
+      padding: 1.125rem 0.875rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      overflow: hidden;
+    }
+    .ps-icon { text-align: center; font-size: 1.375rem; }
+    .ps-title {
+      text-align: center;
+      font-size: 0.64rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+    }
+    .ps-bar-wrap { display: flex; flex-direction: column; gap: 0.35rem; }
+    .ps-bar-track {
+      height: 6px;
+      background: var(--nm-base);
+      box-shadow: var(--sh-inset-sm);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .ps-bar-fill {
+      height: 100%;
+      width: 80%;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      border-radius: 3px;
+      box-shadow: 0 0 8px var(--accent-glow);
+    }
+    .ps-bar-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.6rem;
+      color: var(--text-3);
+    }
+    .ps-bar-row span:last-child { color: var(--accent2); font-weight: 700; }
+    .ps-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--nm-dark), transparent); }
+    .ps-rows { display: flex; flex-direction: column; gap: 0.45rem; }
+    .ps-row { display: flex; justify-content: space-between; font-size: 0.6rem; }
+    .ps-row .k { color: var(--text-3); }
+    .ps-row .v { color: var(--text-2); }
+    .ps-row .v-g { color: var(--success); }
+    .ps-cmd { font-size: 0.6rem; color: var(--text-3); }
+    .blink { color: var(--accent); }
+
+    /* ══════════════════════════════════════
+       SERVICES
+    ══════════════════════════════════════ */
+    #services { background: var(--nm-base); }
+    .section-header { margin-bottom: 3.5rem; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s;
+      cursor: default;
+      height: 100%;
+    }
+    .service-card:hover {
+      box-shadow: 12px 12px 28px var(--nm-dark), -10px -10px 28px var(--nm-light), 0 0 0 1px var(--ring);
+      transform: translateY(-5px);
+    }
+    .service-image-wrapper {
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      position: relative;
+      background: var(--nm-deep);
+      border-bottom: 1px solid var(--divider);
+    }
+    .service-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .service-card:hover .service-card-img {
+      transform: scale(1.06);
+    }
+    .service-card-content {
+      padding: 1.5rem 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      flex: 1;
+    }
+    .service-card-content h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-1);
+    }
+    .service-card-content p {
+      font-size: 0.9rem;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+
+    /* ══════════════════════════════════════
+       ABOUT
+    ══════════════════════════════════════ */
+    #about { background: var(--nm-deep); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-text .section-h2 { margin-bottom: 1.75rem; }
+    .about-text p {
+      font-size: 0.95rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 1.125rem;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-text strong { color: var(--text-1); font-weight: 600; }
+
+    /* Stats 2×2 */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.125rem;
+    }
+    .stat-card {
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .stat-card:hover { box-shadow: var(--sh-inset); transform: scale(0.975); }
+    .stat-num {
+      font-size: clamp(2.25rem, 5vw, 3.25rem);
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+      text-shadow: 0 0 22px var(--accent-glow);
+    }
+    .stat-lbl { font-size: 0.85rem; color: var(--text-2); line-height: 1.4; }
+
+    /* ══════════════════════════════════════
+       TESTIMONIALS
+    ══════════════════════════════════════ */
+    #testimonials { background: var(--nm-base); }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .review-card {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .review-card:hover {
+      box-shadow: 12px 12px 28px var(--nm-dark), -10px -10px 28px var(--nm-light), 0 0 0 1px var(--ring);
+      transform: translateY(-4px);
+    }
+    .stars {
+      display: flex;
+      gap: 0.2rem;
+    }
+    .stars span {
+      color: var(--warning);
+      font-size: 0.875rem;
+      filter: drop-shadow(0 0 4px rgba(245,158,11,0.4));
+    }
+    .review-text {
+      font-size: 0.9rem;
+      color: var(--text-2);
+      line-height: 1.7;
+      font-style: italic;
+      flex: 1;
+    }
+    .review-text::before { content: '"'; }
+    .review-text::after  { content: '"'; }
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: auto;
+    }
+    .reviewer-avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: var(--nm-base);
+      box-shadow: var(--sh-inset-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      text-transform: uppercase;
+    }
+    .reviewer-info .name { font-size: 0.875rem; font-weight: 600; color: var(--text-1); }
+    .reviewer-info .via {
+      font-size: 0.72rem;
+      color: var(--text-3);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .via-g { color: #4285F4; font-weight: 700; }
+
+    /* ══════════════════════════════════════
+       WHY US
+    ══════════════════════════════════════ */
+    #why { background: var(--nm-deep); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .why-card {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.125rem;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .why-card:hover {
+      box-shadow: 12px 12px 28px var(--nm-dark), -10px -10px 28px var(--nm-light), 0 0 0 1px var(--ring);
+      transform: translateY(-5px);
+    }
+    .why-card h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-1); }
+    .why-card p { font-size: 0.9rem; color: var(--text-2); line-height: 1.65; }
+
+    /* ══════════════════════════════════════
+       CONTACT
+    ══════════════════════════════════════ */
+    #contact { background: var(--nm-base); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 0.875rem; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      border-radius: 16px;
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .contact-item:hover { box-shadow: var(--sh-inset-sm); transform: translateX(4px); }
+    .ci-icon {
+      width: 42px; height: 42px;
+      border-radius: 11px;
+      background: var(--nm-base);
+      box-shadow: var(--sh-inset-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ci-icon svg {
+      width: 18px; height: 18px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      filter: drop-shadow(0 0 4px var(--accent-glow));
+    }
+    .ci-body { flex: 1; min-width: 0; }
+    .ci-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 0.2rem;
+    }
+    .ci-value {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text-1);
+      line-height: 1.5;
+    }
+    .ci-value a { color: var(--text-1); transition: color 0.2s; }
+    .ci-value a:hover { color: var(--accent2); }
+
+    /* Open now badge */
+    .open-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--success);
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      border-radius: 999px;
+      padding: 0.2rem 0.6rem;
+      margin-top: 0.4rem;
+    }
+    .open-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--success);
+      flex-shrink: 0;
+    }
+
+    /* Map */
+    .map-frame {
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-lg);
+      border-radius: 22px;
+      padding: 12px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .map-frame iframe {
+      display: block;
+      border: 0;
+      border-radius: 14px;
+      width: 100%;
+      height: 420px;
+    }
+    .map-cta {
+      margin-top: 0.875rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    #site-footer {
+      background: var(--nm-deep);
+      box-shadow: 0 -6px 24px var(--nm-dark);
+    }
+    .footer-main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid var(--divider);
+    }
+    .footer-brand .logo { margin-bottom: 1rem; }
+    .footer-tagline { font-size: 0.875rem; color: var(--text-3); line-height: 1.65; max-width: 240px; margin-bottom: 1.5rem; }
+    .footer-social { display: flex; gap: 0.625rem; }
+    .social-btn {
+      width: 38px; height: 38px;
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: box-shadow 0.2s, color 0.2s;
+      color: var(--text-3);
+    }
+    .social-btn:hover { box-shadow: var(--sh-inset-sm); color: var(--accent2); }
+    .social-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+
+    .footer-col-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 1.25rem;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 0.625rem; }
+    .footer-links a {
+      font-size: 0.9rem;
+      color: var(--text-2);
+      transition: color 0.2s;
+      display: inline-block;
+    }
+    .footer-links a:hover { color: var(--text-1); }
+
+    .footer-contact-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .footer-contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      color: var(--text-2);
+      line-height: 1.5;
+    }
+    .footer-contact-list svg {
+      width: 14px; height: 14px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .footer-contact-list a { color: var(--text-2); transition: color 0.2s; }
+    .footer-contact-list a:hover { color: var(--accent2); }
+
+    .footer-bottom {
+      padding: 1.25rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-bottom p { font-size: 0.78rem; color: var(--text-3); }
+
+    /* ══════════════════════════════════════
+       ANIMATIONS
+    ══════════════════════════════════════ */
+    @media (prefers-reduced-motion: no-preference) {
+      #site-header { animation: slideDown 0.4s ease both; }
+      @keyframes slideDown {
+        from { transform: translateY(-100%); opacity: 0; }
+        to   { transform: translateY(0); opacity: 1; }
+      }
+      .hero-content { animation: fadeUp 0.65s ease 0.15s both; }
+      .hero-visual  { animation: fadeUp 0.65s ease 0.35s both; }
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(22px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      .ps-bar-fill { animation: pulseFill 2.8s ease-in-out infinite; }
+      @keyframes pulseFill { 0%,100% { width: 80%; } 50% { width: 87%; } }
+      .blink { animation: blink 1s step-end infinite; }
+      @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.55s ease, transform 0.55s ease;
+      }
+      .reveal.in { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-main { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 4.5rem 0; }
+      .primary-nav, .header-hours { display: none; }
+      .header-cta .btn { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .hero-content { text-align: center; }
+      .hero-eyebrow { justify-content: center; }
+      .hero-sub { margin: 0 auto 2rem; }
+      .hero-actions { justify-content: center; }
+      .trust-pills { justify-content: center; }
+
+      .services-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 2.5rem; padding-top: 3rem; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-tagline { max-width: 100%; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { justify-content: center; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .footer-main { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header id="site-header" role="banner">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="#hero" class="logo" aria-label="Wireless Connect LLC — Home">
+        <img src="Logo.png" alt="Wireless Connect LLC" class="logo-img">
+      </a>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <div class="header-hours" aria-label="Open Monday to Saturday 10am to 7pm">
+          <span class="dot" aria-hidden="true"></span>
+          Mon–Sat 10 AM–7 PM
+        </div>
+        <a href="tel:+12066195401" class="btn btn-primary" aria-label="Call us at (206) 619-5401">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Call Now
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Navigation">
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:+12066195401" class="btn btn-primary">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    Call (206) 619-5401
+  </a>
+</div>
+
+<main id="main-content" role="main">
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section id="hero" aria-labelledby="hero-h1">
+
+  <!-- Background pattern -->
+  <svg class="device-bg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="100%" height="100%">
+    <defs>
+      <pattern id="dp" x="0" y="0" width="130" height="110" patternUnits="userSpaceOnUse">
+        <rect x="8" y="8" width="30" height="52" rx="5" fill="none" stroke="#fff" stroke-width="1.4"/>
+        <rect x="18" y="12" width="10" height="2" rx="1" fill="none" stroke="#fff" stroke-width="0.9"/>
+        <rect x="11" y="55" width="24" height="3" rx="1.5" fill="none" stroke="#fff" stroke-width="0.9"/>
+        <rect x="65" y="18" width="48" height="32" rx="3" fill="none" stroke="#fff" stroke-width="1.4"/>
+        <path d="M61 52h56l-4 7H65z" fill="none" stroke="#fff" stroke-width="0.9"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#dp)"/>
+  </svg>
+
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span>Seattle · Est. 2011</span>
+          <span class="pill">Walk-ins Welcome</span>
+        </div>
+        <h1 class="hero-h1" id="hero-h1">
+          Seattle's Phone &amp;<br>Computer Repair<br><em>Experts</em>
+        </h1>
+        <p class="hero-sub">
+          Cracked screen? Slow laptop? Dead battery? We fix it — fast, honestly, and at a fair price. No appointment needed.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:+12066195401" class="btn btn-primary" aria-label="Call us at (206) 619-5401">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Call (206) 619-5401
+          </a>
+          <a href="https://maps.google.com/?q=Wireless+Connect+LLC,+14723+Aurora+Ave+N,+Seattle,+WA+98133" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+            Get Directions →
+          </a>
+        </div>
+        <div class="trust-pills" role="list" aria-label="Key trust signals">
+          <span class="trust-pill" role="listitem">Walk-ins welcome</span>
+          <span class="trust-pill" role="listitem">Same-day repairs</span>
+          <span class="trust-pill" role="listitem">13+ years in Seattle</span>
+        </div>
+      </div>
+
+      <!-- Decorative phone mockup -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="phone-wrap">
+          <div class="phone-glow"></div>
+          <div class="phone" role="img" aria-label="Repair status display">
+            <div class="phone-pill"></div>
+            <div class="phone-screen">
+              <div class="ps-icon">🔧</div>
+              <div class="ps-title">REPAIR IN PROGRESS</div>
+              <div class="ps-bar-wrap">
+                <div class="ps-bar-track"><div class="ps-bar-fill"></div></div>
+                <div class="ps-bar-row"><span>████████░░</span><span>80%</span></div>
+              </div>
+              <div class="ps-divider"></div>
+              <div class="ps-rows">
+                <div class="ps-row"><span class="k">TYPE</span><span class="v">Screen replace</span></div>
+                <div class="ps-row"><span class="k">EST. TIME</span><span class="v">30 min<span class="blink">_</span></span></div>
+                <div class="ps-row"><span class="k">STATUS</span><span class="v-g">● Active</span></div>
+                <div class="ps-row"><span class="k">TECH</span><span class="v">Assigned</span></div>
+              </div>
+              <div class="ps-divider"></div>
+              <div class="ps-cmd">&gt; Diagnostics complete<span class="blink">_</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICES
+══════════════════════════════════════ -->
+<section id="services" aria-labelledby="services-h2">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-label">What We Fix</span>
+      <h2 class="section-h2" id="services-h2">Precision Repair Services</h2>
+      <p class="section-sub">Comprehensive diagnostics and repair protocols for all major hardware ecosystems.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card nm-card reveal" aria-labelledby="s1">
+        <div class="service-image-wrapper">
+          <img src="Mobile Phone Repair.png" alt="Phone Repair" class="service-card-img">
+        </div>
+        <div class="service-card-content">
+          <h3 id="s1">Phone Repair</h3>
+          <p>Screen replacements, battery swaps, and logic board micro-soldering for all major Android devices.</p>
+        </div>
+      </article>
+
+      <article class="service-card nm-card reveal" aria-labelledby="s2">
+        <div class="service-image-wrapper">
+          <img src="iPhone Screen Replacement.png" alt="iPhone Specialists" class="service-card-img">
+        </div>
+        <div class="service-card-content">
+          <h3 id="s2">iPhone Specialists</h3>
+          <p>Dedicated iOS repair protocols ensuring FaceID, TrueTone, and waterproof sealing integrity.</p>
+        </div>
+      </article>
+
+      <article class="service-card nm-card reveal" aria-labelledby="s3">
+        <div class="service-image-wrapper">
+          <img src="Computer Repair.png" alt="Computer Repair" class="service-card-img">
+        </div>
+        <div class="service-card-content">
+          <h3 id="s3">Computer Repair</h3>
+          <p>Hardware diagnostics, thermal paste re-application, and component level motherboard repair.</p>
+        </div>
+      </article>
+
+      <article class="service-card nm-card reveal" aria-labelledby="s4">
+        <div class="service-image-wrapper">
+          <img src="Windows Installation.png" alt="Windows Systems" class="service-card-img">
+        </div>
+        <div class="service-card-content">
+          <h3 id="s4">Windows Systems</h3>
+          <p>OS recovery, blue-screen diagnostics, malware removal, and custom PC build troubleshooting.</p>
+        </div>
+      </article>
+
+      <article class="service-card nm-card reveal" aria-labelledby="s5">
+        <div class="service-image-wrapper">
+          <img src="Pre-Owned Devices.png" alt="Pre-owned Devices" class="service-card-img">
+        </div>
+        <div class="service-card-content">
+          <h3 id="s5">Pre-owned Devices</h3>
+          <p>Certified refurbished hardware passing a rigorous 40-point diagnostic inspection.</p>
+        </div>
+      </article>
+
+      <article class="service-card nm-card reveal" aria-labelledby="s6">
+        <div class="service-image-wrapper">
+          <img src="Accessories.png" alt="Accessories" class="service-card-img">
+        </div>
+        <div class="service-card-content">
+          <h3 id="s6">Accessories</h3>
+          <p>High-end cables, tempered glass protection, and power delivery (PD) certified charging hubs.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ABOUT
+══════════════════════════════════════ -->
+<section id="about" aria-labelledby="about-h2">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-text reveal">
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-h2" id="about-h2">Local experts,<br>real service</h2>
+        <p style="margin-top:1.5rem">
+          <strong>Wireless Connect LLC</strong> has been serving the greater Seattle area since 2011. We're a locally owned and operated shop — not a franchise, not a chain. When you bring your device to us, you work directly with our experienced technicians, not a call center.
+        </p>
+        <p>
+          We believe repair should be <strong>honest and transparent</strong>. We diagnose your device, tell you exactly what's wrong, give you a fair price — then fix it. No upsells, no hidden fees.
+        </p>
+        <p>
+          Whether you walked in off Aurora Ave N or found us online, you'll get the same quality service we've been delivering to Seattle for over a decade. We're proud to be your neighborhood tech shop.
+        </p>
+      </div>
+
+      <div class="stats-grid reveal">
+        <div class="stat-card nm-card">
+          <div class="stat-num">13+</div>
+          <div class="stat-lbl">Years serving Seattle</div>
+        </div>
+        <div class="stat-card nm-card">
+          <div class="stat-num">10K+</div>
+          <div class="stat-lbl">Devices repaired</div>
+        </div>
+        <div class="stat-card nm-card">
+          <div class="stat-num">6</div>
+          <div class="stat-lbl">Services offered</div>
+        </div>
+        <div class="stat-card nm-card">
+          <div class="stat-num">5★</div>
+          <div class="stat-lbl">Google rating</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════ -->
+<section id="testimonials" aria-labelledby="reviews-h2">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-label">Customer Reviews</span>
+      <h2 class="section-h2" id="reviews-h2">What Seattle customers say</h2>
+      <p class="section-sub">Real reviews from real customers in our community.</p>
+    </div>
+
+    <div class="reviews-grid">
+
+      <article class="review-card nm-card reveal">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <span aria-hidden="true">★★★★★</span>
+        </div>
+        <p class="review-text">My iPhone screen was completely shattered. They fixed it in under an hour and it looks brand new. Prices are fair and they didn't try to sell me anything extra. Will be coming back.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" aria-hidden="true">KM</div>
+          <div class="reviewer-info">
+            <div class="name">Kelsey M.</div>
+            <div class="via"><span class="via-g">G</span> Google Review</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card nm-card reveal">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <span aria-hidden="true">★★★★★</span>
+        </div>
+        <p class="review-text">Brought in a laptop that had been completely dead. They diagnosed it, explained exactly what was wrong, and had it running the same afternoon. Incredibly professional and reasonably priced.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" aria-hidden="true">DT</div>
+          <div class="reviewer-info">
+            <div class="name">David T.</div>
+            <div class="via"><span class="via-g">G</span> Google Review</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card nm-card reveal">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <span aria-hidden="true">★★★★★</span>
+        </div>
+        <p class="review-text">Been going here for years — they've fixed three of my family's phones. They're always honest about what needs repair and what doesn't. This is the only shop I trust in Seattle.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" aria-hidden="true">RA</div>
+          <div class="reviewer-info">
+            <div class="name">Rosa A.</div>
+            <div class="via"><span class="via-g">G</span> Google Review</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WHY CHOOSE US
+══════════════════════════════════════ -->
+<section id="why" aria-labelledby="why-h2">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-h2" id="why-h2">Repair you can count on</h2>
+      <p class="section-sub">Three things that set us apart from the rest.</p>
+    </div>
+
+    <div class="why-grid">
+
+      <article class="why-card nm-card-deep reveal" aria-labelledby="w1">
+        <div class="nm-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3 id="w1">Honest diagnostics</h3>
+        <p>We inspect your device thoroughly and tell you exactly what's wrong — and what it costs to fix — before we start. No hidden fees, ever.</p>
+      </article>
+
+      <article class="why-card nm-card-deep reveal" aria-labelledby="w2">
+        <div class="nm-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 id="w2">Fast turnaround</h3>
+        <p>Most phone screen replacements are done in under an hour. Walk in with a broken screen, walk out with a working phone the same day.</p>
+      </article>
+
+      <article class="why-card nm-card-deep reveal" aria-labelledby="w3">
+        <div class="nm-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 id="w3">Local &amp; community-rooted</h3>
+        <p>13 years on Aurora Ave N means we've built trust the hard way — one satisfied customer at a time. We're not going anywhere.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CONTACT
+══════════════════════════════════════ -->
+<section id="contact" aria-labelledby="contact-h2">
+  <div class="container">
+    <div class="section-header text-center" style="margin-bottom:3.5rem">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-h2" id="contact-h2">Come visit the shop</h2>
+      <p class="section-sub">We're on Aurora Ave N in Seattle. Walk in any time Monday through Saturday.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+
+        <address style="font-style:normal;display:contents">
+          <div class="contact-item">
+            <div class="ci-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Address</div>
+              <div class="ci-value">
+                <a href="https://maps.google.com/?q=Wireless+Connect+LLC,+14723+Aurora+Ave+N,+Seattle,+WA+98133" target="_blank" rel="noopener noreferrer">
+                  14723 Aurora Ave N<br>Seattle, WA 98133
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="ci-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Phone</div>
+              <div class="ci-value"><a href="tel:+12066195401">(206) 619-5401</a></div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="ci-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Email</div>
+              <div class="ci-value"><a href="mailto:gofixwireless@gmail.com">gofixwireless@gmail.com</a></div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="ci-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Store Hours</div>
+              <div class="ci-value">
+                Mon – Sat: 10:00 AM – 7:00 PM<br>
+                <span style="color:var(--text-3)">Sunday: Closed</span>
+              </div>
+              <div class="open-badge" aria-label="Currently open">Open now</div>
+            </div>
+          </div>
+        </address>
+
+      </div>
+
+      <div class="reveal">
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.3522!2d-122.34798!3d47.72390!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490119290a8f939%3A0xc8c62e4d5c4f4e58!2s14723+Aurora+Ave+N%2C+Seattle%2C+WA+98133!5e0!3m2!1sen!2sus!4v1687000000000"
+            width="100%"
+            height="420"
+            style="border:0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Wireless Connect LLC on Google Maps — 14723 Aurora Ave N, Seattle WA 98133"
+            aria-label="Map showing Wireless Connect LLC location at 14723 Aurora Ave N, Seattle, WA 98133">
+          </iframe>
+        </div>
+        <div class="map-cta">
+          <a href="https://maps.google.com/?q=Wireless+Connect+LLC,+14723+Aurora+Ave+N,+Seattle,+WA+98133" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="font-size:0.875rem; padding:0.6rem 1.25rem; min-height:40px">
+            Open in Google Maps →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer id="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-main">
+
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <a href="#hero" class="logo" aria-label="Wireless Connect LLC — Back to top">
+          <img src="Logo.png" alt="Wireless Connect LLC" class="logo-img">
+        </a>
+        <p class="footer-tagline">Seattle's trusted phone and computer repair specialists — locally owned since 2011.</p>
+        <div class="footer-social" aria-label="Social media">
+          <!-- Google Maps -->
+          <a href="https://maps.google.com/?q=Wireless+Connect+LLC" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Find us on Google Maps">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </a>
+          <!-- Phone -->
+          <a href="tel:+12066195401" class="social-btn" aria-label="Call us">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:gofixwireless@gmail.com" class="social-btn" aria-label="Email us">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services column -->
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Phone Repair</a></li>
+          <li><a href="#services">iPhone Specialists</a></li>
+          <li><a href="#services">Computer Repair</a></li>
+          <li><a href="#services">Windows Systems</a></li>
+          <li><a href="#services">Pre-owned Devices</a></li>
+          <li><a href="#services">Accessories</a></li>
+        </ul>
+      </div>
+
+      <!-- Company column -->
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#testimonials">Customer Reviews</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#contact">Find Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact column -->
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>14723 Aurora Ave N<br>Seattle, WA 98133</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+12066195401">(206) 619-5401</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:gofixwireless@gmail.com">gofixwireless@gmail.com</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Mon–Sat: 10 AM – 7 PM<br><span style="color:var(--text-3)">Sunday: Closed</span></span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Wireless Connect LLC · 14723 Aurora Ave N, Seattle, WA 98133 · All rights reserved</p>
+      <p>Locally owned &amp; operated since 2011</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
+<script>
+  'use strict';
+
+  /* ── Mobile drawer ── */
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+
+  function openDrawer() {
+    hamburgerBtn.classList.add('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'true');
+    mobileDrawer.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    hamburgerBtn.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+    mobileDrawer.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  hamburgerBtn.addEventListener('click', () =>
+    mobileDrawer.classList.contains('open') ? closeDrawer() : openDrawer()
+  );
+  mobileDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
+      closeDrawer();
+      hamburgerBtn.focus();
+    }
+  });
+
+  /* ── Smooth scroll ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const id = this.getAttribute('href');
+      if (id === '#') return;
+      const el = document.querySelector(id);
+      if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  /* ── Scroll reveal ── */
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const siblings = Array.from(
+          (entry.target.parentElement || document.body).querySelectorAll('.reveal:not(.in)')
+        );
+        const delay = Math.min(siblings.indexOf(entry.target) * 80, 300);
+        setTimeout(() => entry.target.classList.add('in'), delay);
+        revealObs.unobserve(entry.target);
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  /* ── Active nav link on scroll ── */
+  const navLinks = document.querySelectorAll('.primary-nav a');
+  const sectionIds = ['hero','services','about','testimonials','why','contact'];
+
+  const sectionObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          const active = link.getAttribute('href') === `#${id}`;
+          link.toggleAttribute('aria-current', active);
+          if (active) link.setAttribute('aria-current','page');
+          else link.removeAttribute('aria-current');
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sectionIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) sectionObs.observe(el);
+  });
+
+  /* ── Open now badge: hide if outside business hours ── */
+  (function() {
+    const badge = document.querySelector('.open-badge');
+    if (!badge) return;
+    const now = new Date();
+    const day = now.getDay();   // 0=Sun, 6=Sat
+    const h   = now.getHours();
+    const open = day >= 1 && day <= 6 && h >= 10 && h < 19;
+    if (!open) {
+      badge.textContent = 'Currently closed';
+      badge.style.color = 'var(--text-3)';
+      badge.style.setProperty('--success', 'var(--text-3)');
+      badge.style.boxShadow = 'none';
+    }
+  })();
+</script>
+
+</body>
+</html>
