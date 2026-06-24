@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 135" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@900&amp;display=swap');
+      .logo-text {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 900;
+        font-size: 52px;
+        text-anchor: middle;
+        letter-spacing: 0.5px;
+      }
+      .best-fill { fill: #7C3AED; }
+      .mobile-fill { fill: #EC4899; }
+      
+      .outline {
+        stroke: #ffffff;
+        stroke-width: 7px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        fill: #ffffff;
+      }
+      
+      .shadow {
+        stroke: #120e2e;
+        stroke-width: 14px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        fill: #120e2e;
+      }
+    </style>
+  </defs>
+  <!-- BEST shadow -->
+  <text x="124" y="61" class="logo-text shadow">BEST</text>
+  <!-- BEST outline -->
+  <text x="120" y="55" class="logo-text outline">BEST</text>
+  <!-- BEST fill -->
+  <text x="120" y="55" class="logo-text best-fill">BEST</text>
+
+  <!-- MOBILE shadow -->
+  <text x="124" y="118" class="logo-text shadow">MOBILE</text>
+  <!-- MOBILE outline -->
+  <text x="120" y="112" class="logo-text outline">MOBILE</text>
+  <!-- MOBILE fill -->
+  <text x="120" y="112" class="logo-text mobile-fill">MOBILE</text>
+</svg>
