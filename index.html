@@ -22,44 +22,108 @@
 
   <!-- Schema.org Local Business -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Best Mobilez",
-    "description": "Locally owned mobile phone repair, iPhone screen replacement, and computer repair shop in Scarborough, ON since 2011.",
-    "url": "https://wirelessconnectllc.com/",
-    "telephone": "+14163198000",
-    "email": "seven2356@gmail.com",
-    "foundingDate": "2011",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "3331 Markham Rd #113",
-      "addressLocality": "Scarborough",
-      "addressRegion": "ON",
-      "postalCode": "M1X 1S8",
-      "addressCountry": "CA"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 43.773151,
-      "longitude": -79.242626
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-        "opens": "10:00",
-        "closes": "20:30"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Best Mobilez - Markham Rd (Main)",
+      "description": "Locally owned mobile phone repair, iPhone screen replacement, and computer repair shop in Scarborough, ON since 2011.",
+      "url": "https://wirelessconnectllc.com/",
+      "telephone": "+14163198000",
+      "email": "seven2356@gmail.com",
+      "foundingDate": "2011",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3331 Markham Rd #113",
+        "addressLocality": "Scarborough",
+        "addressRegion": "ON",
+        "postalCode": "M1X 1S8",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.773151,
+        "longitude": -79.242626
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "10:00",
+          "closes": "20:30"
+        }
+      ],
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "ratingCount": "120"
       }
-    ],
-    "priceRange": "$$",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "ratingCount": "120"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Best Mobilez - Birchmount Rd",
+      "description": "Locally owned mobile phone repair, iPhone screen replacement, and computer repair shop in Scarborough, ON.",
+      "url": "https://wirelessconnectllc.com/",
+      "telephone": "+14163198000",
+      "email": "seven2356@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1515 Birchmount Rd",
+        "addressLocality": "Scarborough",
+        "addressRegion": "ON",
+        "postalCode": "M1P 2G7",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.75545,
+        "longitude": -79.278385
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "10:00",
+          "closes": "20:30"
+        }
+      ],
+      "priceRange": "$$"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Best Mobilez - Pickering Service Center",
+      "description": "Locally owned mobile phone repair, iPhone screen replacement, and computer repair service center in Pickering, ON.",
+      "url": "https://wirelessconnectllc.com/",
+      "telephone": "+14163198000",
+      "email": "seven2356@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1315 Pickering Parkway, Picore Centre I, Suite #300",
+        "addressLocality": "Pickering",
+        "addressRegion": "ON",
+        "postalCode": "L1V 7G5",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.83103,
+        "longitude": -79.08726
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "10:00",
+          "closes": "20:30"
+        }
+      ],
+      "priceRange": "$$"
     }
-  }
+  ]
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -360,9 +424,9 @@
     }
     .header-hours .dot {
       width: 6px; height: 6px;
-      background: var(--success);
+      background: var(--status-color, var(--success));
       border-radius: 50%;
-      box-shadow: 0 0 6px var(--success);
+      box-shadow: 0 0 6px var(--status-color, var(--success));
       flex-shrink: 0;
     }
 
@@ -877,6 +941,67 @@
     .ci-value a { color: var(--text-1); transition: color 0.2s; }
     .ci-value a:hover { color: var(--accent2); }
 
+    /* Branch Location Cards */
+    .location-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      border-radius: 16px;
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      border: 1px solid rgba(0,0,0,0.06);
+      cursor: pointer;
+      text-align: left;
+      width: 100%;
+      font-family: inherit;
+      color: inherit;
+      line-height: inherit;
+      transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+    }
+    .location-card:hover {
+      transform: translateX(4px);
+    }
+    .location-card:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+    .location-card.active {
+      box-shadow: var(--sh-inset-sm);
+      border-color: rgba(29, 78, 216, 0.3);
+    }
+    .location-card .ci-body {
+      flex: 1;
+    }
+    .location-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      margin-top: 0.5rem;
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      color: var(--text-3);
+      transition: box-shadow 0.2s, color 0.2s;
+    }
+    .location-card.active .location-badge {
+      box-shadow: var(--sh-inset-sm);
+      color: var(--accent);
+    }
+    .contact-section-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin: 1.5rem 0 0.75rem;
+    }
+    .contact-section-title:first-of-type {
+      margin-top: 0;
+    }
+
     /* Open now badge */
     .open-badge {
       display: inline-flex;
@@ -884,7 +1009,7 @@
       gap: 0.35rem;
       font-size: 0.72rem;
       font-weight: 600;
-      color: var(--success);
+      color: var(--status-color, var(--success));
       background: var(--nm-base);
       box-shadow: var(--sh-raise-sm);
       border-radius: 999px;
@@ -894,10 +1019,18 @@
     .open-badge::before {
       content: '';
       width: 6px; height: 6px;
-      background: var(--success);
+      background: var(--status-color, var(--success));
       border-radius: 50%;
-      box-shadow: 0 0 6px var(--success);
+      box-shadow: 0 0 6px var(--status-color, var(--success));
       flex-shrink: 0;
+    }
+
+    /* Status Classes */
+    .is-open {
+      --status-color: var(--success);
+    }
+    .is-closed {
+      --status-color: #EF4444; /* red color */
     }
 
     /* Map */
@@ -1169,7 +1302,7 @@
             </svg>
             Call (416) 319-8000
           </a>
-          <a href="https://maps.google.com/maps/place/Best+Mobilez/@43.773151,-79.242626,15z/data=!4m2!3m1!1s0x89d4d6de05fd8fc1:0x2a14a87e53cd4d1" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+          <a href="#contact" class="btn btn-ghost">
             Get Directions →
           </a>
         </div>
@@ -1445,21 +1578,48 @@
     <div class="contact-grid">
       <div class="contact-info reveal">
 
-        <address style="font-style:normal;display:contents">
-          <div class="contact-item">
+        <h3 class="contact-section-title">Our Locations</h3>
+        
+        <div class="branch-selector" style="display:flex; flex-direction:column; gap:0.875rem; width:100%" role="tablist" aria-label="Our branch locations">
+          <!-- Markham Rd Card -->
+          <button type="button" class="location-card active" data-loc="markham" role="tab" aria-selected="true" aria-controls="map-panel" id="tab-markham">
             <div class="ci-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div class="ci-body">
-              <div class="ci-label">Address</div>
-              <div class="ci-value">
-                <a href="https://maps.google.com/maps/place/Best+Mobilez/@43.773151,-79.242626,15z/data=!4m2!3m1!1s0x89d4d6de05fd8fc1:0x2a14a87e53cd4d1" target="_blank" rel="noopener noreferrer">
-                  3331 Markham Rd #113<br>Scarborough, ON M1X 1S8, Canada
-                </a>
-              </div>
+              <div class="ci-label">Scarborough — Markham Rd (Main)</div>
+              <div class="ci-value">3331 Markham Rd #113<br>Scarborough, ON M1X 1S8</div>
+              <span class="location-badge">Main Branch</span>
             </div>
-          </div>
+          </button>
 
+          <!-- Birchmount Rd Card -->
+          <button type="button" class="location-card" data-loc="birchmount" role="tab" aria-selected="false" aria-controls="map-panel" id="tab-birchmount">
+            <div class="ci-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Scarborough — Birchmount Rd</div>
+              <div class="ci-value">1515 Birchmount Rd<br>Scarborough, ON M1P 2G7</div>
+              <span class="location-badge">Branch Office</span>
+            </div>
+          </button>
+
+          <!-- Pickering Card -->
+          <button type="button" class="location-card" data-loc="pickering" role="tab" aria-selected="false" aria-controls="map-panel" id="tab-pickering">
+            <div class="ci-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Pickering — Service Center</div>
+              <div class="ci-value">1315 Pickering Parkway, #300<br>Pickering, ON L1V 7G5</div>
+              <span class="location-badge">Service Center</span>
+            </div>
+          </button>
+        </div>
+
+        <h3 class="contact-section-title">Get in Touch</h3>
+        <address style="font-style:normal; display:flex; flex-direction:column; gap:0.875rem; width:100%">
           <div class="contact-item">
             <div class="ci-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z"/></svg>
@@ -1497,7 +1657,7 @@
 
       </div>
 
-      <div class="reveal">
+      <div class="reveal" id="map-panel" role="tabpanel" aria-labelledby="tab-markham">
         <div class="map-frame">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.805!2d-79.242626!3d43.773151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d6de05fd8fc1%3A0x2a14a87e53cd4d1!2sBest%20Mobilez!5e0!3m2!1sen!2sca!4v1687000000000"
@@ -1539,7 +1699,7 @@
         <p class="footer-tagline">Scarborough's trusted phone and computer repair specialists — locally owned since 2011.</p>
         <div class="footer-social" aria-label="Social media">
           <!-- Google Maps -->
-          <a href="https://maps.google.com/maps/place/Best+Mobilez/@43.773151,-79.242626,15z/data=!4m2!3m1!1s0x89d4d6de05fd8fc1:0x2a14a87e53cd4d1" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Find us on Google Maps">
+          <a href="#contact" class="social-btn" aria-label="Find us on Google Maps">
             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </a>
           <!-- Phone -->
@@ -1579,13 +1739,21 @@
 
       <!-- Contact column -->
       <div>
-        <div class="footer-col-title">Contact</div>
-        <ul class="footer-contact-list">
+        <div class="footer-col-title">Our Branches</div>
+        <ul class="footer-contact-list" style="gap:1rem">
           <li>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>3331 Markham Rd #113<br>Scarborough, ON M1X 1S8, Canada</span>
+            <span><strong>Scarborough (Markham)</strong><br>3331 Markham Rd #113<br>Scarborough, ON M1X 1S8</span>
           </li>
           <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><strong>Scarborough (Birchmount)</strong><br>1515 Birchmount Rd<br>Scarborough, ON M1P 2G7</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><strong>Pickering (Service Center)</strong><br>1315 Pickering Parkway, #300<br>Pickering, ON L1V 7G5</span>
+          </li>
+          <li style="margin-top:0.5rem; border-top:1px solid var(--divider); padding-top:0.5rem">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z"/></svg>
             <a href="tel:+14163198000">(416) 319-8000</a>
           </li>
@@ -1593,17 +1761,13 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <a href="mailto:seven2356@gmail.com">seven2356@gmail.com</a>
           </li>
-          <li>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Mon–Sat: 10 AM – 8:30 PM<br><span style="color:var(--text-3)">Sunday: Closed</span></span>
-          </li>
         </ul>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 Best Mobilez · 3331 Markham Rd #113, Scarborough, ON M1X 1S8, Canada · All rights reserved</p>
+      <p>© 2026 Best Mobilez · Markham &amp; Birchmount, Scarborough &amp; Pickering, ON · All rights reserved</p>
       <p>Locally owned &amp; operated since 2011</p>
     </div>
   </div>
@@ -1694,20 +1858,119 @@
     if (el) sectionObs.observe(el);
   });
 
-  /* ── Open now badge: hide if outside business hours ── */
+  /* ── Open now badge: hide if outside business hours (Canada/Toronto Time Zone) ── */
   (function() {
     const badge = document.querySelector('.open-badge');
+    const headerDot = document.querySelector('.header-hours .dot');
     if (!badge) return;
-    const now = new Date();
-    const day = now.getDay();   // 0=Sun, 6=Sat
-    const h   = now.getHours();
-    const open = day >= 1 && day <= 6 && h >= 10 && h < 19;
-    if (!open) {
-      badge.textContent = 'Currently closed';
-      badge.style.color = 'var(--text-3)';
-      badge.style.setProperty('--success', 'var(--text-3)');
-      badge.style.boxShadow = 'none';
+    try {
+      // Get current date and time in Toronto (Eastern Time Zone)
+      const torontoString = new Date().toLocaleString("en-US", { timeZone: "America/Toronto" });
+      const torontoDate = new Date(torontoString);
+      const day = torontoDate.getDay();   // 0=Sun, 1=Mon, ..., 6=Sat
+      const h   = torontoDate.getHours();
+      const m   = torontoDate.getMinutes();
+      
+      // Store hours: Mon - Sat, 10:00 AM to 8:30 PM (10:00 is 600 mins, 20:30 is 1230 mins)
+      const minutesToday = h * 60 + m;
+      const isOpen = day >= 1 && day <= 6 && minutesToday >= 600 && minutesToday < 1230;
+
+      if (!isOpen) {
+        badge.textContent = 'Currently closed';
+        badge.classList.remove('is-open');
+        badge.classList.add('is-closed');
+        if (headerDot) {
+          headerDot.classList.remove('is-open');
+          headerDot.classList.add('is-closed');
+        }
+      } else {
+        badge.textContent = 'Open now';
+        badge.classList.remove('is-closed');
+        badge.classList.add('is-open');
+        if (headerDot) {
+          headerDot.classList.remove('is-closed');
+          headerDot.classList.add('is-open');
+        }
+      }
+    } catch (e) {
+      // Fallback to local time if timezone string fails
+      const day = new Date().getDay();
+      const h = new Date().getHours();
+      const open = day >= 1 && day <= 6 && h >= 10 && h < 20; // fallback simple check
+      if (!open) {
+        badge.textContent = 'Currently closed';
+        badge.classList.remove('is-open');
+        badge.classList.add('is-closed');
+        if (headerDot) {
+          headerDot.classList.remove('is-open');
+          headerDot.classList.add('is-closed');
+        }
+      } else {
+        badge.textContent = 'Open now';
+        badge.classList.remove('is-closed');
+        badge.classList.add('is-open');
+        if (headerDot) {
+          headerDot.classList.remove('is-closed');
+          headerDot.classList.add('is-open');
+        }
+      }
     }
+  })();
+
+  /* ── Interactive Location Selector ── */
+  (function() {
+    const locationCards = document.querySelectorAll('.location-card');
+    const mapPanel = document.getElementById('map-panel');
+    const mapIframe = mapPanel.querySelector('.map-frame iframe');
+    const mapCta = mapPanel.querySelector('.map-cta a');
+
+    const locationData = {
+      markham: {
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.805!2d-79.242626!3d43.773151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d6de05fd8fc1%3A0x2a14a87e53cd4d1!2sBest%20Mobilez!5e0!3m2!1sen!2sca!4v1687000000000',
+        directionsUrl: 'https://maps.google.com/maps/place/Best+Mobilez/@43.773151,-79.242626,15z/data=!4m2!3m1!1s0x89d4d6de05fd8fc1:0x2a14a87e53cd4d1',
+        title: 'Best Mobilez on Google Maps — 3331 Markham Rd #113, Scarborough ON M1X 1S8',
+        ariaLabel: 'Map showing Best Mobilez location at 3331 Markham Rd #113, Scarborough, ON M1X 1S8'
+      },
+      birchmount: {
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.2341496057816!2d-79.28095992382453!3d43.75545384615466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d039f6974db7%3A0x89b3f3b9be92e315!2s1515%20Birchmount%20Rd%2C%20Scarborough%2C%20ON%20M1P%202G7!5e0!3m2!1sen!2sca!4v1719220000000',
+        directionsUrl: 'https://maps.google.com/maps/place/1515+Birchmount+Rd,+Scarborough,+ON+M1P+2G7,+Canada/@43.75545,-79.278385,15z/',
+        title: 'Best Mobilez on Google Maps — 1515 Birchmount Rd, Scarborough ON M1P 2G7',
+        ariaLabel: 'Map showing Best Mobilez location at 1515 Birchmount Rd, Scarborough, ON M1P 2G7'
+      },
+      pickering: {
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.4449830588636!2d-79.08726592382029!3d43.83103284107147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4dfbc3885d539%3A0xcd50bf8cfb159b36!2s1315%20Pickering%20Pkwy%2C%20Pickering%2C%20ON%20L1V%207G5!5e0!3m2!1sen!2sca!4v1719220000000',
+        directionsUrl: 'https://maps.google.com/maps/place/1315+Pickering+Pkwy,+Pickering,+ON+L1V+7G5,+Canada/@43.83103,-79.08726,15z/',
+        title: 'Best Mobilez on Google Maps — 1315 Pickering Parkway, Pickering ON L1V 7G5',
+        ariaLabel: 'Map showing Best Mobilez service center at 1315 Pickering Parkway, Pickering, ON L1V 7G5'
+      }
+    };
+
+    locationCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const loc = card.getAttribute('data-loc');
+        if (!loc || !locationData[loc]) return;
+
+        // Update active class & attributes on cards
+        locationCards.forEach(c => {
+          c.classList.remove('active');
+          c.setAttribute('aria-selected', 'false');
+        });
+        card.classList.add('active');
+        card.setAttribute('aria-selected', 'true');
+        
+        // Link aria-labelledby of panel to active card ID
+        mapPanel.setAttribute('aria-labelledby', card.id);
+
+        // Update map frame
+        const data = locationData[loc];
+        mapIframe.src = data.mapUrl;
+        mapIframe.setAttribute('title', data.title);
+        mapIframe.setAttribute('aria-label', data.ariaLabel);
+
+        // Update CTA map link
+        mapCta.href = data.directionsUrl;
+      });
+    });
   })();
 </script>
 
