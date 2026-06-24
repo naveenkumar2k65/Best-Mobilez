@@ -133,14 +133,14 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
     /* ═══════════════════════════════════════════════════════════
-       LIGHT NEUMORPHISM DESIGN SYSTEM
-       Base: #E4EBF5  |  Dark shadow: #B8C4D4  |  Light shadow: #FFFFFF
+       LIGHT NEUMORPHISM DESIGN SYSTEM (BRAND MATCHED)
+       Base: #ECEAF4  |  Dark shadow: #BDB7D3  |  Light shadow: #FFFFFF
     ═══════════════════════════════════════════════════════════ */
     :root {
-      --nm-base:   #E4EBF5;
-      --nm-dark:   #B5C0D0;
+      --nm-base:   #ECEAF4;
+      --nm-dark:   #BDB7D3;
       --nm-light:  #FFFFFF;
-      --nm-deep:   #D8E2F0;   /* slightly deeper tint for alternate sections */
+      --nm-deep:   #DFDBED;   /* slightly deeper tint for alternate sections */
 
       --sh-raise:  8px 8px 18px var(--nm-dark), -6px -6px 18px var(--nm-light);
       --sh-raise-sm: 4px 4px 10px var(--nm-dark), -3px -3px 10px var(--nm-light);
@@ -149,10 +149,10 @@
       --sh-inset-sm: inset 3px 3px 7px var(--nm-dark), inset -2px -2px 7px var(--nm-light);
       --sh-flat:   3px 3px 6px var(--nm-dark), -2px -2px 6px var(--nm-light);
 
-      --accent:    #1D4ED8;
-      --accent2:   #2563EB;
-      --accent-dk: #1E40AF;
-      --accent-glow: rgba(29,78,216,0.18);
+      --accent:    #7C3AED;   /* Purple matching "BEST" in Logo */
+      --accent2:   #EC4899;   /* Magenta matching "MOBILEZ" in Logo */
+      --accent-dk: #6D28D9;
+      --accent-glow: rgba(124,58,237,0.18);
       --success:   #059669;
       --warning:   #D97706;
 
@@ -161,7 +161,7 @@
       --text-3:    #64748B;
 
       --divider:   rgba(0,0,0,0.08);
-      --ring:      rgba(29,78,216,0.22);
+      --ring:      rgba(124,58,237,0.22);
 
       --max-w: 1200px;
     }
@@ -303,7 +303,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, transparent 60%);
+      background: linear-gradient(135deg, rgba(124,58,237,0.1) 0%, transparent 60%);
       border-radius: inherit;
     }
     .nm-icon svg {
@@ -333,7 +333,7 @@
       position: sticky;
       top: 0;
       z-index: 200;
-      background: rgba(228, 235, 245, 0.96);
+      background: rgba(236, 234, 244, 0.96);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       box-shadow: 0 4px 20px var(--nm-dark), 0 1px 0 var(--divider);
@@ -362,7 +362,7 @@
       transition: filter 0.2s, opacity 0.2s;
     }
     .logo:hover .logo-img {
-      filter: drop-shadow(0 2px 6px rgba(29,78,216,0.25)) brightness(1.05);
+      filter: drop-shadow(0 2px 6px rgba(124,58,237,0.25)) brightness(1.05);
       opacity: 0.88;
     }
     .footer-brand .logo-img {
@@ -614,7 +614,7 @@
       width: 260px; height: 260px;
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
-      background: radial-gradient(circle, rgba(29,78,216,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%);
       border-radius: 50%;
       pointer-events: none;
     }
