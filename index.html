@@ -1969,6 +1969,19 @@
 
         // Update CTA map link
         mapCta.href = data.directionsUrl;
+
+        // On mobile layouts, scroll down to the map panel so the user sees the updated map
+        if (window.innerWidth <= 768) {
+          const header = document.getElementById('site-header');
+          const headerHeight = header ? header.offsetHeight + 10 : 80;
+          const elementPosition = mapPanel.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - headerHeight;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
       });
     });
   })();
