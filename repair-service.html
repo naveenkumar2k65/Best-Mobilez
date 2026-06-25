@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cell Phone Service & Repair — Best Mobile</title>
+  <meta name="description"
+    content="Professional iPhone and Android repairs in Scarborough & Pickering. Screen replacements, capacity battery swaps, microscope micro-soldering. 90-day warranty.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cell Phone Service & Repair — Best Mobile">
+  <meta property="og:description"
+    content="Scarborough's trusted repair specialists. Screen replacements, battery swaps, and micro-soldering.">
+  <meta property="og:image" content="phone_repair_board.png">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    /* ── Light Neumorphism Design System (Shared) ── */
+    :root {
+      --nm-base: #ECEAF4;
+      --nm-dark: #BDB7D3;
+      --nm-light: #FFFFFF;
+      --nm-deep: #DFDBED;
+
+      --sh-raise: 8px 8px 18px var(--nm-dark), -6px -6px 18px var(--nm-light);
+      --sh-raise-sm: 4px 4px 10px var(--nm-dark), -3px -3px 10px var(--nm-light);
+      --sh-raise-lg: 14px 14px 32px var(--nm-dark), -10px -10px 32px var(--nm-light);
+      --sh-inset: inset 5px 5px 11px var(--nm-dark), inset -4px -4px 11px var(--nm-light);
+      --sh-inset-sm: inset 3px 3px 7px var(--nm-dark), inset -2px -2px 7px var(--nm-light);
+      --sh-flat: 3px 3px 6px var(--nm-dark), -2px -2px 6px var(--nm-light);
+
+      --accent: #7C3AED;
+      --accent2: #EC4899;
+      --accent-dk: #6D28D9;
+      --accent-glow: rgba(124, 58, 237, 0.18);
+      --success: #059669;
+      --warning: #D97706;
+
+      --text-1: #0F172A;
+      --text-2: #334155;
+      --text-3: #64748B;
+
+      --divider: rgba(0, 0, 0, 0.08);
+      --ring: rgba(124, 58, 237, 0.22);
+      --max-w: 1200px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--nm-base);
+      color: var(--text-1);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible, button:focus-visible, select:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── Header ── */
+    #site-header {
+      background: var(--nm-base);
+      border-bottom: 1px solid var(--divider);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0.85rem 0;
+      box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-img {
+      height: 42px;
+      display: block;
+    }
+
+    .primary-nav {
+      display: flex;
+      gap: 2.2rem;
+    }
+
+    .primary-nav a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-2);
+      transition: color 0.25s, transform 0.25s;
+    }
+
+    .primary-nav a:hover {
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .header-hours {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-2);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--nm-base);
+      padding: 0.4rem 0.85rem;
+      border-radius: 30px;
+      box-shadow: var(--sh-inset-sm);
+    }
+
+    .header-hours .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+      display: inline-block;
+    }
+
+    .header-hours .dot.is-closed {
+      background: var(--warning);
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.7rem 1.4rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      color: var(--text-1);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--sh-raise);
+      color: var(--accent);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: var(--sh-inset-sm);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dk));
+      color: var(--nm-light) !important;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 10px 20px var(--accent-glow);
+      color: var(--nm-light) !important;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 110;
+    }
+
+    .hamburger span {
+      width: 100%;
+      height: 2px;
+      background: var(--text-1);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100%;
+      background: var(--nm-base);
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+      z-index: 105;
+      padding: 6rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-drawer.active {
+      right: 0;
+    }
+
+    .mobile-drawer a {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-2);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    /* ── Main Breadcrumb ── */
+    .breadcrumb-nav {
+      padding: 1.5rem 0 0;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-3);
+      font-weight: 500;
+    }
+
+    .breadcrumbs a:hover {
+      color: var(--accent);
+    }
+
+    .breadcrumbs span.separator {
+      color: var(--text-3);
+    }
+
+    .breadcrumbs span.current {
+      color: var(--text-1);
+      font-weight: 700;
+    }
+
+    /* Neumorphic Back Arrow Button */
+    .btn-back-arrow {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      flex-shrink: 0;
+    }
+
+    .btn-back-arrow:hover {
+      box-shadow: var(--sh-inset-sm);
+      color: var(--accent);
+      transform: scale(1.08);
+    }
+
+    .btn-back-arrow:active {
+      transform: scale(0.95);
+    }
+
+    .btn-back-arrow svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 3.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ── Hero Section ── */
+    .service-hero {
+      padding: 3.5rem 0 5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .badge-pop {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 10px rgba(236, 72, 153, 0.25);
+    }
+
+    .hero-title {
+      font-size: 2.85rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--text-1);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-2);
+      margin-bottom: 2rem;
+    }
+
+    .hero-bullets {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .bullet-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-2);
+    }
+
+    .bullet-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hero-img-container {
+      background: var(--nm-base);
+      border-radius: 24px;
+      padding: 0.85rem;
+      box-shadow: var(--sh-raise);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .hero-img-wrapper {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--divider);
+      position: relative;
+    }
+
+    .hero-img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .hero-img-container:hover .hero-img {
+      transform: scale(1.02);
+    }
+
+    /* ── Service Cards Grid ── */
+    .repairs-showcase {
+      padding: 6.5rem 0;
+      background: var(--nm-deep);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text-1);
+    }
+
+    .repairs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .repair-card {
+      background: var(--nm-base);
+      border-radius: 20px;
+      padding: 2.2rem 1.8rem;
+      box-shadow: var(--sh-raise);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .repair-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 12px 12px 28px var(--nm-dark), -10px -10px 28px var(--nm-light), 0 0 0 1px var(--ring);
+    }
+
+    .repair-card-img-wrapper {
+      width: calc(100% + 3.6rem);
+      margin: -2.2rem -1.8rem 1.5rem -1.8rem;
+      height: 155px;
+      overflow: hidden;
+      border-radius: 20px 20px 0 0;
+      border-bottom: 1px solid var(--divider);
+      position: relative;
+      background: var(--nm-deep);
+    }
+
+    .repair-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .repair-card:hover .repair-card-img {
+      transform: scale(1.05);
+    }
+
+    .repair-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--nm-base);
+      box-shadow: var(--sh-inset-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .repair-icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .repair-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-1);
+    }
+
+    .repair-card p {
+      font-size: 0.88rem;
+      color: var(--text-2);
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .repair-meta {
+      border-top: 1px solid var(--divider);
+      padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+
+    .meta-time {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-weight: 600;
+      color: var(--text-2);
+    }
+
+    .meta-time svg {
+      width: 14px;
+      height: 14px;
+      color: var(--accent);
+    }
+
+    .meta-price {
+      font-weight: 800;
+      color: var(--accent2);
+    }
+
+    /* ── Estimator Section ── */
+    .estimator-section {
+      padding: 6.5rem 0;
+    }
+
+    .estimator-box {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--nm-base);
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: var(--sh-raise);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .estimator-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .estimator-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-2);
+    }
+
+    .custom-select {
+      background: var(--nm-base);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      box-shadow: var(--sh-inset-sm);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-1);
+      outline: none;
+      width: 100%;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px;
+    }
+
+    .estimator-result {
+      background: var(--nm-base);
+      border-radius: 20px;
+      box-shadow: var(--sh-inset);
+      padding: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .result-placeholder {
+      color: var(--text-3);
+      font-size: 0.95rem;
+    }
+
+    .result-content {
+      display: none;
+    }
+
+    .result-content.active {
+      display: block;
+      animation: fadeIn 0.4s forwards;
+    }
+
+    .result-device {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.5px;
+    }
+
+    .result-type {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--text-1);
+      margin-bottom: 1rem;
+    }
+
+    .result-price-box {
+      font-size: 2.85rem;
+      font-weight: 800;
+      color: var(--accent2);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1px;
+    }
+
+    .result-meta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      border-top: 1px solid var(--divider);
+      border-bottom: 1px solid var(--divider);
+      padding: 1rem 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .result-meta-item {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-2);
+    }
+
+    .result-meta-item strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--text-1);
+      margin-top: 0.15rem;
+    }
+
+    .result-guarantee {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--success);
+    }
+
+    .result-guarantee svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* ── FAQ Section ── */
+    .faq-section {
+      padding: 6.5rem 0;
+      background: var(--nm-deep);
+    }
+
+    .faq-accordion {
+      max-width: 750px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .faq-item {
+      background: var(--nm-base);
+      border-radius: 16px;
+      box-shadow: var(--sh-raise-sm);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+
+    .faq-item:hover {
+      box-shadow: var(--sh-raise);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 1.5rem 1.8rem;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-1);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+    }
+
+    .faq-question svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-question svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background: rgba(0, 0, 0, 0.01);
+    }
+
+    .faq-answer-inner {
+      padding: 0 1.8rem 1.5rem;
+      font-size: 0.9rem;
+      color: var(--text-2);
+      border-top: 1px solid var(--divider);
+      padding-top: 1rem;
+    }
+
+    /* ── Contact CTA Section ── */
+    .repair-cta {
+      padding: 6.5rem 0;
+      text-align: center;
+    }
+
+    .cta-box {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--nm-base);
+      border-radius: 24px;
+      padding: 4rem 2rem;
+      box-shadow: var(--sh-raise-lg);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .cta-box h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .cta-box p {
+      font-size: 1.05rem;
+      color: var(--text-2);
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    /* ── Footer ── */
+    #site-footer {
+      background: var(--nm-base);
+      border-top: 1px solid var(--divider);
+      padding: 5rem 0 3rem;
+      color: var(--text-2);
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-brand .logo {
+      display: inline-block;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-tagline {
+      font-size: 0.88rem;
+      color: var(--text-2);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.85rem;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .social-btn:hover {
+      box-shadow: var(--sh-inset-sm);
+      color: var(--accent);
+      transform: scale(1.05);
+    }
+
+    .social-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .footer-col-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-1);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .footer-links a {
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--divider);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--text-3);
+    }
+
+    /* ── Responsive Styling ── */
+    @media (max-width: 991px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 4.5rem 0;
+      }
+      .primary-nav, .header-cta {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .estimator-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-main {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Header ── -->
+  <header id="site-header" role="banner">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="logo" aria-label="Best Mobile — Home">
+          <img src="Logo.svg" alt="Best Mobile Logo" class="logo-img">
+        </a>
+
+        <nav class="primary-nav" aria-label="Main navigation">
+          <a href="index.html#services">Services</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#testimonials">Reviews</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="header-cta">
+          <div class="header-hours" aria-label="Open Monday to Sunday 10:00 AM to 8:30 PM">
+            <span class="dot" id="headerDot" aria-hidden="true"></span>
+            Mon–Sun 10 AM–8:30 PM
+          </div>
+          <a href="tel:+14163198000" class="btn btn-primary" aria-label="Call us">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z" />
+            </svg>
+            Call Now
+          </a>
+        </div>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Navigation">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#testimonials">Reviews</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="tel:+14163198000" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Call Now</a>
+  </div>
+
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <div class="container" style="display: flex; align-items: center; justify-content: flex-start; gap: 1.25rem;">
+        <a href="index.html" class="btn-back-arrow" aria-label="Back to home page">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </a>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <a href="index.html#services">Services</a>
+          <span class="separator">/</span>
+          <span class="current">Cell Phone Service &amp; Repair</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text-content">
+            <span class="badge-pop">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="margin-right:2px">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              Most Popular Service
+            </span>
+            <h1 class="hero-title">Cell Phone Service &amp; Repair</h1>
+            <p class="hero-desc">
+              Expert technicians handling all common repairs with same-day turnaround. Screen cracks, dead batteries, logic board faults — all covered under one roof.
+            </p>
+
+            <div class="hero-bullets">
+              <div class="bullet-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                All Major Brands
+              </div>
+              <div class="bullet-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                90-Day Warranty
+              </div>
+              <div class="bullet-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Free Diagnostic
+              </div>
+              <div class="bullet-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Same-Day Turnaround
+              </div>
+            </div>
+
+            <a href="#estimator" class="btn btn-primary">Get Price Estimate</a>
+          </div>
+
+          <div class="hero-img-container">
+            <div class="hero-img-wrapper">
+              <img src="phone_repair_board.png" alt="Technician repairing a phone circuit board" class="hero-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Repairs Showcase -->
+    <section class="repairs-showcase" id="repair-types">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Professional Protocols</span>
+          <h2 class="section-h2">Expert Hardware Care</h2>
+        </div>
+
+        <div class="repairs-grid">
+          <!-- Card 1 -->
+          <article class="repair-card">
+            <div class="repair-card-img-wrapper">
+              <img src="repair_screen.png" alt="Smartphone Screen Replacement" class="repair-card-img">
+            </div>
+            <div class="repair-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <h3>Screen Replacement</h3>
+            <p>Premium screen replacements for iPhone & all Android devices. Fixes cracked glass, bleeding LCDs, unresponsive touch digitisers, and green line displays.</p>
+            <div class="repair-meta">
+              <span class="meta-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                30–45 mins
+              </span>
+              <span class="meta-price">From $89</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="repair-card">
+            <div class="repair-card-img-wrapper">
+              <img src="repair_battery.png" alt="Smartphone Battery Swap" class="repair-card-img">
+            </div>
+            <div class="repair-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2" ry="2"/><line x1="22" y1="11" x2="22" y2="13"/></svg>
+            </div>
+            <h3>Battery Swap</h3>
+            <p>Premium capacity cell swaps. Resolves quick discharging, unexpected shutoffs, charging issues, and battery swelling. High-capacity cells with strict safety controls.</p>
+            <div class="repair-meta">
+              <span class="meta-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                20–30 mins
+              </span>
+              <span class="meta-price">From $59</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="repair-card">
+            <div class="repair-card-img-wrapper">
+              <img src="phone_repair_board.png" alt="Logic Board Micro-Soldering" class="repair-card-img">
+            </div>
+            <div class="repair-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Logic Board Micro-Soldering</h3>
+            <p>Precision micro-soldering under microscope. Repair logic board faults, water shorts, blown audio ICs, charging filters, FPC connectors, and memory chips.</p>
+            <div class="repair-meta">
+              <span class="meta-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                1–2 days
+              </span>
+              <span class="meta-price">From $129</span>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="repair-card">
+            <div class="repair-card-img-wrapper">
+              <img src="repair_water.png" alt="Water Damage Recovery" class="repair-card-img">
+            </div>
+            <div class="repair-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+            </div>
+            <h3>Water Damage Recovery</h3>
+            <p>Deep ultrasonic cleaning and board drying protocol. Liquid-exposed boards are completely disassembled, cleaned of corrosion, diagnostic-checked, and repaired.</p>
+            <div class="repair-meta">
+              <span class="meta-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                1–2 days
+              </span>
+              <span class="meta-price">From $79</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estimator Section -->
+    <section class="estimator-section" id="estimator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Transparent Rates</span>
+          <h2 class="section-h2">Instant Repair Cost Estimator</h2>
+        </div>
+
+        <div class="estimator-box">
+          <div class="estimator-grid">
+            <div class="estimator-form">
+              <div class="form-group">
+                <label for="brandSelect">Device Brand</label>
+                <select id="brandSelect" class="custom-select">
+                  <option value="" disabled selected>Select Brand</option>
+                  <option value="apple">Apple (iPhone)</option>
+                  <option value="samsung">Samsung</option>
+                  <option value="google">Google</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="modelSelect">Device Model</label>
+                <select id="modelSelect" class="custom-select" disabled>
+                  <option value="" disabled selected>Select Brand First</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="repairSelect">Repair Service</label>
+                <select id="repairSelect" class="custom-select" disabled>
+                  <option value="" disabled selected>Select Model First</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="estimator-result">
+              <div id="estimatorPlaceholder" class="result-placeholder">
+                <p>Select your brand, model, and repair service to generate an instant diagnostic price estimate.</p>
+              </div>
+              <div id="estimatorContent" class="result-content">
+                <div class="result-device" id="resDevice">iPhone 15 Pro Max</div>
+                <div class="result-type" id="resType">Screen Replacement</div>
+                <div class="result-price-box" id="resPrice">$249 - $299</div>
+                <div class="result-meta-row">
+                  <div class="result-meta-item">
+                    Est. Duration
+                    <strong id="resTime">30–45 Mins</strong>
+                  </div>
+                  <div class="result-meta-item">
+                    Coverage
+                    <strong id="resWarranty">90-Day Warranty</strong>
+                  </div>
+                </div>
+                <div class="result-guarantee">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  Your Data is Fully Preserved
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Got Questions?</span>
+          <h2 class="section-h2">Repair FAQs</h2>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              Will I lose my photos and data during repair?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                No, your data is fully preserved. We follow a strict security and technical repair protocol that does not touch your device's motherboard data storage. However, we always recommend making a backup before any hardware service as standard tech practice.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you use original Apple &amp; Samsung screens?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We use premium OEM-grade screen replacements and parts that match original factory specifications in color depth, touch sensitivity, refresh rates, and glass durability. We also offer original refurbished screens for select models.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              What does the 90-day warranty cover?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Our 90-day warranty covers any parts replaced and our labor costs. If the replaced screen, battery, or charging port fails to perform correctly, we replace it free of charge. The warranty does not cover subsequent physical cracks, drops, or liquid damage after repair completion.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              How does the "Free Diagnostic" work?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                When you bring your phone, we will run comprehensive hardware tests at no charge to find the exact fault. We explain the issue and quote a repair price. If you choose not to proceed with the repair, there is absolutely zero diagnostic fee to pay.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="repair-cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready to restore your device?</h2>
+          <p>Get your cell phone repaired today by Scarborough's trusted hardware specialists. Visit us at Pickering, Markham Road, or Birchmount Rd.</p>
+          <div class="cta-buttons">
+            <a href="index.html#contact" class="btn btn-primary">Find Nearest Location</a>
+            <a href="tel:+14163198000" class="btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z"/></svg>
+              Speak to a Technician
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer id="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Best Mobile — Home">
+            <img src="Logo.svg" alt="Best Mobile Logo" class="logo-img">
+          </a>
+          <p class="footer-tagline">Scarborough's trusted cell phone sales, service &amp; repair specialists — locally owned with 25 years of trusted experience.</p>
+          <div class="footer-social" aria-label="Social media">
+            <a href="index.html#contact" class="social-btn" aria-label="Find us on Google Maps">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
+            </a>
+            <a href="tel:+14163198000" class="social-btn" aria-label="Call us">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z" /></svg>
+            </a>
+            <a href="mailto:seven2356@gmail.com" class="social-btn" aria-label="Email us">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="repair-service.html">Cell Phone Service &amp; Repair</a></li>
+            <li><a href="index.html#services">Samsung &amp; iPhone Specialists</a></li>
+            <li><a href="index.html#services">Cell Phone Sales</a></li>
+            <li><a href="index.html#services">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#testimonials">Customer Reviews</a></li>
+            <li><a href="index.html#contact">Store Locations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Help &amp; Support</div>
+          <ul class="footer-links">
+            <li><a href="index.html#contact">Book Repair</a></li>
+            <li><a href="repair-service.html#faq">Repair FAQ</a></li>
+            <li><a href="tel:+14163198000">Support Hotline</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Best Mobile. All rights reserved.</span>
+        <span>Scarborough &amp; Pickering, ON, Canada</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Drawer Logic
+    (function() {
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      if (!hamburgerBtn || !mobileDrawer) return;
+
+      hamburgerBtn.addEventListener('click', () => {
+        const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+        hamburgerBtn.setAttribute('aria-expanded', !expanded);
+        hamburgerBtn.classList.toggle('active');
+        mobileDrawer.classList.toggle('active');
+      });
+
+      // Close drawer when link clicked
+      const mobileLinks = mobileDrawer.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+          hamburgerBtn.classList.remove('active');
+          mobileDrawer.classList.remove('active');
+        });
+      });
+    })();
+
+    // Live Hours Active indicator
+    (function () {
+      const headerDot = document.getElementById('headerDot');
+      if (!headerDot) return;
+      try {
+        const torontoString = new Date().toLocaleString("en-US", { timeZone: "America/Toronto" });
+        const torontoDate = new Date(torontoString);
+        const day = torontoDate.getDay();
+        const h = torontoDate.getHours();
+        const m = torontoDate.getMinutes();
+
+        const minutesToday = h * 60 + m;
+        const isOpen = day >= 0 && day <= 6 && minutesToday >= 600 && minutesToday < 1230; // 10:00 to 20:30
+
+        if (!isOpen) {
+          headerDot.classList.add('is-closed');
+        }
+      } catch (e) {
+        // Fallback
+        const h = new Date().getHours();
+        if (h < 10 || h >= 21) {
+          headerDot.classList.add('is-closed');
+        }
+      }
+    })();
+
+    // Accordion Logic
+    (function() {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(q => {
+        q.addEventListener('click', () => {
+          const item = q.parentElement;
+          const answer = item.querySelector('.faq-answer');
+          const isActive = item.classList.contains('active');
+
+          // Close all FAQ items
+          document.querySelectorAll('.faq-item').forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.faq-answer').style.maxHeight = null;
+          });
+
+          // Toggle clicked item
+          if (!isActive) {
+            item.classList.add('active');
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          }
+        });
+      });
+    })();
+
+    // Price Estimator Logic
+    (function() {
+      const brandSel = document.getElementById('brandSelect');
+      const modelSel = document.getElementById('modelSelect');
+      const repairSel = document.getElementById('repairSelect');
+      
+      const placeholder = document.getElementById('estimatorPlaceholder');
+      const resultBox = document.getElementById('estimatorContent');
+      
+      const resDevice = document.getElementById('resDevice');
+      const resType = document.getElementById('resType');
+      const resPrice = document.getElementById('resPrice');
+      const resTime = document.getElementById('resTime');
+      const resWarranty = document.getElementById('resWarranty');
+
+      // Database
+      const modelsData = {
+        apple: [
+          { value: 'iphone_16pm', label: 'iPhone 16 Pro Max' },
+          { value: 'iphone_16p', label: 'iPhone 16 Pro' },
+          { value: 'iphone_16pl', label: 'iPhone 16 Plus' },
+          { value: 'iphone_16', label: 'iPhone 16' },
+          { value: 'iphone_15pm', label: 'iPhone 15 Pro Max' },
+          { value: 'iphone_15p', label: 'iPhone 15 Pro' },
+          { value: 'iphone_15pl', label: 'iPhone 15 Plus' },
+          { value: 'iphone_15', label: 'iPhone 15' },
+          { value: 'iphone_14pm', label: 'iPhone 14 Pro Max' },
+          { value: 'iphone_14p', label: 'iPhone 14 Pro' },
+          { value: 'iphone_14pl', label: 'iPhone 14 Plus' },
+          { value: 'iphone_14', label: 'iPhone 14' },
+          { value: 'iphone_13pm', label: 'iPhone 13 Pro Max' },
+          { value: 'iphone_13p', label: 'iPhone 13 Pro' },
+          { value: 'iphone_13', label: 'iPhone 13' },
+          { value: 'iphone_13m', label: 'iPhone 13 mini' },
+          { value: 'iphone_12pm', label: 'iPhone 12 Pro Max' },
+          { value: 'iphone_12p', label: 'iPhone 12 Pro' },
+          { value: 'iphone_12', label: 'iPhone 12' },
+          { value: 'iphone_12m', label: 'iPhone 12 mini' },
+          { value: 'iphone_11pm', label: 'iPhone 11 Pro Max' },
+          { value: 'iphone_11p', label: 'iPhone 11 Pro' },
+          { value: 'iphone_11', label: 'iPhone 11' },
+          { value: 'iphone_se3', label: 'iPhone SE (3rd Gen)' },
+          { value: 'iphone_se2', label: 'iPhone SE (2nd Gen)' }
+        ],
+        samsung: [
+          { value: 's25u', label: 'Galaxy S25 Ultra' },
+          { value: 's25p', label: 'Galaxy S25+' },
+          { value: 's25', label: 'Galaxy S25' },
+          { value: 's24u', label: 'Galaxy S24 Ultra' },
+          { value: 's24p', label: 'Galaxy S24+' },
+          { value: 's24', label: 'Galaxy S24' },
+          { value: 's23u', label: 'Galaxy S23 Ultra' },
+          { value: 's23p', label: 'Galaxy S23+' },
+          { value: 's23', label: 'Galaxy S23' },
+          { value: 's22u', label: 'Galaxy S22 Ultra' },
+          { value: 's22p', label: 'Galaxy S22+' },
+          { value: 's22', label: 'Galaxy S22' },
+          { value: 's21u', label: 'Galaxy S21 Ultra' },
+          { value: 's21p', label: 'Galaxy S21+' },
+          { value: 's21', label: 'Galaxy S21' },
+          { value: 's21fe', label: 'Galaxy S21 FE' },
+          { value: 'a55', label: 'Galaxy A55' },
+          { value: 'a54', label: 'Galaxy A54' },
+          { value: 'a35', label: 'Galaxy A35' }
+        ],
+        google: [
+          { value: 'pixel_9pxl', label: 'Pixel 9 Pro XL' },
+          { value: 'pixel_9p', label: 'Pixel 9 Pro' },
+          { value: 'pixel_9', label: 'Pixel 9' },
+          { value: 'pixel_8a', label: 'Pixel 8a' },
+          { value: 'pixel_8p', label: 'Pixel 8 Pro' },
+          { value: 'pixel_8', label: 'Pixel 8' },
+          { value: 'pixel_7a', label: 'Pixel 7a' },
+          { value: 'pixel_7p', label: 'Pixel 7 Pro' },
+          { value: 'pixel_7', label: 'Pixel 7' },
+          { value: 'pixel_6a', label: 'Pixel 6a' },
+          { value: 'pixel_6p', label: 'Pixel 6 Pro' },
+          { value: 'pixel_6', label: 'Pixel 6' }
+        ]
+      };
+
+      const repairsData = [
+        { value: 'screen', label: 'Screen Replacement' },
+        { value: 'battery', label: 'Battery Swap' },
+        { value: 'microsolder', label: 'Logic Board Micro-Soldering' },
+        { value: 'diagnostic', label: 'Diagnostics & Troubleshooting' }
+      ];
+
+      // Matrix generator pricing ranges
+      const priceMatrix = {
+        // Apple - iPhone 16 Series
+        'iphone_16pm_screen': { price: '$329 - $379', time: '30–45 Mins' },
+        'iphone_16pm_battery': { price: '$109 - $129', time: '20–30 Mins' },
+        'iphone_16pm_microsolder': { price: '$179 - $229', time: '1–2 Days' },
+        'iphone_16pm_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_16p_screen': { price: '$299 - $349', time: '30–45 Mins' },
+        'iphone_16p_battery': { price: '$109 - $129', time: '20–30 Mins' },
+        'iphone_16p_microsolder': { price: '$169 - $219', time: '1–2 Days' },
+        'iphone_16p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_16pl_screen': { price: '$269 - $319', time: '30–45 Mins' },
+        'iphone_16pl_battery': { price: '$99 - $119', time: '20–30 Mins' },
+        'iphone_16pl_microsolder': { price: '$159 - $209', time: '1–2 Days' },
+        'iphone_16pl_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_16_screen': { price: '$249 - $289', time: '30–45 Mins' },
+        'iphone_16_battery': { price: '$99 - $119', time: '20–30 Mins' },
+        'iphone_16_microsolder': { price: '$149 - $199', time: '1–2 Days' },
+        'iphone_16_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Apple - iPhone 15 Series
+        'iphone_15pm_screen': { price: '$279 - $329', time: '30–45 Mins' },
+        'iphone_15pm_battery': { price: '$99 - $119', time: '20–30 Mins' },
+        'iphone_15pm_microsolder': { price: '$159 - $209', time: '1–2 Days' },
+        'iphone_15pm_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_15p_screen': { price: '$259 - $309', time: '30–45 Mins' },
+        'iphone_15p_battery': { price: '$99 - $119', time: '20–30 Mins' },
+        'iphone_15p_microsolder': { price: '$159 - $209', time: '1–2 Days' },
+        'iphone_15p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_15pl_screen': { price: '$239 - $289', time: '30–45 Mins' },
+        'iphone_15pl_battery': { price: '$99 - $119', time: '20–30 Mins' },
+        'iphone_15pl_microsolder': { price: '$149 - $199', time: '1–2 Days' },
+        'iphone_15pl_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_15_screen': { price: '$229 - $269', time: '30–45 Mins' },
+        'iphone_15_battery': { price: '$89 - $109', time: '20–30 Mins' },
+        'iphone_15_microsolder': { price: '$149 - $199', time: '1–2 Days' },
+        'iphone_15_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Apple - iPhone 14 Series
+        'iphone_14pm_screen': { price: '$269 - $319', time: '30–45 Mins' },
+        'iphone_14pm_battery': { price: '$89 - $109', time: '20–30 Mins' },
+        'iphone_14pm_microsolder': { price: '$159 - $209', time: '1–2 Days' },
+        'iphone_14pm_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_14p_screen': { price: '$249 - $299', time: '30–45 Mins' },
+        'iphone_14p_battery': { price: '$89 - $109', time: '20–30 Mins' },
+        'iphone_14p_microsolder': { price: '$149 - $199', time: '1–2 Days' },
+        'iphone_14p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_14pl_screen': { price: '$209 - $249', time: '30–45 Mins' },
+        'iphone_14pl_battery': { price: '$89 - $109', time: '20–30 Mins' },
+        'iphone_14pl_microsolder': { price: '$139 - $189', time: '1–2 Days' },
+        'iphone_14pl_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_14_screen': { price: '$189 - $229', time: '30–45 Mins' },
+        'iphone_14_battery': { price: '$79 - $99', time: '20–30 Mins' },
+        'iphone_14_microsolder': { price: '$139 - $189', time: '1–2 Days' },
+        'iphone_14_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Apple - iPhone 13 Series
+        'iphone_13pm_screen': { price: '$229 - $269', time: '30–45 Mins' },
+        'iphone_13pm_battery': { price: '$79 - $99', time: '20–30 Mins' },
+        'iphone_13pm_microsolder': { price: '$139 - $189', time: '1–2 Days' },
+        'iphone_13pm_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_13p_screen': { price: '$209 - $249', time: '30–45 Mins' },
+        'iphone_13p_battery': { price: '$79 - $99', time: '20–30 Mins' },
+        'iphone_13p_microsolder': { price: '$139 - $189', time: '1–2 Days' },
+        'iphone_13p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_13_screen': { price: '$159 - $199', time: '30–45 Mins' },
+        'iphone_13_battery': { price: '$79 - $89', time: '20–30 Mins' },
+        'iphone_13_microsolder': { price: '$129 - $179', time: '1–2 Days' },
+        'iphone_13_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_13m_screen': { price: '$149 - $189', time: '30–45 Mins' },
+        'iphone_13m_battery': { price: '$79 - $89', time: '20–30 Mins' },
+        'iphone_13m_microsolder': { price: '$129 - $179', time: '1–2 Days' },
+        'iphone_13m_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Apple - iPhone 12 Series
+        'iphone_12pm_screen': { price: '$179 - $219', time: '30–45 Mins' },
+        'iphone_12pm_battery': { price: '$69 - $89', time: '20–30 Mins' },
+        'iphone_12pm_microsolder': { price: '$129 - $179', time: '1–2 Days' },
+        'iphone_12pm_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_12p_screen': { price: '$159 - $199', time: '30–45 Mins' },
+        'iphone_12p_battery': { price: '$69 - $89', time: '20–30 Mins' },
+        'iphone_12p_microsolder': { price: '$129 - $179', time: '1–2 Days' },
+        'iphone_12p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_12_screen': { price: '$129 - $169', time: '30–45 Mins' },
+        'iphone_12_battery': { price: '$69 - $79', time: '20–30 Mins' },
+        'iphone_12_microsolder': { price: '$129 - $169', time: '1–2 Days' },
+        'iphone_12_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_12m_screen': { price: '$129 - $159', time: '30–45 Mins' },
+        'iphone_12m_battery': { price: '$69 - $79', time: '20–30 Mins' },
+        'iphone_12m_microsolder': { price: '$119 - $159', time: '1–2 Days' },
+        'iphone_12m_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Apple - iPhone 11 Series
+        'iphone_11pm_screen': { price: '$139 - $179', time: '30–45 Mins' },
+        'iphone_11pm_battery': { price: '$69 - $79', time: '20–30 Mins' },
+        'iphone_11pm_microsolder': { price: '$119 - $159', time: '1–2 Days' },
+        'iphone_11pm_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_11p_screen': { price: '$129 - $169', time: '30–45 Mins' },
+        'iphone_11p_battery': { price: '$69 - $79', time: '20–30 Mins' },
+        'iphone_11p_microsolder': { price: '$119 - $159', time: '1–2 Days' },
+        'iphone_11p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_11_screen': { price: '$99 - $129', time: '30–45 Mins' },
+        'iphone_11_battery': { price: '$59 - $69', time: '20–30 Mins' },
+        'iphone_11_microsolder': { price: '$109 - $149', time: '1–2 Days' },
+        'iphone_11_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Apple - iPhone SE Series
+        'iphone_se3_screen': { price: '$89 - $109', time: '30–45 Mins' },
+        'iphone_se3_battery': { price: '$59 - $69', time: '20–30 Mins' },
+        'iphone_se3_microsolder': { price: '$99 - $139', time: '1–2 Days' },
+        'iphone_se3_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'iphone_se2_screen': { price: '$79 - $99', time: '30–45 Mins' },
+        'iphone_se2_battery': { price: '$49 - $59', time: '20–30 Mins' },
+        'iphone_se2_microsolder': { price: '$89 - $129', time: '1–2 Days' },
+        'iphone_se2_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Samsung - Galaxy S25 Series
+        's25u_screen': { price: '$329 - $379', time: '40–50 Mins' },
+        's25u_battery': { price: '$99 - $119', time: '20–30 Mins' },
+        's25u_microsolder': { price: '$169 - $219', time: '1–2 Days' },
+        's25u_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        's25p_screen': { price: '$269 - $319', time: '40–50 Mins' },
+        's25p_battery': { price: '$89 - $109', time: '20–30 Mins' },
+        's25p_microsolder': { price: '$159 - $209', time: '1–2 Days' },
+        's25p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        's25_screen': { price: '$249 - $299', time: '40–50 Mins' },
+        's25_battery': { price: '$89 - $109', time: '20–30 Mins' },
+        's25_microsolder': { price: '$149 - $199', time: '1–2 Days' },
+        's25_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Samsung - Galaxy S24 Series
+        's24u_screen': { price: '$299 - $349', time: '40–50 Mins' },
+        's24u_battery': { price: '$89 - $109', time: '20–30 Mins' },
+        's24u_microsolder': { price: '$159 - $209', time: '1–2 Days' },
+        's24u_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        's24p_screen': { price: '$249 - $299', time: '40–50 Mins' },
+        's24p_battery': { price: '$79 - $99', time: '20–30 Mins' },
+        's24p_microsolder': { price: '$149 - $199', time: '1–2 Days' },
+        's24p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        's24_screen': { price: '$239 - $279', time: '40–50 Mins' },
+        's24_battery': { price: '$79 - $99', time: '20–30 Mins' },
+        's24_microsolder': { price: '$149 - $199', time: '1–2 Days' },
+        's24_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Samsung - Galaxy S23 Series
+        's23u_screen': { price: '$269 - $319', time: '40–50 Mins' },
+        's23u_battery': { price: '$79 - $99', time: '20–30 Mins' },
+        's23u_microsolder': { price: '$149 - $199', time: '1–2 Days' },
+        's23u_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        's23p_screen': { price: '$229 - $279', time: '40–50 Mins' },
+        's23p_battery': { price: '$79 - $99', time: '20–30 Mins' },
+        's23p_microsolder': { price: '$139 - $189', time: '1–2 Days' },
+        's23p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        's23_screen': { price: '$219 - $259', time: '40–50 Mins' },
+        's23_battery': { price: '$69 - $89', time: '20–30 Mins' },
+        's23_microsolder': { price: '$139 - $189', time: '1–2 Days' },
+        's23_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Samsung - Galaxy S22 Series
+        's22u_screen': { price: '$249 - $299', time: '40–50 Mins' },
+        's22u_battery': { price: '$79 - $99', time: '20–30 Mins' },
+        's22u_microsolder': { price: '$139 - $189', time: '1–2 Days' },
+        's22u_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        's22p_screen': { price: '$209 - $249', time: '40–50 Mins' },
+        's22p_battery': { price: '$79 - $89', time: '20–30 Mins' },
+        's22p_microsolder': { price: '$129 - $179', time: '1–2 Days' },
+        's22p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        's22_screen': { price: '$189 - $229', time: '40–50 Mins' },
+        's22_battery': { price: '$69 - $79', time: '20–30 Mins' },
+        's22_microsolder': { price: '$129 - $169', time: '1–2 Days' },
+        's22_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Samsung - Galaxy S21 Series
+        's21u_screen': { price: '$219 - $259', time: '40–50 Mins' },
+        's21u_battery': { price: '$69 - $89', time: '20–30 Mins' },
+        's21u_microsolder': { price: '$129 - $179', time: '1–2 Days' },
+        's21u_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        's21p_screen': { price: '$179 - $219', time: '40–50 Mins' },
+        's21p_battery': { price: '$69 - $79', time: '20–30 Mins' },
+        's21p_microsolder': { price: '$119 - $169', time: '1–2 Days' },
+        's21p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        's21_screen': { price: '$159 - $199', time: '40–50 Mins' },
+        's21_battery': { price: '$59 - $79', time: '20–30 Mins' },
+        's21_microsolder': { price: '$119 - $159', time: '1–2 Days' },
+        's21_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        's21fe_screen': { price: '$139 - $179', time: '40–50 Mins' },
+        's21fe_battery': { price: '$59 - $79', time: '20–30 Mins' },
+        's21fe_microsolder': { price: '$109 - $149', time: '1–2 Days' },
+        's21fe_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Samsung - Galaxy A Series
+        'a55_screen': { price: '$149 - $189', time: '30–45 Mins' },
+        'a55_battery': { price: '$59 - $79', time: '20–30 Mins' },
+        'a55_microsolder': { price: '$119 - $159', time: '1–2 Days' },
+        'a55_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'a54_screen': { price: '$139 - $169', time: '30–45 Mins' },
+        'a54_battery': { price: '$59 - $79', time: '20–30 Mins' },
+        'a54_microsolder': { price: '$119 - $159', time: '1–2 Days' },
+        'a54_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'a35_screen': { price: '$129 - $159', time: '30–45 Mins' },
+        'a35_battery': { price: '$59 - $79', time: '20–30 Mins' },
+        'a35_microsolder': { price: '$109 - $149', time: '1–2 Days' },
+        'a35_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Google - Pixel 9 Series
+        'pixel_9pxl_screen': { price: '$289 - $339', time: '30–45 Mins' },
+        'pixel_9pxl_battery': { price: '$89 - $109', time: '20–30 Mins' },
+        'pixel_9pxl_microsolder': { price: '$159 - $209', time: '1–2 Days' },
+        'pixel_9pxl_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'pixel_9p_screen': { price: '$269 - $319', time: '30–45 Mins' },
+        'pixel_9p_battery': { price: '$89 - $109', time: '20–30 Mins' },
+        'pixel_9p_microsolder': { price: '$159 - $209', time: '1–2 Days' },
+        'pixel_9p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'pixel_9_screen': { price: '$229 - $269', time: '30–45 Mins' },
+        'pixel_9_battery': { price: '$79 - $99', time: '20–30 Mins' },
+        'pixel_9_microsolder': { price: '$149 - $199', time: '1–2 Days' },
+        'pixel_9_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Google - Pixel 8 Series
+        'pixel_8p_screen': { price: '$249 - $289', time: '30–45 Mins' },
+        'pixel_8p_battery': { price: '$79 - $99', time: '20–30 Mins' },
+        'pixel_8p_microsolder': { price: '$149 - $189', time: '1–2 Days' },
+        'pixel_8p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'pixel_8_screen': { price: '$199 - $239', time: '30–45 Mins' },
+        'pixel_8_battery': { price: '$69 - $89', time: '20–30 Mins' },
+        'pixel_8_microsolder': { price: '$139 - $179', time: '1–2 Days' },
+        'pixel_8_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'pixel_8a_screen': { price: '$159 - $199', time: '30–45 Mins' },
+        'pixel_8a_battery': { price: '$69 - $89', time: '20–30 Mins' },
+        'pixel_8a_microsolder': { price: '$129 - $169', time: '1–2 Days' },
+        'pixel_8a_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Google - Pixel 7 Series
+        'pixel_7p_screen': { price: '$219 - $259', time: '30–45 Mins' },
+        'pixel_7p_battery': { price: '$79 - $89', time: '20–30 Mins' },
+        'pixel_7p_microsolder': { price: '$139 - $179', time: '1–2 Days' },
+        'pixel_7p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'pixel_7_screen': { price: '$169 - $199', time: '30–45 Mins' },
+        'pixel_7_battery': { price: '$69 - $79', time: '20–30 Mins' },
+        'pixel_7_microsolder': { price: '$129 - $169', time: '1–2 Days' },
+        'pixel_7_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'pixel_7a_screen': { price: '$149 - $189', time: '30–45 Mins' },
+        'pixel_7a_battery': { price: '$69 - $79', time: '20–30 Mins' },
+        'pixel_7a_microsolder': { price: '$129 - $169', time: '1–2 Days' },
+        'pixel_7a_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        // Google - Pixel 6 Series
+        'pixel_6a_screen': { price: '$129 - $159', time: '30–45 Mins' },
+        'pixel_6a_battery': { price: '$59 - $79', time: '20–30 Mins' },
+        'pixel_6a_microsolder': { price: '$119 - $149', time: '1–2 Days' },
+        'pixel_6a_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'pixel_6p_screen': { price: '$189 - $229', time: '30–45 Mins' },
+        'pixel_6p_battery': { price: '$69 - $89', time: '20–30 Mins' },
+        'pixel_6p_microsolder': { price: '$129 - $169', time: '1–2 Days' },
+        'pixel_6p_diagnostic': { price: 'FREE', time: '15 Mins' },
+
+        'pixel_6_screen': { price: '$149 - $189', time: '30–45 Mins' },
+        'pixel_6_battery': { price: '$69 - $79', time: '20–30 Mins' },
+        'pixel_6_microsolder': { price: '$119 - $159', time: '1–2 Days' },
+        'pixel_6_diagnostic': { price: 'FREE', time: '15 Mins' }
+      };
+
+      // Listeners
+      brandSel.addEventListener('change', () => {
+        const brand = brandSel.value;
+        modelSel.innerHTML = '<option value="" disabled selected>Select Model</option>';
+        repairSel.innerHTML = '<option value="" disabled selected>Select Model First</option>';
+        modelSel.disabled = false;
+        repairSel.disabled = true;
+
+        if (modelsData[brand]) {
+          modelsData[brand].forEach(m => {
+            const opt = document.createElement('option');
+            opt.value = m.value;
+            opt.textContent = m.label;
+            modelSel.appendChild(opt);
+          });
+        }
+
+        placeholder.style.display = 'block';
+        resultBox.classList.remove('active');
+      });
+
+      modelSel.addEventListener('change', () => {
+        repairSel.innerHTML = '<option value="" disabled selected>Select Repair Service</option>';
+        repairSel.disabled = false;
+
+        repairsData.forEach(r => {
+          const opt = document.createElement('option');
+          opt.value = r.value;
+          opt.textContent = r.label;
+          repairSel.appendChild(opt);
+        });
+
+        placeholder.style.display = 'block';
+        resultBox.classList.remove('active');
+      });
+
+      repairSel.addEventListener('change', () => {
+        const modelVal = modelSel.value;
+        const repairVal = repairSel.value;
+        const key = `${modelVal}_${repairVal}`;
+
+        const modelLabel = modelSel.options[modelSel.selectedIndex].text;
+        const repairLabel = repairSel.options[repairSel.selectedIndex].text;
+
+        if (priceMatrix[key]) {
+          const data = priceMatrix[key];
+          
+          resDevice.textContent = modelLabel;
+          resType.textContent = repairLabel;
+          resPrice.textContent = data.price;
+          resTime.textContent = data.time;
+          resWarranty.textContent = repairVal === 'diagnostic' ? 'N/A' : '90-Day Warranty';
+
+          placeholder.style.display = 'none';
+          resultBox.classList.add('active');
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
