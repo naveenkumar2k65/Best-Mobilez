@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cell Phone Service & Repair — Best Mobile</title>
+  <title>Accessories &amp; Premium Brands — Best Mobile</title>
   <meta name="description"
-    content="Professional iPhone and Android repairs in Scarborough & Pickering. Screen replacements, capacity battery swaps, microscope micro-soldering. 90-day warranty.">
+    content="High-grade cell phone accessories in Scarborough &amp; Pickering. PD-certified fast chargers, 9H tempered glass screen protectors, MFi cables, MagSafe accessories, and rugged cases.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Cell Phone Service & Repair — Best Mobile">
+  <meta property="og:title" content="Accessories &amp; Premium Brands — Best Mobile">
   <meta property="og:description"
-    content="Scarborough's trusted repair specialists. Screen replacements, battery swaps, and micro-soldering.">
-  <meta property="og:image" content="phone_repair_board.png">
+    content="Only high-grade accessories tested for safety and performance. Certified cables, tempered glass, and PD charging hubs. No cheap knock-offs.">
+  <meta property="og:image" content="Accessories.png">
   <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -417,6 +417,38 @@
       transform: scale(1.02);
     }
 
+    /* ── Fast Stats Row ── */
+    .service-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    .service-stat-card {
+      background: var(--nm-base);
+      border-radius: 18px;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--sh-raise-sm);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .service-stat-lbl {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-stat-val {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
     /* ── Service Cards Grid ── */
     .repairs-showcase {
       padding: 6.5rem 0;
@@ -447,7 +479,7 @@
 
     .repairs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
     }
 
@@ -466,28 +498,6 @@
     .repair-card:hover {
       transform: translateY(-5px);
       box-shadow: 12px 12px 28px var(--nm-dark), -10px -10px 28px var(--nm-light), 0 0 0 1px var(--ring);
-    }
-
-    .repair-card-img-wrapper {
-      width: calc(100% + 3.6rem);
-      margin: -2.2rem -1.8rem 1.5rem -1.8rem;
-      height: 155px;
-      overflow: hidden;
-      border-radius: 20px 20px 0 0;
-      border-bottom: 1px solid var(--divider);
-      position: relative;
-      background: var(--nm-deep);
-    }
-
-    .repair-card-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .repair-card:hover .repair-card-img {
-      transform: scale(1.05);
     }
 
     .repair-icon {
@@ -550,161 +560,10 @@
       color: var(--accent2);
     }
 
-    /* ── Estimator Section ── */
-    .estimator-section {
-      padding: 6.5rem 0;
-    }
-
-    .estimator-box {
-      max-width: 850px;
-      margin: 0 auto;
-      background: var(--nm-base);
-      border-radius: 24px;
-      padding: 3rem;
-      box-shadow: var(--sh-raise);
-      border: 1px solid rgba(255, 255, 255, 0.7);
-    }
-
-    .estimator-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-    }
-
-    .estimator-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .form-group label {
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--text-2);
-    }
-
-    .custom-select {
-      background: var(--nm-base);
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      padding: 0.85rem 1rem;
-      border-radius: 12px;
-      box-shadow: var(--sh-inset-sm);
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--text-1);
-      outline: none;
-      width: 100%;
-      cursor: pointer;
-      appearance: none;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
-      background-repeat: no-repeat;
-      background-position: right 12px center;
-      background-size: 16px;
-    }
-
-    .estimator-result {
-      background: var(--nm-base);
-      border-radius: 20px;
-      box-shadow: var(--sh-inset);
-      padding: 2.2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .result-placeholder {
-      color: var(--text-3);
-      font-size: 0.95rem;
-    }
-
-    .result-content {
-      display: none;
-    }
-
-    .result-content.active {
-      display: block;
-      animation: fadeIn 0.4s forwards;
-    }
-
-    .result-device {
-      font-size: 0.85rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.35rem;
-      letter-spacing: 0.5px;
-    }
-
-    .result-type {
-      font-size: 1.45rem;
-      font-weight: 800;
-      color: var(--text-1);
-      margin-bottom: 1rem;
-    }
-
-    .result-price-box {
-      font-size: 2.85rem;
-      font-weight: 800;
-      color: var(--accent2);
-      line-height: 1;
-      margin-bottom: 1.5rem;
-      letter-spacing: -1px;
-    }
-
-    .result-meta-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      border-top: 1px solid var(--divider);
-      border-bottom: 1px solid var(--divider);
-      padding: 1rem 0;
-      margin-bottom: 1.5rem;
-    }
-
-    .result-meta-item {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-2);
-    }
-
-    .result-meta-item strong {
-      display: block;
-      font-size: 0.92rem;
-      color: var(--text-1);
-      margin-top: 0.15rem;
-    }
-
-    .result-guarantee {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--success);
-    }
-
-    .result-guarantee svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
     /* ── FAQ Section ── */
     .faq-section {
       padding: 6.5rem 0;
-      background: var(--nm-deep);
+      background: var(--nm-base);
     }
 
     .faq-accordion {
@@ -775,6 +634,7 @@
     .repair-cta {
       padding: 6.5rem 0;
       text-align: center;
+      background: var(--nm-deep);
     }
 
     .cta-box {
@@ -840,44 +700,39 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: var(--nm-base);
-      box-shadow: var(--sh-raise-sm);
-      border: 1px solid rgba(255, 255, 255, 0.7);
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: var(--sh-raise-sm);
       transition: all 0.2s;
     }
 
     .social-btn:hover {
       box-shadow: var(--sh-inset-sm);
       color: var(--accent);
-      transform: scale(1.05);
     }
 
     .social-btn svg {
       width: 16px;
       height: 16px;
-      fill: none;
       stroke: currentColor;
+      fill: none;
       stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
     }
 
     .footer-col-title {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 800;
       color: var(--text-1);
-      margin-bottom: 1.5rem;
       text-transform: uppercase;
+      margin-bottom: 1.5rem;
       letter-spacing: 0.5px;
     }
 
     .footer-links {
       display: flex;
       flex-direction: column;
-      gap: 0.85rem;
+      gap: 0.8rem;
     }
 
     .footer-links a {
@@ -924,9 +779,9 @@
       .hero-title {
         font-size: 2.2rem;
       }
-      .estimator-grid {
+      .service-stats-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 1.25rem;
       }
       .cta-buttons {
         flex-direction: column;
@@ -1156,7 +1011,7 @@
           <span class="separator">/</span>
           <a href="index.html#services">Services</a>
           <span class="separator">/</span>
-          <span class="current">Cell Phone Service &amp; Repair</span>
+          <span class="current">Accessories</span>
         </div>
       </div>
     </nav>
@@ -1170,193 +1025,168 @@
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="margin-right:2px">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
-              Most Popular Service
+              Premium Brands
             </span>
-            <h1 class="hero-title">Cell Phone Service &amp; Repair</h1>
+            <h1 class="hero-title">Accessories</h1>
             <p class="hero-desc">
-              Expert technicians handling all common repairs with same-day turnaround. Screen cracks, dead batteries, logic board faults — all covered under one roof.
+              Only high-grade accessories tested for safety and performance — certified cables, tempered glass, and power delivery charging hubs. No cheap knock-offs that risk your device.
             </p>
 
             <div class="hero-bullets">
               <div class="bullet-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                All Major Brands
+                PD-certified chargers
               </div>
               <div class="bullet-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                90-Day Warranty
+                9H tempered glass
               </div>
               <div class="bullet-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Free Diagnostic
+                MFi cables
               </div>
               <div class="bullet-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Same-Day Turnaround
+                MagSafe compatible
+              </div>
+              <div class="bullet-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Rugged cases
+              </div>
+              <div class="bullet-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Premium brands
               </div>
             </div>
 
-            <a href="#estimator" class="btn btn-primary">Get Price Estimate</a>
+            <a href="index.html#contact" class="btn btn-primary">Enquire about accessories &rarr;</a>
           </div>
 
           <div class="hero-img-container">
             <div class="hero-img-wrapper">
-              <img src="phone_repair_board.png" alt="Technician repairing a phone circuit board" class="hero-img">
+              <img src="Accessories.png" alt="Phone accessories including cables and chargers on display" class="hero-img">
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Fast Stats Row -->
+    <div class="container">
+      <div class="service-stats-grid">
+        <div class="service-stat-card">
+          <div class="service-stat-lbl">Quality Standard</div>
+          <div class="service-stat-val">Premium brands only</div>
+        </div>
+        <div class="service-stat-card">
+          <div class="service-stat-lbl">Safety Rating</div>
+          <div class="service-stat-val">Safety certified</div>
+        </div>
+        <div class="service-stat-card">
+          <div class="service-stat-lbl">Device Compatibility</div>
+          <div class="service-stat-val">All models covered</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Repairs Showcase -->
-    <section class="repairs-showcase" id="repair-types">
+    <section class="repairs-showcase" id="protocols">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Professional Protocols</span>
-          <h2 class="section-h2">Expert Hardware Care</h2>
+          <span class="section-label">Safe &amp; Certified</span>
+          <h2 class="section-h2">High-Performance Accessories</h2>
         </div>
 
         <div class="repairs-grid">
           <!-- Card 1 -->
           <article class="repair-card">
-            <div class="repair-card-img-wrapper">
-              <img src="repair_screen.png" alt="Smartphone Screen Replacement" class="repair-card-img">
-            </div>
             <div class="repair-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             </div>
-            <h3>Screen Replacement</h3>
-            <p>Premium screen replacements for iPhone & all Android devices. Fixes cracked glass, bleeding LCDs, unresponsive touch digitisers, and green line displays.</p>
+            <h3>PD-Certified Chargers</h3>
+            <p>PD-certified 65W–140W chargers for fast, safe charging. High-speed power delivery adapters safely regulate voltage levels for quick-charging smartphones and laptops.</p>
             <div class="repair-meta">
               <span class="meta-time">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                30–45 mins
+                65W–140W power delivery
               </span>
-              <span class="meta-price">From $89</span>
             </div>
           </article>
 
           <!-- Card 2 -->
           <article class="repair-card">
-            <div class="repair-card-img-wrapper">
-              <img src="repair_battery.png" alt="Smartphone Battery Swap" class="repair-card-img">
-            </div>
             <div class="repair-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2" ry="2"/><line x1="22" y1="11" x2="22" y2="13"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
             </div>
-            <h3>Battery Swap</h3>
-            <p>Premium capacity cell swaps. Resolves quick discharging, unexpected shutoffs, charging issues, and battery swelling. High-capacity cells with strict safety controls.</p>
+            <h3>9H Tempered Glass</h3>
+            <p>9H hardness tempered glass for full drop protection. Engineered to absorb high impact shocks, protecting screen panels from scratches and shattering.</p>
             <div class="repair-meta">
               <span class="meta-time">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                20–30 mins
+                9H hardness rating
               </span>
-              <span class="meta-price">From $59</span>
             </div>
           </article>
 
           <!-- Card 3 -->
           <article class="repair-card">
-            <div class="repair-card-img-wrapper">
-              <img src="phone_repair_board.png" alt="Logic Board Micro-Soldering" class="repair-card-img">
-            </div>
             <div class="repair-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z"/><path d="M6 21a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3v12a3 3 0 0 0 3 3z"/></svg>
             </div>
-            <h3>Logic Board Micro-Soldering</h3>
-            <p>Precision micro-soldering under microscope. Repair logic board faults, water shorts, blown audio ICs, charging filters, FPC connectors, and memory chips.</p>
+            <h3>MFi-Certified Cables</h3>
+            <p>MFi-certified Lightning &amp; USB-C cables for all devices. Guaranteed data sync and charge compatibility without iOS alert warnings or connection drops.</p>
             <div class="repair-meta">
               <span class="meta-time">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                1–2 days
+                Apple MFi &amp; USB-IF certified
               </span>
-              <span class="meta-price">From $129</span>
             </div>
           </article>
 
           <!-- Card 4 -->
           <article class="repair-card">
-            <div class="repair-card-img-wrapper">
-              <img src="repair_water.png" alt="Water Damage Recovery" class="repair-card-img">
-            </div>
             <div class="repair-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
             </div>
-            <h3>Water Damage Recovery</h3>
-            <p>Deep ultrasonic cleaning and board drying protocol. Liquid-exposed boards are completely disassembled, cleaned of corrosion, diagnostic-checked, and repaired.</p>
+            <h3>MagSafe &amp; Wireless</h3>
+            <p>Wireless &amp; MagSafe chargers for iPhone &amp; Android. Perfectly aligned magnetic arrays for efficient inductive power transfer and fast wire-free charging.</p>
             <div class="repair-meta">
               <span class="meta-time">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                1–2 days
+                Qi &amp; MagSafe compatible
               </span>
-              <span class="meta-price">From $79</span>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- Estimator Section -->
-    <section class="estimator-section" id="estimator">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Transparent Rates</span>
-          <h2 class="section-h2">Instant Repair Cost Estimator</h2>
-        </div>
-
-        <div class="estimator-box">
-          <div class="estimator-grid">
-            <div class="estimator-form">
-              <div class="form-group">
-                <label for="brandSelect">Device Brand</label>
-                <select id="brandSelect" class="custom-select">
-                  <option value="" disabled selected>Select Brand</option>
-                  <option value="apple">Apple (iPhone)</option>
-                  <option value="samsung">Samsung</option>
-                  <option value="google">Google</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="modelSelect">Device Model</label>
-                <select id="modelSelect" class="custom-select" disabled>
-                  <option value="" disabled selected>Select Brand First</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="repairSelect">Repair Service</label>
-                <select id="repairSelect" class="custom-select" disabled>
-                  <option value="" disabled selected>Select Model First</option>
-                </select>
-              </div>
+          <!-- Card 5 -->
+          <article class="repair-card">
+            <div class="repair-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
             </div>
-
-            <div class="estimator-result">
-              <div id="estimatorPlaceholder" class="result-placeholder">
-                <p>Select your brand, model, and repair service to generate an instant diagnostic price estimate.</p>
-              </div>
-              <div id="estimatorContent" class="result-content">
-                <div class="result-device" id="resDevice">iPhone 15 Pro Max</div>
-                <div class="result-type" id="resType">Screen Replacement</div>
-                <div class="result-price-box" id="resPrice">$249 - $299</div>
-                <div class="result-meta-row">
-                  <div class="result-meta-item">
-                    Est. Duration
-                    <strong id="resTime">30–45 Mins</strong>
-                  </div>
-                  <div class="result-meta-item">
-                    Coverage
-                    <strong id="resWarranty">90-Day Warranty</strong>
-                  </div>
-                </div>
-                <div class="result-guarantee">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  Your Data is Fully Preserved
-                </div>
-              </div>
+            <h3>Slim &amp; Rugged Cases</h3>
+            <p>Slim &amp; rugged protective cases for all popular models. Military-grade shock-absorption corner cushions and raised bezels safeguard phone screen glass and cameras.</p>
+            <div class="repair-meta">
+              <span class="meta-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Military drop-test standards
+              </span>
             </div>
-          </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="repair-card">
+            <div class="repair-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Premium Brand Guarantee</h3>
+            <p>We only stock accessories from trusted, certified brands (like Anker, OtterBox, and Belkin), avoiding cheap replicas that can damage batteries or screen layers.</p>
+            <div class="repair-meta">
+              <span class="meta-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                100% genuine products only
+              </span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1366,19 +1196,19 @@
       <div class="container">
         <div class="section-header">
           <span class="section-label">Got Questions?</span>
-          <h2 class="section-h2">Repair FAQs</h2>
+          <h2 class="section-h2">Accessories FAQs</h2>
         </div>
 
         <div class="faq-accordion">
           <!-- FAQ 1 -->
           <div class="faq-item">
             <button class="faq-question">
-              Will I lose my photos and data during repair?
+              Why shouldn't I buy cheap charging cables?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                No, your data is fully preserved. We follow a strict security and technical repair protocol that does not touch your device's motherboard data storage. However, we always recommend making a backup before any hardware service as standard tech practice.
+                Cheap, non-certified cables often lack voltage-regulating microchips. This can cause power spikes that overheat the device, degrade the battery lifespan, or damage the motherboard charging IC.
               </div>
             </div>
           </div>
@@ -1386,12 +1216,12 @@
           <!-- FAQ 2 -->
           <div class="faq-item">
             <button class="faq-question">
-              Do you use original Apple &amp; Samsung screens?
+              What does MFi certification mean?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                We use premium OEM-grade screen replacements and parts that match original factory specifications in color depth, touch sensitivity, refresh rates, and glass durability. We also offer original refurbished screens for select models.
+                MFi stands for "Made for iPhone/iPad/iPod". It is Apple's official licensing program ensuring third-party hardware meets Apple's strict safety, durability, and performance standards.
               </div>
             </div>
           </div>
@@ -1399,12 +1229,12 @@
           <!-- FAQ 3 -->
           <div class="faq-item">
             <button class="faq-question">
-              What does the 90-day warranty cover?
+              Do you install the tempered glass protectors for me?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                Our 90-day warranty covers any parts replaced and our labor costs. If the replaced screen, battery, or charging port fails to perform correctly, we replace it free of charge. The warranty does not cover subsequent physical cracks, drops, or liquid damage after repair completion.
+                Yes! Every tempered glass purchase at Best Mobile includes free professional installation by our staff in-store, ensuring a clean, bubble-free, and dust-free alignment.
               </div>
             </div>
           </div>
@@ -1412,12 +1242,12 @@
           <!-- FAQ 4 -->
           <div class="faq-item">
             <button class="faq-question">
-              How does the "Free Diagnostic" work?
+              Do you have cases for older phone models?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                When you bring your phone, we will run comprehensive hardware tests at no charge to find the exact fault. We explain the issue and quote a repair price. If you choose not to proceed with the repair, there is absolutely zero diagnostic fee to pay.
+                Yes, we carry a wide selection of slim, clear, and rugged cases for both the latest flagship devices and popular older models of iPhones, Samsung Galaxy, and Google Pixel.
               </div>
             </div>
           </div>
@@ -1429,13 +1259,13 @@
     <section class="repair-cta">
       <div class="container">
         <div class="cta-box">
-          <h2>Ready to restore your device?</h2>
-          <p>Get your cell phone repaired today by Scarborough's trusted hardware specialists. Visit us at Pickering, Markham Road, or Birchmount Rd.</p>
+          <h2>Need high-grade protection or fast charging adapters?</h2>
+          <p>Visit our store locations to browse our full selection of premium cases, screen protectors, MagSafe wireless chargers, and fast-charging power hubs.</p>
           <div class="cta-buttons">
             <a href="index.html#contact" class="btn btn-primary">Find Nearest Location</a>
             <a href="tel:+14163198000" class="btn">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.79 19.79 0 0 1 1.65 3.53 2 2 0 0 1 3.62 1.35h3a2 2 0 0 1 2 1.72c.08.96.23 1.91.45 2.83a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.92.22 1.87.37 2.83.45A2 2 0 0 1 22 16.92z"/></svg>
-              Speak to a Technician
+              Speak to a Representative
             </a>
             <button class="btn btn-accent-inquiry" id="openInquiryBtn">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -1492,7 +1322,7 @@
           <div class="footer-col-title">Help &amp; Support</div>
           <ul class="footer-links">
             <li><a href="index.html#contact">Book Repair</a></li>
-            <li><a href="repair-service.html#faq">Repair FAQ</a></li>
+            <li><a href="accessories-service.html#faq">Accessories FAQ</a></li>
             <li><a href="tel:+14163198000">Support Hotline</a></li>
           </ul>
         </div>
@@ -1579,453 +1409,6 @@
         });
       });
     })();
-
-    // Price Estimator Logic
-    (function() {
-      const brandSel = document.getElementById('brandSelect');
-      const modelSel = document.getElementById('modelSelect');
-      const repairSel = document.getElementById('repairSelect');
-      
-      const placeholder = document.getElementById('estimatorPlaceholder');
-      const resultBox = document.getElementById('estimatorContent');
-      
-      const resDevice = document.getElementById('resDevice');
-      const resType = document.getElementById('resType');
-      const resPrice = document.getElementById('resPrice');
-      const resTime = document.getElementById('resTime');
-      const resWarranty = document.getElementById('resWarranty');
-
-      // Database
-      const modelsData = {
-        apple: [
-          { value: 'iphone_16pm', label: 'iPhone 16 Pro Max' },
-          { value: 'iphone_16p', label: 'iPhone 16 Pro' },
-          { value: 'iphone_16pl', label: 'iPhone 16 Plus' },
-          { value: 'iphone_16', label: 'iPhone 16' },
-          { value: 'iphone_15pm', label: 'iPhone 15 Pro Max' },
-          { value: 'iphone_15p', label: 'iPhone 15 Pro' },
-          { value: 'iphone_15pl', label: 'iPhone 15 Plus' },
-          { value: 'iphone_15', label: 'iPhone 15' },
-          { value: 'iphone_14pm', label: 'iPhone 14 Pro Max' },
-          { value: 'iphone_14p', label: 'iPhone 14 Pro' },
-          { value: 'iphone_14pl', label: 'iPhone 14 Plus' },
-          { value: 'iphone_14', label: 'iPhone 14' },
-          { value: 'iphone_13pm', label: 'iPhone 13 Pro Max' },
-          { value: 'iphone_13p', label: 'iPhone 13 Pro' },
-          { value: 'iphone_13', label: 'iPhone 13' },
-          { value: 'iphone_13m', label: 'iPhone 13 mini' },
-          { value: 'iphone_12pm', label: 'iPhone 12 Pro Max' },
-          { value: 'iphone_12p', label: 'iPhone 12 Pro' },
-          { value: 'iphone_12', label: 'iPhone 12' },
-          { value: 'iphone_12m', label: 'iPhone 12 mini' },
-          { value: 'iphone_11pm', label: 'iPhone 11 Pro Max' },
-          { value: 'iphone_11p', label: 'iPhone 11 Pro' },
-          { value: 'iphone_11', label: 'iPhone 11' },
-          { value: 'iphone_se3', label: 'iPhone SE (3rd Gen)' },
-          { value: 'iphone_se2', label: 'iPhone SE (2nd Gen)' }
-        ],
-        samsung: [
-          { value: 's25u', label: 'Galaxy S25 Ultra' },
-          { value: 's25p', label: 'Galaxy S25+' },
-          { value: 's25', label: 'Galaxy S25' },
-          { value: 's24u', label: 'Galaxy S24 Ultra' },
-          { value: 's24p', label: 'Galaxy S24+' },
-          { value: 's24', label: 'Galaxy S24' },
-          { value: 's23u', label: 'Galaxy S23 Ultra' },
-          { value: 's23p', label: 'Galaxy S23+' },
-          { value: 's23', label: 'Galaxy S23' },
-          { value: 's22u', label: 'Galaxy S22 Ultra' },
-          { value: 's22p', label: 'Galaxy S22+' },
-          { value: 's22', label: 'Galaxy S22' },
-          { value: 's21u', label: 'Galaxy S21 Ultra' },
-          { value: 's21p', label: 'Galaxy S21+' },
-          { value: 's21', label: 'Galaxy S21' },
-          { value: 's21fe', label: 'Galaxy S21 FE' },
-          { value: 'a55', label: 'Galaxy A55' },
-          { value: 'a54', label: 'Galaxy A54' },
-          { value: 'a35', label: 'Galaxy A35' }
-        ],
-        google: [
-          { value: 'pixel_9pxl', label: 'Pixel 9 Pro XL' },
-          { value: 'pixel_9p', label: 'Pixel 9 Pro' },
-          { value: 'pixel_9', label: 'Pixel 9' },
-          { value: 'pixel_8a', label: 'Pixel 8a' },
-          { value: 'pixel_8p', label: 'Pixel 8 Pro' },
-          { value: 'pixel_8', label: 'Pixel 8' },
-          { value: 'pixel_7a', label: 'Pixel 7a' },
-          { value: 'pixel_7p', label: 'Pixel 7 Pro' },
-          { value: 'pixel_7', label: 'Pixel 7' },
-          { value: 'pixel_6a', label: 'Pixel 6a' },
-          { value: 'pixel_6p', label: 'Pixel 6 Pro' },
-          { value: 'pixel_6', label: 'Pixel 6' }
-        ]
-      };
-
-      const repairsData = [
-        { value: 'screen', label: 'Screen Replacement' },
-        { value: 'battery', label: 'Battery Swap' },
-        { value: 'microsolder', label: 'Logic Board Micro-Soldering' },
-        { value: 'diagnostic', label: 'Diagnostics & Troubleshooting' }
-      ];
-
-      // Matrix generator pricing ranges
-      const priceMatrix = {
-        // Apple - iPhone 16 Series
-        'iphone_16pm_screen': { price: '$329 - $379', time: '30–45 Mins' },
-        'iphone_16pm_battery': { price: '$109 - $129', time: '20–30 Mins' },
-        'iphone_16pm_microsolder': { price: '$179 - $229', time: '1–2 Days' },
-        'iphone_16pm_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_16p_screen': { price: '$299 - $349', time: '30–45 Mins' },
-        'iphone_16p_battery': { price: '$109 - $129', time: '20–30 Mins' },
-        'iphone_16p_microsolder': { price: '$169 - $219', time: '1–2 Days' },
-        'iphone_16p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_16pl_screen': { price: '$269 - $319', time: '30–45 Mins' },
-        'iphone_16pl_battery': { price: '$99 - $119', time: '20–30 Mins' },
-        'iphone_16pl_microsolder': { price: '$159 - $209', time: '1–2 Days' },
-        'iphone_16pl_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_16_screen': { price: '$249 - $289', time: '30–45 Mins' },
-        'iphone_16_battery': { price: '$99 - $119', time: '20–30 Mins' },
-        'iphone_16_microsolder': { price: '$149 - $199', time: '1–2 Days' },
-        'iphone_16_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Apple - iPhone 15 Series
-        'iphone_15pm_screen': { price: '$279 - $329', time: '30–45 Mins' },
-        'iphone_15pm_battery': { price: '$99 - $119', time: '20–30 Mins' },
-        'iphone_15pm_microsolder': { price: '$159 - $209', time: '1–2 Days' },
-        'iphone_15pm_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_15p_screen': { price: '$259 - $309', time: '30–45 Mins' },
-        'iphone_15p_battery': { price: '$99 - $119', time: '20–30 Mins' },
-        'iphone_15p_microsolder': { price: '$159 - $209', time: '1–2 Days' },
-        'iphone_15p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_15pl_screen': { price: '$239 - $289', time: '30–45 Mins' },
-        'iphone_15pl_battery': { price: '$99 - $119', time: '20–30 Mins' },
-        'iphone_15pl_microsolder': { price: '$149 - $199', time: '1–2 Days' },
-        'iphone_15pl_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_15_screen': { price: '$229 - $269', time: '30–45 Mins' },
-        'iphone_15_battery': { price: '$89 - $109', time: '20–30 Mins' },
-        'iphone_15_microsolder': { price: '$149 - $199', time: '1–2 Days' },
-        'iphone_15_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Apple - iPhone 14 Series
-        'iphone_14pm_screen': { price: '$269 - $319', time: '30–45 Mins' },
-        'iphone_14pm_battery': { price: '$89 - $109', time: '20–30 Mins' },
-        'iphone_14pm_microsolder': { price: '$159 - $209', time: '1–2 Days' },
-        'iphone_14pm_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_14p_screen': { price: '$249 - $299', time: '30–45 Mins' },
-        'iphone_14p_battery': { price: '$89 - $109', time: '20–30 Mins' },
-        'iphone_14p_microsolder': { price: '$149 - $199', time: '1–2 Days' },
-        'iphone_14p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_14pl_screen': { price: '$209 - $249', time: '30–45 Mins' },
-        'iphone_14pl_battery': { price: '$89 - $109', time: '20–30 Mins' },
-        'iphone_14pl_microsolder': { price: '$139 - $189', time: '1–2 Days' },
-        'iphone_14pl_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_14_screen': { price: '$189 - $229', time: '30–45 Mins' },
-        'iphone_14_battery': { price: '$79 - $99', time: '20–30 Mins' },
-        'iphone_14_microsolder': { price: '$139 - $189', time: '1–2 Days' },
-        'iphone_14_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Apple - iPhone 13 Series
-        'iphone_13pm_screen': { price: '$229 - $269', time: '30–45 Mins' },
-        'iphone_13pm_battery': { price: '$79 - $99', time: '20–30 Mins' },
-        'iphone_13pm_microsolder': { price: '$139 - $189', time: '1–2 Days' },
-        'iphone_13pm_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_13p_screen': { price: '$209 - $249', time: '30–45 Mins' },
-        'iphone_13p_battery': { price: '$79 - $99', time: '20–30 Mins' },
-        'iphone_13p_microsolder': { price: '$139 - $189', time: '1–2 Days' },
-        'iphone_13p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_13_screen': { price: '$159 - $199', time: '30–45 Mins' },
-        'iphone_13_battery': { price: '$79 - $89', time: '20–30 Mins' },
-        'iphone_13_microsolder': { price: '$129 - $179', time: '1–2 Days' },
-        'iphone_13_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_13m_screen': { price: '$149 - $189', time: '30–45 Mins' },
-        'iphone_13m_battery': { price: '$79 - $89', time: '20–30 Mins' },
-        'iphone_13m_microsolder': { price: '$129 - $179', time: '1–2 Days' },
-        'iphone_13m_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Apple - iPhone 12 Series
-        'iphone_12pm_screen': { price: '$179 - $219', time: '30–45 Mins' },
-        'iphone_12pm_battery': { price: '$69 - $89', time: '20–30 Mins' },
-        'iphone_12pm_microsolder': { price: '$129 - $179', time: '1–2 Days' },
-        'iphone_12pm_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_12p_screen': { price: '$159 - $199', time: '30–45 Mins' },
-        'iphone_12p_battery': { price: '$69 - $89', time: '20–30 Mins' },
-        'iphone_12p_microsolder': { price: '$129 - $179', time: '1–2 Days' },
-        'iphone_12p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_12_screen': { price: '$129 - $169', time: '30–45 Mins' },
-        'iphone_12_battery': { price: '$69 - $79', time: '20–30 Mins' },
-        'iphone_12_microsolder': { price: '$129 - $169', time: '1–2 Days' },
-        'iphone_12_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_12m_screen': { price: '$129 - $159', time: '30–45 Mins' },
-        'iphone_12m_battery': { price: '$69 - $79', time: '20–30 Mins' },
-        'iphone_12m_microsolder': { price: '$119 - $159', time: '1–2 Days' },
-        'iphone_12m_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Apple - iPhone 11 Series
-        'iphone_11pm_screen': { price: '$139 - $179', time: '30–45 Mins' },
-        'iphone_11pm_battery': { price: '$69 - $79', time: '20–30 Mins' },
-        'iphone_11pm_microsolder': { price: '$119 - $159', time: '1–2 Days' },
-        'iphone_11pm_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_11p_screen': { price: '$129 - $169', time: '30–45 Mins' },
-        'iphone_11p_battery': { price: '$69 - $79', time: '20–30 Mins' },
-        'iphone_11p_microsolder': { price: '$119 - $159', time: '1–2 Days' },
-        'iphone_11p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_11_screen': { price: '$99 - $129', time: '30–45 Mins' },
-        'iphone_11_battery': { price: '$59 - $69', time: '20–30 Mins' },
-        'iphone_11_microsolder': { price: '$109 - $149', time: '1–2 Days' },
-        'iphone_11_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Apple - iPhone SE Series
-        'iphone_se3_screen': { price: '$89 - $109', time: '30–45 Mins' },
-        'iphone_se3_battery': { price: '$59 - $69', time: '20–30 Mins' },
-        'iphone_se3_microsolder': { price: '$99 - $139', time: '1–2 Days' },
-        'iphone_se3_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'iphone_se2_screen': { price: '$79 - $99', time: '30–45 Mins' },
-        'iphone_se2_battery': { price: '$49 - $59', time: '20–30 Mins' },
-        'iphone_se2_microsolder': { price: '$89 - $129', time: '1–2 Days' },
-        'iphone_se2_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Samsung - Galaxy S25 Series
-        's25u_screen': { price: '$329 - $379', time: '40–50 Mins' },
-        's25u_battery': { price: '$99 - $119', time: '20–30 Mins' },
-        's25u_microsolder': { price: '$169 - $219', time: '1–2 Days' },
-        's25u_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        's25p_screen': { price: '$269 - $319', time: '40–50 Mins' },
-        's25p_battery': { price: '$89 - $109', time: '20–30 Mins' },
-        's25p_microsolder': { price: '$159 - $209', time: '1–2 Days' },
-        's25p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        's25_screen': { price: '$249 - $299', time: '40–50 Mins' },
-        's25_battery': { price: '$89 - $109', time: '20–30 Mins' },
-        's25_microsolder': { price: '$149 - $199', time: '1–2 Days' },
-        's25_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Samsung - Galaxy S24 Series
-        's24u_screen': { price: '$299 - $349', time: '40–50 Mins' },
-        's24u_battery': { price: '$89 - $109', time: '20–30 Mins' },
-        's24u_microsolder': { price: '$159 - $209', time: '1–2 Days' },
-        's24u_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        's24p_screen': { price: '$249 - $299', time: '40–50 Mins' },
-        's24p_battery': { price: '$79 - $99', time: '20–30 Mins' },
-        's24p_microsolder': { price: '$149 - $199', time: '1–2 Days' },
-        's24p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        's24_screen': { price: '$239 - $279', time: '40–50 Mins' },
-        's24_battery': { price: '$79 - $99', time: '20–30 Mins' },
-        's24_microsolder': { price: '$149 - $199', time: '1–2 Days' },
-        's24_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Samsung - Galaxy S23 Series
-        's23u_screen': { price: '$269 - $319', time: '40–50 Mins' },
-        's23u_battery': { price: '$79 - $99', time: '20–30 Mins' },
-        's23u_microsolder': { price: '$149 - $199', time: '1–2 Days' },
-        's23u_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        's23p_screen': { price: '$229 - $279', time: '40–50 Mins' },
-        's23p_battery': { price: '$79 - $99', time: '20–30 Mins' },
-        's23p_microsolder': { price: '$139 - $189', time: '1–2 Days' },
-        's23p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        's23_screen': { price: '$219 - $259', time: '40–50 Mins' },
-        's23_battery': { price: '$69 - $89', time: '20–30 Mins' },
-        's23_microsolder': { price: '$139 - $189', time: '1–2 Days' },
-        's23_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Samsung - Galaxy S22 Series
-        's22u_screen': { price: '$249 - $299', time: '40–50 Mins' },
-        's22u_battery': { price: '$79 - $99', time: '20–30 Mins' },
-        's22u_microsolder': { price: '$139 - $189', time: '1–2 Days' },
-        's22u_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        's22p_screen': { price: '$209 - $249', time: '40–50 Mins' },
-        's22p_battery': { price: '$79 - $89', time: '20–30 Mins' },
-        's22p_microsolder': { price: '$129 - $179', time: '1–2 Days' },
-        's22p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        's22_screen': { price: '$189 - $229', time: '40–50 Mins' },
-        's22_battery': { price: '$69 - $79', time: '20–30 Mins' },
-        's22_microsolder': { price: '$129 - $169', time: '1–2 Days' },
-        's22_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Samsung - Galaxy S21 Series
-        's21u_screen': { price: '$219 - $259', time: '40–50 Mins' },
-        's21u_battery': { price: '$69 - $89', time: '20–30 Mins' },
-        's21u_microsolder': { price: '$129 - $179', time: '1–2 Days' },
-        's21u_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        's21p_screen': { price: '$179 - $219', time: '40–50 Mins' },
-        's21p_battery': { price: '$69 - $79', time: '20–30 Mins' },
-        's21p_microsolder': { price: '$119 - $169', time: '1–2 Days' },
-        's21p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        's21_screen': { price: '$159 - $199', time: '40–50 Mins' },
-        's21_battery': { price: '$59 - $79', time: '20–30 Mins' },
-        's21_microsolder': { price: '$119 - $159', time: '1–2 Days' },
-        's21_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        's21fe_screen': { price: '$139 - $179', time: '40–50 Mins' },
-        's21fe_battery': { price: '$59 - $79', time: '20–30 Mins' },
-        's21fe_microsolder': { price: '$109 - $149', time: '1–2 Days' },
-        's21fe_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Samsung - Galaxy A Series
-        'a55_screen': { price: '$149 - $189', time: '30–45 Mins' },
-        'a55_battery': { price: '$59 - $79', time: '20–30 Mins' },
-        'a55_microsolder': { price: '$119 - $159', time: '1–2 Days' },
-        'a55_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'a54_screen': { price: '$139 - $169', time: '30–45 Mins' },
-        'a54_battery': { price: '$59 - $79', time: '20–30 Mins' },
-        'a54_microsolder': { price: '$119 - $159', time: '1–2 Days' },
-        'a54_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'a35_screen': { price: '$129 - $159', time: '30–45 Mins' },
-        'a35_battery': { price: '$59 - $79', time: '20–30 Mins' },
-        'a35_microsolder': { price: '$109 - $149', time: '1–2 Days' },
-        'a35_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Google - Pixel 9 Series
-        'pixel_9pxl_screen': { price: '$289 - $339', time: '30–45 Mins' },
-        'pixel_9pxl_battery': { price: '$89 - $109', time: '20–30 Mins' },
-        'pixel_9pxl_microsolder': { price: '$159 - $209', time: '1–2 Days' },
-        'pixel_9pxl_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'pixel_9p_screen': { price: '$269 - $319', time: '30–45 Mins' },
-        'pixel_9p_battery': { price: '$89 - $109', time: '20–30 Mins' },
-        'pixel_9p_microsolder': { price: '$159 - $209', time: '1–2 Days' },
-        'pixel_9p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'pixel_9_screen': { price: '$229 - $269', time: '30–45 Mins' },
-        'pixel_9_battery': { price: '$79 - $99', time: '20–30 Mins' },
-        'pixel_9_microsolder': { price: '$149 - $199', time: '1–2 Days' },
-        'pixel_9_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Google - Pixel 8 Series
-        'pixel_8p_screen': { price: '$249 - $289', time: '30–45 Mins' },
-        'pixel_8p_battery': { price: '$79 - $99', time: '20–30 Mins' },
-        'pixel_8p_microsolder': { price: '$149 - $189', time: '1–2 Days' },
-        'pixel_8p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'pixel_8_screen': { price: '$199 - $239', time: '30–45 Mins' },
-        'pixel_8_battery': { price: '$69 - $89', time: '20–30 Mins' },
-        'pixel_8_microsolder': { price: '$139 - $179', time: '1–2 Days' },
-        'pixel_8_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'pixel_8a_screen': { price: '$159 - $199', time: '30–45 Mins' },
-        'pixel_8a_battery': { price: '$69 - $89', time: '20–30 Mins' },
-        'pixel_8a_microsolder': { price: '$129 - $169', time: '1–2 Days' },
-        'pixel_8a_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Google - Pixel 7 Series
-        'pixel_7p_screen': { price: '$219 - $259', time: '30–45 Mins' },
-        'pixel_7p_battery': { price: '$79 - $89', time: '20–30 Mins' },
-        'pixel_7p_microsolder': { price: '$139 - $179', time: '1–2 Days' },
-        'pixel_7p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'pixel_7_screen': { price: '$169 - $199', time: '30–45 Mins' },
-        'pixel_7_battery': { price: '$69 - $79', time: '20–30 Mins' },
-        'pixel_7_microsolder': { price: '$129 - $169', time: '1–2 Days' },
-        'pixel_7_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'pixel_7a_screen': { price: '$149 - $189', time: '30–45 Mins' },
-        'pixel_7a_battery': { price: '$69 - $79', time: '20–30 Mins' },
-        'pixel_7a_microsolder': { price: '$129 - $169', time: '1–2 Days' },
-        'pixel_7a_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        // Google - Pixel 6 Series
-        'pixel_6a_screen': { price: '$129 - $159', time: '30–45 Mins' },
-        'pixel_6a_battery': { price: '$59 - $79', time: '20–30 Mins' },
-        'pixel_6a_microsolder': { price: '$119 - $149', time: '1–2 Days' },
-        'pixel_6a_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'pixel_6p_screen': { price: '$189 - $229', time: '30–45 Mins' },
-        'pixel_6p_battery': { price: '$69 - $89', time: '20–30 Mins' },
-        'pixel_6p_microsolder': { price: '$129 - $169', time: '1–2 Days' },
-        'pixel_6p_diagnostic': { price: 'FREE', time: '15 Mins' },
-
-        'pixel_6_screen': { price: '$149 - $189', time: '30–45 Mins' },
-        'pixel_6_battery': { price: '$69 - $79', time: '20–30 Mins' },
-        'pixel_6_microsolder': { price: '$119 - $159', time: '1–2 Days' },
-        'pixel_6_diagnostic': { price: 'FREE', time: '15 Mins' }
-      };
-
-      // Listeners
-      brandSel.addEventListener('change', () => {
-        const brand = brandSel.value;
-        modelSel.innerHTML = '<option value="" disabled selected>Select Model</option>';
-        repairSel.innerHTML = '<option value="" disabled selected>Select Model First</option>';
-        modelSel.disabled = false;
-        repairSel.disabled = true;
-
-        if (modelsData[brand]) {
-          modelsData[brand].forEach(m => {
-            const opt = document.createElement('option');
-            opt.value = m.value;
-            opt.textContent = m.label;
-            modelSel.appendChild(opt);
-          });
-        }
-
-        placeholder.style.display = 'block';
-        resultBox.classList.remove('active');
-      });
-
-      modelSel.addEventListener('change', () => {
-        repairSel.innerHTML = '<option value="" disabled selected>Select Repair Service</option>';
-        repairSel.disabled = false;
-
-        repairsData.forEach(r => {
-          const opt = document.createElement('option');
-          opt.value = r.value;
-          opt.textContent = r.label;
-          repairSel.appendChild(opt);
-        });
-
-        placeholder.style.display = 'block';
-        resultBox.classList.remove('active');
-      });
-
-      repairSel.addEventListener('change', () => {
-        const modelVal = modelSel.value;
-        const repairVal = repairSel.value;
-        const key = `${modelVal}_${repairVal}`;
-
-        const modelLabel = modelSel.options[modelSel.selectedIndex].text;
-        const repairLabel = repairSel.options[repairSel.selectedIndex].text;
-
-        if (priceMatrix[key]) {
-          const data = priceMatrix[key];
-          
-          resDevice.textContent = modelLabel;
-          resType.textContent = repairLabel;
-          resPrice.textContent = data.price;
-          resTime.textContent = data.time;
-          resWarranty.textContent = repairVal === 'diagnostic' ? 'N/A' : '90-Day Warranty';
-
-          placeholder.style.display = 'none';
-          resultBox.classList.add('active');
-        }
-      });
-    })();
   </script>
   <!-- ── Neumorphic Inquiry Modal ── -->
   <div class="modal-overlay" id="inquiryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -2069,7 +1452,7 @@
         </div>
         <div class="form-group-full">
           <label for="iq-question" class="form-label">Your Question / Inquiry</label>
-          <textarea id="iq-question" class="form-control" placeholder="e.g., Hi, I have an iPhone 13 with a cracked screen. How much is the screen repair and how long does it take?" required></textarea>
+          <textarea id="iq-question" class="form-control" placeholder="e.g., Hi, do you carry MFi-certified USB-C cables and 9H tempered glass screen protectors for the iPhone 15 Pro?" required></textarea>
         </div>
         <div class="form-actions">
           <button type="button" class="btn" id="cancelInquiryBtn">Cancel</button>
@@ -2095,7 +1478,7 @@
         // Auto-select option based on current page
         const select = document.getElementById('iq-service');
         if (select) {
-          select.value = 'Cell Phone Service & Repair';
+          select.value = 'Accessories';
         }
       }
 

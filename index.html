@@ -852,47 +852,9 @@
       font-weight: 700;
     }
 
-    .ps-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--nm-dark), transparent);
-    }
-
-    .ps-rows {
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-    }
-
-    .ps-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.6rem;
-    }
-
-    .ps-row .k {
-      color: var(--text-3);
-    }
-
-    .ps-row .v {
-      color: var(--text-2);
-    }
-
-    .ps-row .v-g {
-      color: var(--success);
-    }
-
-    .ps-cmd {
-      font-size: 0.6rem;
-      color: var(--text-3);
-    }
-
-    .blink {
-      color: var(--accent);
-    }
-
     /* ══════════════════════════════════════
-       SERVICES (Horizontal Carousel with Manual & Auto Scroll)
-    ══════════════════════════════════════ */
+       SERVICES (3D Globe/Orbit Carousel)
+     ══════════════════════════════════════ */
     #services {
       background: var(--nm-base);
       overflow: hidden;
@@ -904,166 +866,66 @@
 
     .services-carousel-container {
       position: relative;
-      overflow: hidden;
       width: 100%;
+      height: 520px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1200px;
+      overflow: visible;
       padding: 1.5rem 0;
-      /* extra padding to prevent card hover transforms/shadows from being clipped */
-      -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-      mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
     }
 
-    .services-track {
-      display: flex;
+    .services-globe-stage {
+      position: relative;
       width: 100%;
-      overflow-x: auto;
-      gap: 1.5rem;
-      scrollbar-width: none;
-      /* Hide scrollbar for Firefox */
-      -ms-overflow-style: none;
-      /* Hide scrollbar for IE/Edge */
-      cursor: grab;
-      user-select: none;
-      /* prevent text highlights while dragging */
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .services-track:active {
-      cursor: grabbing;
-    }
-
-    /* Hide scrollbar for Chrome/Safari */
-    .services-track::-webkit-scrollbar {
-      display: none;
-    }
-
-    .services-group {
+      height: 100%;
       display: flex;
-      gap: 1.5rem;
-      flex-shrink: 0;
+      justify-content: center;
+      align-items: center;
+      transform-style: preserve-3d;
     }
 
-    .services-group .service-card {
+    .services-globe-stage .service-card {
+      position: absolute;
       width: 320px;
+      height: 420px;
+      margin: 0;
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      transition: box-shadow 0.3s, transform 0.3s;
-      cursor: default;
-      height: 100%;
-      scroll-snap-align: start;
-    }
-
-    .services-group .service-card:hover {
-      box-shadow: 12px 12px 28px var(--nm-dark), -10px -10px 28px var(--nm-light), 0 0 0 1px var(--ring);
-      transform: translateY(-5px);
-    }
-
-    /* Neumorphic Navigation Arrows */
-    .carousel-arrow {
-      position: absolute;
+      background: var(--nm-base);
+      border-radius: 20px;
+      box-shadow: var(--sh-raise);
+      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                  opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                  filter 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                  box-shadow 0.3s, border-color 0.3s;
+      backface-visibility: hidden;
+      cursor: pointer;
+      user-select: none;
+      border: 1px solid rgba(255, 255, 255, 0.5);
       top: 50%;
-      transform: translateY(-50%);
-      width: 48px;
-      height: 48px;
-      background: var(--nm-base);
-      box-shadow: var(--sh-raise-sm);
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 10;
-      transition: box-shadow 0.2s, transform 0.2s, color 0.2s;
-      color: var(--text-2);
-      padding: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
-    .carousel-arrow:hover {
-      box-shadow: var(--sh-inset-sm);
-      color: var(--accent);
-      transform: translateY(-50%) scale(1.05);
+    /* Style for when card is active (front-most) and hovered */
+    .services-globe-stage .service-card.active:hover {
+      box-shadow: 14px 14px 32px var(--nm-dark), -10px -10px 32px var(--nm-light), 0 0 0 1px var(--ring);
+      transform: translate3d(var(--tx), var(--ty), var(--tz)) scale(1.05) !important;
     }
 
-    .carousel-arrow:active {
-      box-shadow: var(--sh-inset-sm);
-      transform: translateY(-50%) scale(0.95);
-    }
-
-    .carousel-arrow.arrow-left {
-      left: 1.5rem;
-    }
-
-    .carousel-arrow.arrow-right {
-      right: 1.5rem;
-    }
-
-    /* Neumorphic Carousel Dots */
-    .carousel-dots {
-      display: flex;
-      justify-content: center;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-      padding: 0.5rem;
-      z-index: 10;
-      position: relative;
-    }
-
-    .carousel-dots .dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--nm-base);
-      box-shadow: var(--sh-raise-sm);
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      padding: 0;
-      outline: none;
-    }
-
-    .carousel-dots .dot:hover {
-      transform: scale(1.2);
-    }
-
-    .carousel-dots .dot.active {
-      box-shadow: var(--sh-inset-sm);
-      background: var(--accent);
-      border-color: transparent;
-      width: 26px;
-      /* Modern capsule expanding active dot */
-      border-radius: 6px;
-    }
-
-    .carousel-arrow svg {
-      width: 20px;
-      height: 20px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    @media (max-width: 480px) {
-      .services-group .service-card {
-        width: 280px;
+    /* Responsive dimensions for mobile and tablet views */
+    @media (max-width: 768px) {
+      .services-carousel-container {
+        height: 460px;
       }
-
-      .carousel-arrow {
-        width: 38px;
-        height: 38px;
-      }
-
-      .carousel-arrow.arrow-left {
-        left: 0.5rem;
-      }
-
-      .carousel-arrow.arrow-right {
-        right: 0.5rem;
+      .services-globe-stage .service-card {
+        width: 270px;
+        height: 370px;
       }
     }
 
@@ -1105,6 +967,146 @@
       font-size: 0.9rem;
       color: var(--text-2);
       line-height: 1.6;
+    }
+
+    /* ── Neumorphic Inquiry Modal ── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.4);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .inquiry-modal-card {
+      background: var(--nm-base);
+      border-radius: 28px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 580px;
+      box-shadow: var(--sh-raise-lg);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+
+    .modal-overlay.active .inquiry-modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .modal-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-1);
+    }
+
+    .btn-close-modal {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--nm-base);
+      box-shadow: var(--sh-raise-sm);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .btn-close-modal:hover {
+      box-shadow: var(--sh-inset-sm);
+      color: var(--accent2);
+    }
+
+    .inquiry-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .form-group-full {
+      grid-column: span 2;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-2);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-control {
+      width: 100%;
+      background: var(--nm-base);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      font-family: inherit;
+      font-size: 0.92rem;
+      color: var(--text-1);
+      box-shadow: var(--sh-inset-sm);
+      outline: none;
+      transition: box-shadow 0.25s, border-color 0.25s;
+    }
+
+    .form-control:focus {
+      box-shadow: var(--sh-inset);
+      border-color: var(--accent);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-actions {
+      grid-column: span 2;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 576px) {
+      .inquiry-form {
+        grid-template-columns: 1fr;
+      }
+      .form-group-full {
+        grid-column: span 1;
+      }
+      .form-actions {
+        grid-column: span 1;
+        flex-direction: column-reverse;
+      }
+      .form-actions .btn {
+        width: 100%;
+      }
     }
 
     /* ══════════════════════════════════════
@@ -2031,176 +2033,48 @@
         </div>
 
         <div class="services-carousel-container reveal">
-          <!-- Left Arrow -->
-          <button class="carousel-arrow arrow-left" id="services-prev" aria-label="Previous services">
-            <svg viewBox="0 0 24 24">
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
-          </button>
+          <div class="services-globe-stage" id="servicesGlobeStage">
 
-          <div class="services-track">
+            <a href="repair-service.html" class="service-card nm-card active" aria-labelledby="s1" style="cursor: pointer;">
+              <div class="service-image-wrapper">
+                <img src="Mobile Phone Repair.png" alt="Cell Phone Service &amp; Repair" class="service-card-img">
+              </div>
+              <div class="service-card-content">
+                <h3 id="s1">Cell Phone Service &amp; Repair</h3>
+                <p>Screen replacements, battery swaps, and logic board micro-soldering for all major Android &amp; iPhone devices.</p>
+              </div>
+            </a>
 
-            <!-- Prefix Group for infinite wrapping left -->
-            <div class="services-group" aria-hidden="true">
-              <a href="repair-service.html" class="service-card nm-card" aria-labelledby="s1-pre-dup"
-                style="cursor: pointer;">
-                <div class="service-image-wrapper">
-                  <img src="Mobile Phone Repair.png" alt="Cell Phone Service &amp; Repair" class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s1-pre-dup">Cell Phone Service &amp; Repair</h3>
-                  <p>Screen replacements, battery swaps, and logic board micro-soldering for all major Android &amp;
-                    iPhone
-                    devices.</p>
-                </div>
-              </a>
+            <a href="specialist-service.html" class="service-card nm-card" aria-labelledby="s2" style="cursor: pointer;">
+              <div class="service-image-wrapper">
+                <img src="iPhone Screen Replacement.png" alt="Samsung &amp; iPhone Specialists" class="service-card-img">
+              </div>
+              <div class="service-card-content">
+                <h3 id="s2">Samsung &amp; iPhone Specialists</h3>
+                <p>Dedicated repair protocols for iOS &amp; Samsung devices, ensuring screen, battery, and original calibration integrity.</p>
+              </div>
+            </a>
 
-              <article class="service-card nm-card" aria-labelledby="s2-pre-dup">
-                <div class="service-image-wrapper">
-                  <img src="iPhone Screen Replacement.png" alt="Samsung &amp; iPhone Specialists"
-                    class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s2-pre-dup">Samsung &amp; iPhone Specialists</h3>
-                  <p>Dedicated repair protocols for iOS &amp; Samsung devices, ensuring screen, battery, and original
-                    calibration integrity.</p>
-                </div>
-              </article>
+            <a href="sales-service.html" class="service-card nm-card" aria-labelledby="s5" style="cursor: pointer;">
+              <div class="service-image-wrapper">
+                <img src="Pre-Owned Devices.png" alt="Cell Phone Sales" class="service-card-img">
+              </div>
+              <div class="service-card-content">
+                <h3 id="s5">Cell Phone Sales</h3>
+                <p>Certified refurbished premium smartphones and pre-owned cell phones passing a rigorous 40-point inspection.</p>
+              </div>
+            </a>
 
-              <article class="service-card nm-card" aria-labelledby="s5-pre-dup">
-                <div class="service-image-wrapper">
-                  <img src="Pre-Owned Devices.png" alt="Cell Phone Sales" class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s5-pre-dup">Cell Phone Sales</h3>
-                  <p>Certified refurbished premium smartphones and pre-owned cell phones passing a rigorous 40-point
-                    inspection.</p>
-                </div>
-              </article>
+            <a href="accessories-service.html" class="service-card nm-card" aria-labelledby="s6" style="cursor: pointer;">
+              <div class="service-image-wrapper">
+                <img src="Accessories.png" alt="Accessories" class="service-card-img">
+              </div>
+              <div class="service-card-content">
+                <h3 id="s6">Accessories</h3>
+                <p>High-end cables, tempered glass protection, and power delivery (PD) certified charging hubs.</p>
+              </div>
+            </a>
 
-              <article class="service-card nm-card" aria-labelledby="s6-pre-dup">
-                <div class="service-image-wrapper">
-                  <img src="Accessories.png" alt="Accessories" class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s6-pre-dup">Accessories</h3>
-                  <p>High-end cables, tempered glass protection, and power delivery (PD) certified charging hubs.</p>
-                </div>
-              </article>
-            </div>
-
-            <!-- Main Group (Active & Keyboard Accessible) -->
-            <div class="services-group">
-              <a href="repair-service.html" class="service-card nm-card" aria-labelledby="s1" style="cursor: pointer;">
-                <div class="service-image-wrapper">
-                  <img src="Mobile Phone Repair.png" alt="Cell Phone Service &amp; Repair" class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s1">Cell Phone Service &amp; Repair</h3>
-                  <p>Screen replacements, battery swaps, and logic board micro-soldering for all major Android &amp;
-                    iPhone
-                    devices.</p>
-                </div>
-              </a>
-
-              <article class="service-card nm-card" aria-labelledby="s2">
-                <div class="service-image-wrapper">
-                  <img src="iPhone Screen Replacement.png" alt="Samsung &amp; iPhone Specialists"
-                    class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s2">Samsung &amp; iPhone Specialists</h3>
-                  <p>Dedicated repair protocols for iOS &amp; Samsung devices, ensuring screen, battery, and original
-                    calibration integrity.</p>
-                </div>
-              </article>
-
-              <article class="service-card nm-card" aria-labelledby="s5">
-                <div class="service-image-wrapper">
-                  <img src="Pre-Owned Devices.png" alt="Cell Phone Sales" class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s5">Cell Phone Sales</h3>
-                  <p>Certified refurbished premium smartphones and pre-owned cell phones passing a rigorous 40-point
-                    inspection.</p>
-                </div>
-              </article>
-
-              <article class="service-card nm-card" aria-labelledby="s6">
-                <div class="service-image-wrapper">
-                  <img src="Accessories.png" alt="Accessories" class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s6">Accessories</h3>
-                  <p>High-end cables, tempered glass protection, and power delivery (PD) certified charging hubs.</p>
-                </div>
-              </article>
-            </div>
-
-            <!-- Suffix Group for infinite wrapping right -->
-            <div class="services-group" aria-hidden="true">
-              <a href="repair-service.html" class="service-card nm-card" aria-labelledby="s1-dup"
-                style="cursor: pointer;">
-                <div class="service-image-wrapper">
-                  <img src="Mobile Phone Repair.png" alt="Cell Phone Service &amp; Repair" class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s1-dup">Cell Phone Service &amp; Repair</h3>
-                  <p>Screen replacements, battery swaps, and logic board micro-soldering for all major Android &amp;
-                    iPhone
-                    devices.</p>
-                </div>
-              </a>
-
-              <article class="service-card nm-card" aria-labelledby="s2-dup">
-                <div class="service-image-wrapper">
-                  <img src="iPhone Screen Replacement.png" alt="Samsung &amp; iPhone Specialists"
-                    class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s2-dup">Samsung &amp; iPhone Specialists</h3>
-                  <p>Dedicated repair protocols for iOS &amp; Samsung devices, ensuring screen, battery, and original
-                    calibration integrity.</p>
-                </div>
-              </article>
-
-              <article class="service-card nm-card" aria-labelledby="s5-dup">
-                <div class="service-image-wrapper">
-                  <img src="Pre-Owned Devices.png" alt="Cell Phone Sales" class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s5-dup">Cell Phone Sales</h3>
-                  <p>Certified refurbished premium smartphones and pre-owned cell phones passing a rigorous 40-point
-                    inspection.</p>
-                </div>
-              </article>
-
-              <article class="service-card nm-card" aria-labelledby="s6-dup">
-                <div class="service-image-wrapper">
-                  <img src="Accessories.png" alt="Accessories" class="service-card-img">
-                </div>
-                <div class="service-card-content">
-                  <h3 id="s6-dup">Accessories</h3>
-                  <p>High-end cables, tempered glass protection, and power delivery (PD) certified charging hubs.</p>
-                </div>
-              </article>
-            </div>
-
-          </div>
-
-          <!-- Right Arrow -->
-          <button class="carousel-arrow arrow-right" id="services-next" aria-label="Next services">
-            <svg viewBox="0 0 24 24">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </button>
-
-          <!-- Dots Indicator -->
-          <div class="carousel-dots" id="services-dots">
-            <button class="dot active" data-index="0" aria-label="Go to service 1"></button>
-            <button class="dot" data-index="1" aria-label="Go to service 2"></button>
-            <button class="dot" data-index="2" aria-label="Go to service 3"></button>
-            <button class="dot" data-index="3" aria-label="Go to service 4"></button>
           </div>
         </div>
       </div>
@@ -2551,14 +2425,13 @@
           </div>
         </div>
 
-        <!-- Services column -->
         <div>
           <div class="footer-col-title">Services</div>
           <ul class="footer-links">
-            <li><a href="#services">Cell Phone Service &amp; Repair</a></li>
-            <li><a href="#services">Samsung &amp; iPhone Specialists</a></li>
-            <li><a href="#services">Cell Phone Sales</a></li>
-            <li><a href="#services">Accessories</a></li>
+            <li><a href="repair-service.html">Cell Phone Service &amp; Repair</a></li>
+            <li><a href="specialist-service.html">Samsung &amp; iPhone Specialists</a></li>
+            <li><a href="sales-service.html">Cell Phone Sales</a></li>
+            <li><a href="accessories-service.html">Accessories</a></li>
           </ul>
         </div>
 
@@ -2838,260 +2711,222 @@
       });
     })();
 
-    /* ── Services Carousel (Manual & Auto Scroll) ── */
+    /* ── Services Carousel (3D Globe/Orbit Rotation) ── */
     (function () {
-      const track = document.querySelector('.services-track');
-      const prevBtn = document.getElementById('services-prev');
-      const nextBtn = document.getElementById('services-next');
-      const dots = document.querySelectorAll('#services-dots .dot');
+      const container = document.querySelector('.services-carousel-container');
+      const stage = document.getElementById('servicesGlobeStage');
+      const cards = stage ? stage.querySelectorAll('.service-card') : [];
 
-      if (!track) return;
+      if (!stage || cards.length === 0) return;
 
-      let isPaused = false;
-      let isDragging = false;
-      let startX = 0;
-      let scrollLeftStart = 0;
-      let pauseTimeout = null;
-      let resumeTimeout = null;
-      let autoScrollInterval = null;
-      let scrollEndTimeout = null;
+      let currentAngle = 0;
+      let targetAngle = 0;
+      let targetIndex = 0; // index of the active card (closest to front)
+      let isHovered = false;
+      let autoScrollTimer = null;
 
-      // Layout sizing metrics (computed dynamically)
-      let cardWidth = 320;
-      let gap = 24;
-      let step = 344;
-      let groupWidth = 1376;
+      // 3D positioning metrics
+      let radiusX = 350;
+      let radiusZ = 200;
+      let tiltY = 25;
+      const ease = 0.08; // LERP smoothing factor
 
-      function updateMetrics() {
-        const card = track.querySelector('.service-card');
-        if (card) {
-          cardWidth = card.offsetWidth;
-          const style = window.getComputedStyle(track);
-          const gapValue = parseFloat(style.columnGap || style.gap);
-          gap = !isNaN(gapValue) ? gapValue : 24;
-          step = cardWidth + gap;
-          groupWidth = 4 * step;
+      function updateDimensions() {
+        const width = window.innerWidth;
+        if (width <= 480) {
+          radiusX = 110;
+          radiusZ = 70;
+          tiltY = 8;
+        } else if (width <= 768) {
+          radiusX = 170;
+          radiusZ = 110;
+          tiltY = 15;
+        } else {
+          radiusX = 350;
+          radiusZ = 200;
+          tiltY = 25;
         }
       }
 
-      // Initialize scroll position to the start of the main group (Group 2)
-      function initScrollPosition() {
-        updateMetrics();
-        track.style.scrollBehavior = 'auto';
-        track.scrollLeft = groupWidth;
-        // Flush layout to ensure immediate position update
-        track.offsetHeight;
-        track.style.scrollBehavior = 'smooth';
-        syncDots();
-        startAutoScroll();
-      }
+      function updateCarousel() {
+        // LERP interpolation for smooth continuous motion
+        currentAngle += (targetAngle - currentAngle) * ease;
 
-      // Sync dot states with current scroll position
-      function syncDots() {
-        updateMetrics();
-        if (groupWidth <= 0 || step <= 0) return;
+        // Set coordinates for each card
+        cards.forEach((card, index) => {
+          // Angle offset: cards are placed at 0, 90, 180, 270 degrees
+          const angle = currentAngle + (index * 90);
+          const rad = angle * (Math.PI / 180);
 
-        // Offset by groupWidth to calculate relative position within main group
-        const relativeScroll = track.scrollLeft - groupWidth;
-        let index = Math.round(relativeScroll / step) % 4;
-        if (index < 0) {
-          index = (index + 4) % 4;
-        }
+          // Orbit path calculations (tilted ellipse in 3D)
+          const x = Math.sin(rad) * radiusX;
+          const y = Math.cos(rad) * tiltY;
+          const z = Math.cos(rad) * radiusZ;
 
-        dots.forEach((dot, idx) => {
-          if (idx === index) {
-            dot.classList.add('active');
+          // Normalized scale and opacity based on depth (Z position)
+          // Z ranges from -radiusZ (back) to +radiusZ (front)
+          const normZ = (z + radiusZ) / (2 * radiusZ); // 0 to 1
+          const scale = 0.75 + 0.25 * normZ; // 0.75 to 1.0
+          const opacity = 0.4 + 0.6 * normZ; // 0.4 to 1.0
+          const blur = Math.max(0, (1 - normZ) * 4); // depth blur up to 4px
+
+          // Set custom CSS variables for hover scaling
+          card.style.setProperty('--tx', `calc(-50% + ${x}px)`);
+          card.style.setProperty('--ty', `calc(-50% + ${y}px)`);
+          card.style.setProperty('--tz', `${z}px`);
+
+          // Apply transforms
+          card.style.transform = `translate3d(calc(-50% + ${x}px), calc(-50% + ${y}px), ${z}px) scale(${scale})`;
+          card.style.opacity = opacity;
+          card.style.filter = blur > 0.5 ? `blur(${blur}px)` : 'none';
+          card.style.zIndex = Math.round((z + radiusZ) * 100);
+
+          // Add active class for styling/focus on the front card
+          const normalizedActiveIndex = ((targetIndex % 4) + 4) % 4;
+          if (index === normalizedActiveIndex) {
+            card.classList.add('active');
+            card.setAttribute('aria-hidden', 'false');
+            card.removeAttribute('tabindex');
           } else {
-            dot.classList.remove('active');
+            card.classList.remove('active');
+            card.setAttribute('aria-hidden', 'true');
+            card.setAttribute('tabindex', '-1');
           }
         });
+
+        requestAnimationFrame(updateCarousel);
       }
 
-      // Seamless infinite scrolling wrapping
-      function handleWrapping() {
-        if (isDragging) return;
-
-        updateMetrics();
-        const currentScroll = track.scrollLeft;
-
-        // Entered Prefix Group (Group 1) -> wrap forward to Group 2
-        if (currentScroll < groupWidth - 10) {
-          track.style.scrollBehavior = 'auto';
-          track.scrollLeft = currentScroll + groupWidth;
-          track.offsetHeight;
-          track.style.scrollBehavior = 'smooth';
-        }
-        // Entered Suffix Group (Group 3) -> wrap backward to Group 2
-        else if (currentScroll >= groupWidth * 2 - 10) {
-          track.style.scrollBehavior = 'auto';
-          track.scrollLeft = currentScroll - groupWidth;
-          track.offsetHeight;
-          track.style.scrollBehavior = 'smooth';
-        }
-      }
-
-      // Handle scroll events with debounced wrapping
-      function handleScroll() {
-        syncDots();
-
-        clearTimeout(scrollEndTimeout);
-        scrollEndTimeout = setTimeout(() => {
-          handleWrapping();
-        }, 150);
-      }
-
-      track.addEventListener('scroll', handleScroll);
-
-      // Auto-rotation runner
-      function startAutoScroll() {
+      // Manage auto-rotation timers
+      function tickAutoScroll() {
         stopAutoScroll();
-        autoScrollInterval = setInterval(() => {
-          if (isPaused || isDragging) return;
+        autoScrollTimer = setTimeout(() => {
+          if (!isHovered) {
+            targetIndex++;
+            targetAngle = targetIndex * -90;
+          }
+          tickAutoScroll();
+        }, 3500); // changes every 3.5 seconds
+      }
 
-          updateMetrics();
-          const current = track.scrollLeft;
-          const target = Math.round(current / step) * step + step;
-
-          track.style.scrollBehavior = 'smooth';
-          track.scrollTo({ left: target, behavior: 'smooth' });
-        }, 4000);
+      // Make sure auto scroll plays when page loads
+      function startAutoScroll() {
+        tickAutoScroll();
       }
 
       function stopAutoScroll() {
-        if (autoScrollInterval) {
-          clearInterval(autoScrollInterval);
+        if (autoScrollTimer) {
+          clearTimeout(autoScrollTimer);
         }
       }
 
-      // Interaction pause handlers
-      function pauseInteraction() {
-        isPaused = true;
-        clearTimeout(resumeTimeout);
-      }
+      // Click handling: bringing background cards to the front
+      cards.forEach((card, index) => {
+        card.addEventListener('click', (e) => {
+          const normalizedActiveIndex = ((targetIndex % 4) + 4) % 4;
+          if (index !== normalizedActiveIndex) {
+            e.preventDefault(); // Stop default action (link navigation)
+            e.stopPropagation(); // Prevent bubbling to container listener
 
-      function resumeInteraction() {
-        clearTimeout(resumeTimeout);
-        resumeTimeout = setTimeout(() => {
-          isPaused = false;
-        }, 3000);
-      }
+            // Shortest path rotation logic
+            const diff = index - normalizedActiveIndex;
+            let adjustedDiff = diff;
+            if (adjustedDiff > 2) adjustedDiff -= 4;
+            if (adjustedDiff < -2) adjustedDiff += 4;
 
-      // Mouse hover actions
-      track.addEventListener('mouseenter', () => {
-        isPaused = true;
-        clearTimeout(resumeTimeout);
+            targetIndex += adjustedDiff;
+            targetAngle = targetIndex * -90;
+
+            // Stop auto scroll and start again fresh
+            stopAutoScroll();
+            tickAutoScroll();
+          }
+        });
       });
-      track.addEventListener('mouseleave', () => {
-        if (!isDragging) {
-          isPaused = false;
+
+      // Container-level click handling: rotating when user clicks/taps the left or right sides
+      container.addEventListener('click', (e) => {
+        // Skip for keyboard/accessibility clicks
+        if (e.clientX === 0 && e.clientY === 0) return;
+
+        const rect = container.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const pct = clickX / rect.width;
+
+        if (pct < 0.35) {
+          // Left side clicked: rotate left (prev card)
+          e.preventDefault();
+          e.stopPropagation();
+          targetIndex--;
+          targetAngle = targetIndex * -90;
+          stopAutoScroll();
+          tickAutoScroll();
+        } else if (pct > 0.65) {
+          // Right side clicked: rotate right (next card)
+          e.preventDefault();
+          e.stopPropagation();
+          targetIndex++;
+          targetAngle = targetIndex * -90;
+          stopAutoScroll();
+          tickAutoScroll();
         }
       });
 
-      // Mobile touch gestures
-      track.addEventListener('touchstart', pauseInteraction, { passive: true });
-      track.addEventListener('touchend', resumeInteraction, { passive: true });
-      track.addEventListener('touchcancel', resumeInteraction, { passive: true });
-
-      // Desktop dragging
-      track.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        pauseInteraction();
-
-        track.style.scrollSnapType = 'none';
-        track.style.scrollBehavior = 'auto';
-
-        startX = e.pageX - track.offsetLeft;
-        scrollLeftStart = track.scrollLeft;
+      // Pause interactions on hover/touch
+      container.addEventListener('mouseenter', () => {
+        isHovered = true;
+        stopAutoScroll();
       });
 
-      window.addEventListener('mouseup', () => {
-        if (isDragging) {
-          isDragging = false;
+      container.addEventListener('mouseleave', () => {
+        isHovered = false;
+        tickAutoScroll();
+      });
 
-          track.style.scrollSnapType = 'x mandatory';
-          track.style.scrollBehavior = 'smooth';
+      // Swipe support for touch screens
+      let touchStartX = 0;
+      let touchEndX = 0;
 
-          // Trigger instant snap layout computation
-          track.offsetHeight;
+      container.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        isHovered = true;
+        stopAutoScroll();
+      }, { passive: true });
 
-          resumeInteraction();
+      container.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchEndX - touchStartX;
+        const swipeThreshold = 50;
+
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            targetIndex--; // Swipe right: prev card
+          } else {
+            targetIndex++; // Swipe left: next card
+          }
+          targetAngle = targetIndex * -90;
         }
-      });
 
-      track.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        const x = e.pageX - track.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        track.scrollLeft = scrollLeftStart - walk;
-      });
+        // Delay resuming to keep it paused for a bit after swipe
+        setTimeout(() => {
+          isHovered = false;
+          tickAutoScroll();
+        }, 1500);
+      }, { passive: true });
 
-      // Click event for dots
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          const index = parseInt(dot.getAttribute('data-index'), 10);
-          if (isNaN(index)) return;
-
-          pauseInteraction();
-          updateMetrics();
-
-          track.style.scrollBehavior = 'smooth';
-          track.scrollTo({ left: groupWidth + index * step, behavior: 'smooth' });
-
-          resumeInteraction();
-        });
-      });
-
-      // Click events for arrows
-      if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-          pauseInteraction();
-          updateMetrics();
-
-          const current = track.scrollLeft;
-          const target = Math.round(current / step) * step - step;
-
-          track.style.scrollBehavior = 'smooth';
-          track.scrollTo({ left: target, behavior: 'smooth' });
-
-          resumeInteraction();
-        });
-        prevBtn.addEventListener('mouseenter', () => { isPaused = true; clearTimeout(resumeTimeout); });
-        prevBtn.addEventListener('mouseleave', () => { isPaused = false; });
-      }
-
-      if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-          pauseInteraction();
-          updateMetrics();
-
-          const current = track.scrollLeft;
-          const target = Math.round(current / step) * step + step;
-
-          track.style.scrollBehavior = 'smooth';
-          track.scrollTo({ left: target, behavior: 'smooth' });
-
-          resumeInteraction();
-        });
-        nextBtn.addEventListener('mouseenter', () => { isPaused = true; clearTimeout(resumeTimeout); });
-        nextBtn.addEventListener('mouseleave', () => { isPaused = false; });
-      }
-
-      // Window resize listener to handle container changes
+      // Handle window resize
       window.addEventListener('resize', () => {
-        updateMetrics();
-        syncDots();
+        updateDimensions();
       });
 
-      // Start initialization on window load / readystate
-      if (document.readyState === 'complete') {
-        initScrollPosition();
-      } else {
-        window.addEventListener('load', initScrollPosition);
-      }
+      // Initialize
+      updateDimensions();
+      targetAngle = 0;
+      updateCarousel();
+      tickAutoScroll();
     })();
   </script>
-
+  
 </body>
 
 </html>
