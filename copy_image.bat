@@ -1,9 +1,21 @@
 @echo off
 echo Copying generated images to workspace...
-copy "C:\Users\navee\.gemini\antigravity-ide\brain\8309cbb3-7166-41d6-9ef9-ee503e42ef38\phone_repair_board_clean_1782499844498.png" "phone_repair_board.png"
-copy "C:\Users\navee\.gemini\antigravity-ide\brain\404b8ce5-caa9-413c-a314-faa9c50ab742\repair_screen_1782384520573.png" "repair_screen.png"
-copy "C:\Users\navee\.gemini\antigravity-ide\brain\404b8ce5-caa9-413c-a314-faa9c50ab742\repair_battery_1782384537271.png" "repair_battery.png"
-copy "C:\Users\navee\.gemini\antigravity-ide\brain\404b8ce5-caa9-413c-a314-faa9c50ab742\repair_water_1782384553345.png" "repair_water.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\cell_phone_sales_1782579172698.png" "sales_hero.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\phone_accessories_display_1782579182972.png" "accessories_hero.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\specialist_phone_repair_1782579194305.png" "specialist_hero.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\display_serialization_1782579676288.png" "display_serialization.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\knox_security_1782579689301.png" "knox_security.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\biometric_sensor_1782579701164.png" "biometric_sensor.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\amoled_calibration_1782579714215.png" "amoled_calibration.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\spen_accuracy_1782579726221.png" "spen_accuracy.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\software_verification_1782579738755.png" "software_verification.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\quality_inspection_1782580140422.png" "quality_inspection.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\battery_health_1782580152690.png" "battery_health.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\unlocked_ready_1782580163868.png" "unlocked_ready.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\hassle_free_returns_1782580174114.png" "hassle_free_returns.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\device_trade_in_1782580185717.png" "device_trade_in.png"
+copy "C:\Users\navee\.gemini\antigravity-ide\brain\8c6a9184-efba-4a7a-9c60-4f7e4c143e65\warranty_included_1782580198954.png" "warranty_included.png"
+copy "phone_repair_board.png" "miniature_repair.png"
 if %errorlevel% equ 0 (
     echo All images copied successfully!
 ) else (
