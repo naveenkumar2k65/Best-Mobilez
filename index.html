@@ -4028,6 +4028,126 @@
     </section>
 
     <!-- ══════════════════════════════════════
+     PREMIUM SHOWROOM GALLERY
+    ══════════════════════════════════════ -->
+    <style>
+      .showroom-gallery-section {
+        background: #020617;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      
+      .gallery-header {
+        margin-bottom: 3rem;
+      }
+      
+      .gallery-header h2 {
+        color: #f8fafc;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+      }
+      
+      .gallery-header p {
+        color: #94a3b8;
+        font-size: 1.125rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        aspect-ratio: 4/3;
+      }
+      
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+      
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0) 50%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1.5rem;
+        text-align: left;
+      }
+      
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+      
+      .gallery-overlay h3 {
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem 0;
+        transform: translateY(10px);
+        transition: transform 0.4s ease;
+      }
+      
+      .gallery-item:hover .gallery-overlay h3 {
+        transform: translateY(0);
+      }
+    </style>
+
+    <section id="showroom-gallery" class="showroom-gallery-section">
+      <div class="gallery-header">
+        <h2>Experience Our Showroom</h2>
+        <p>Step into a world of premium mobile technology, expert service, and unmatched customer satisfaction.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="storefront_exterior.png" alt="Best Mobile Storefront at Twilight">
+          <div class="gallery-overlay">
+            <h3>Premium Location</h3>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="shop_worker_customer.png" alt="Shop worker helping a customer">
+          <div class="gallery-overlay">
+            <h3>Expert Guidance</h3>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="accessory_display.png" alt="Mobile Accessories Display">
+          <div class="gallery-overlay">
+            <h3>Top-Tier Accessories</h3>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="happy_unboxing.png" alt="Happy customer unboxing new phone">
+          <div class="gallery-overlay">
+            <h3>Joy of New Tech</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
      SERVICES
 ══════════════════════════════════════ -->
     <section id="services" aria-labelledby="services-h2">
