@@ -1,0 +1,9 @@
+@echo off
+echo Staging changes...
+git add .
+echo Committing changes...
+git commit -m "Fix mobile carousel click bug and update text/images"
+echo Pushing to GitHub...
+git push
+echo Done!
+pause
