@@ -4717,7 +4717,7 @@
             <a href="repair-service.html" class="service-card nm-card active" aria-labelledby="s1"
               style="cursor: pointer;">
               <div class="service-image-wrapper">
-                <img src="Mobile Phone Repair.png" alt="Cell Phone Service &amp; Repair" class="service-card-img">
+                <img loading="lazy" src="Mobile Phone Repair.png" alt="Cell Phone Service &amp; Repair" class="service-card-img">
               </div>
               <div class="service-card-content">
                 <h3 id="s1">Cell Phone Service &amp; Repair</h3>
@@ -4729,7 +4729,7 @@
             <a href="specialist-service.html" class="service-card nm-card" aria-labelledby="s2"
               style="cursor: pointer;">
               <div class="service-image-wrapper">
-                <img src="iPhone Screen Replacement.png" alt="Samsung &amp; iPhone Specialists"
+                <img loading="lazy" src="iPhone Screen Replacement.png" alt="Samsung &amp; iPhone Specialists"
                   class="service-card-img">
               </div>
               <div class="service-card-content">
@@ -4741,7 +4741,7 @@
 
             <a href="sales-service.html" class="service-card nm-card" aria-labelledby="s5" style="cursor: pointer;">
               <div class="service-image-wrapper">
-                <img src="Pre-Owned Devices.png" alt="Cell Phone Sales" class="service-card-img">
+                <img loading="lazy" src="Pre-Owned Devices.png" alt="Cell Phone Sales" class="service-card-img">
               </div>
               <div class="service-card-content">
                 <h3 id="s5">Cell Phone Sales</h3>
@@ -4753,7 +4753,7 @@
             <a href="accessories-service.html" class="service-card nm-card" aria-labelledby="s6"
               style="cursor: pointer;">
               <div class="service-image-wrapper">
-                <img src="Accessories.png" alt="Accessories" class="service-card-img">
+                <img loading="lazy" src="Accessories.png" alt="Accessories" class="service-card-img">
               </div>
               <div class="service-card-content">
                 <h3 id="s6">Accessories</h3>
@@ -5433,7 +5433,7 @@
       let radiusX = 350;
       let radiusZ = 200;
       let tiltY = 25;
-      const ease = 0.08; // LERP smoothing factor
+      const ease = 0.12; // LERP smoothing factor (increased for faster snappier rotation)
 
       function updateDimensions() {
         const width = window.innerWidth;
@@ -5482,7 +5482,7 @@
           // Apply transforms
           card.style.transform = `translate3d(calc(-50% + ${x}px), calc(-50% + ${y}px), ${z}px) scale(${scale})`;
           card.style.opacity = opacity;
-          card.style.filter = blur > 0.5 ? `blur(${blur}px)` : 'none';
+          card.style.filter = 'none'; // Blur removed for mobile performance
           card.style.zIndex = Math.round((z + radiusZ) * 100);
 
           // Add active class for styling/focus on the front card
