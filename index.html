@@ -918,6 +918,7 @@
       transform: scale(1.05);
       transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     .rh-step.active {
       opacity: 1;
       transform: scale(1);
@@ -4491,25 +4492,33 @@
       </div>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img loading="lazy" src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/storefront_exterior_v3_1782928137150.png" alt="Best Mobile Storefront at Twilight">
+          <img loading="lazy"
+            src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/storefront_exterior_v3_1782928137150.png"
+            alt="Best Mobile Storefront at Twilight">
           <div class="gallery-overlay">
             <h3>Premium Location</h3>
           </div>
         </div>
         <div class="gallery-item">
-          <img loading="lazy" src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/shop_worker_customer_v3_1782928146237.png" alt="Shop worker helping a customer">
+          <img loading="lazy"
+            src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/shop_worker_customer_v3_1782928146237.png"
+            alt="Shop worker helping a customer">
           <div class="gallery-overlay">
             <h3>Expert Guidance</h3>
           </div>
         </div>
         <div class="gallery-item">
-          <img loading="lazy" src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/accessory_display_v3_1782928155936.png" alt="Mobile Accessories Display">
+          <img loading="lazy"
+            src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/accessory_display_v3_1782928155936.png"
+            alt="Mobile Accessories Display">
           <div class="gallery-overlay">
             <h3>Top-Tier Accessories</h3>
           </div>
         </div>
         <div class="gallery-item">
-          <img loading="lazy" src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/happy_unboxing_v3_1782928165320.png" alt="Happy customer unboxing new phone">
+          <img loading="lazy"
+            src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/happy_unboxing_v3_1782928165320.png"
+            alt="Happy customer unboxing new phone">
           <div class="gallery-overlay">
             <h3>Joy of New Tech</h3>
           </div>
@@ -5460,7 +5469,7 @@
     async function initLiveStreamBoard() {
       const feedContainer = document.querySelector('.rh-screen-feed');
       if (!feedContainer) return;
-      
+
       try {
         const res = await fetch('/api/images?type=live_stream');
         if (res.ok) {
@@ -5490,17 +5499,17 @@
       // Initialize JS Slideshow
       const slides = feedContainer.querySelectorAll('.rh-step');
       if (slides.length === 0) return;
-      
+
       let currentSlide = 0;
       slides[0].classList.add('active'); // Show first slide immediately
-      
+
       setInterval(() => {
         slides.forEach(s => s.classList.remove('active'));
         currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].classList.add('active');
       }, 5000); // 5 seconds per slide
     }
-    
+
     document.addEventListener('DOMContentLoaded', initLiveStreamBoard);
   </script>
 
