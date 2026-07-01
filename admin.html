@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Best Mobile</title>
+  <link rel="stylesheet" href="admin.css">
+  
+  <!-- Cropper.js for image cropping -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="login-screen" class="screen active">
+    <div class="login-box">
+      <img src="Logo.svg" alt="Best Mobile Logo" class="admin-logo">
+      <h2>Admin Login</h2>
+      <form id="login-form">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" id="username" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <div id="login-error" class="error-text"></div>
+        <button type="submit" class="btn primary-btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ADMIN DASHBOARD -->
+  <div id="dashboard-screen" class="screen">
+    <header class="admin-header">
+      <img src="Logo.svg" alt="Best Mobile Logo" class="admin-logo-small">
+      <h1>Content Manager</h1>
+      <button id="logout-btn" class="btn secondary-btn">Logout</button>
+    </header>
+
+    <main class="dashboard-content">
+      <!-- Section: Live Stream Board -->
+      <section class="admin-section">
+        <div class="section-header">
+          <h2>Live Stream Board (Slideshow)</h2>
+          <button class="btn primary-btn" onclick="openUploadModal('live_stream')">+ Add Image</button>
+        </div>
+        <div class="image-grid" id="live-stream-grid">
+          <div class="loading-spinner">Loading...</div>
+        </div>
+      </section>
+
+      <!-- Future Section: Top Selling (Can be implemented easily later) -->
+    </main>
+  </div>
+
+  <!-- UPLOAD & CROP MODAL -->
+  <div id="upload-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Upload & Crop Image</h2>
+        <button class="close-btn" onclick="closeUploadModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Step 1: File Picker -->
+        <div id="step-upload" class="step active">
+          <input type="file" id="image-upload-input" accept="image/png, image/jpeg, image/webp" hidden>
+          <div class="upload-dropzone" onclick="document.getElementById('image-upload-input').click()">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <p>Click here to select an image</p>
+          </div>
+        </div>
+
+        <!-- Step 2: Cropper -->
+        <div id="step-crop" class="step">
+          <div class="cropper-container-wrapper">
+            <img id="image-to-crop" src="" alt="To crop">
+          </div>
+          <div class="crop-controls">
+            <p>Drag and zoom to perfectly frame the image (Square 1:1 Aspect Ratio)</p>
+            <button id="btn-crop-upload" class="btn primary-btn">Crop & Upload</button>
+          </div>
+        </div>
+
+        <!-- Loading state -->
+        <div id="step-loading" class="step">
+          <div class="loading-spinner large"></div>
+          <p>Uploading to Cloudinary & Saving to Database...</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

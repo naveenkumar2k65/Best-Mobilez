@@ -1,0 +1,12 @@
+{
+  "name": "wireless-connect-backend",
+  "version": "1.0.0",
+  "description": "Backend for Wireless Connect using Vercel Serverless Functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.4"
+  }
+}

@@ -620,10 +620,10 @@
     ══════════════════════════════════════ */
     #hero {
       position: relative;
-      min-height: 100vh;
+      /* Removed min-height: 100vh to fix huge empty spaces on tall screens */
       display: flex;
       align-items: center;
-      padding: 5rem 0 4rem;
+      padding: 9rem 0 7rem;
       overflow: hidden;
     }
 
@@ -916,10 +916,13 @@
       opacity: 0;
       pointer-events: none;
       transform: scale(1.05);
-      transition: transform 0.6s ease, opacity 0.6s ease;
-      animation-duration: 25s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .rh-step.active {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+      z-index: 2;
     }
 
     .rh-step img {
@@ -1004,159 +1007,9 @@
       transform: rotateY(180deg);
     }
 
-    /* 5 steps * 5s each = 25s total loop */
-    .step-motherboard {
-      animation-name: step1Loop;
-    }
+    /* JS now handles the step loops! */
 
-    .step-screen {
-      animation-name: step2Loop;
-    }
-
-    .step-glass {
-      animation-name: step3Loop;
-    }
-
-    .step-sim {
-      animation-name: step4Loop;
-    }
-
-    .step-repairing {
-      animation-name: step5Loop;
-    }
-
-    @keyframes step1Loop {
-
-      0%,
-      17% {
-        opacity: 1;
-        transform: scale(1);
-        pointer-events: auto;
-        z-index: 2;
-      }
-
-      20%,
-      97% {
-        opacity: 0;
-        transform: scale(1.05);
-        pointer-events: none;
-        z-index: 1;
-      }
-
-      100% {
-        opacity: 1;
-        transform: scale(1);
-        pointer-events: auto;
-        z-index: 2;
-      }
-    }
-
-    @keyframes step2Loop {
-
-      0%,
-      17% {
-        opacity: 0;
-        transform: scale(1.05);
-        pointer-events: none;
-        z-index: 1;
-      }
-
-      20%,
-      37% {
-        opacity: 1;
-        transform: scale(1);
-        pointer-events: auto;
-        z-index: 2;
-      }
-
-      40%,
-      100% {
-        opacity: 0;
-        transform: scale(1.05);
-        pointer-events: none;
-        z-index: 1;
-      }
-    }
-
-    @keyframes step3Loop {
-
-      0%,
-      37% {
-        opacity: 0;
-        transform: scale(1.05);
-        pointer-events: none;
-        z-index: 1;
-      }
-
-      40%,
-      57% {
-        opacity: 1;
-        transform: scale(1);
-        pointer-events: auto;
-        z-index: 2;
-      }
-
-      60%,
-      100% {
-        opacity: 0;
-        transform: scale(1.05);
-        pointer-events: none;
-        z-index: 1;
-      }
-    }
-
-    @keyframes step4Loop {
-
-      0%,
-      57% {
-        opacity: 0;
-        transform: scale(1.05);
-        pointer-events: none;
-        z-index: 1;
-      }
-
-      60%,
-      77% {
-        opacity: 1;
-        transform: scale(1);
-        pointer-events: auto;
-        z-index: 2;
-      }
-
-      80%,
-      100% {
-        opacity: 0;
-        transform: scale(1.05);
-        pointer-events: none;
-        z-index: 1;
-      }
-    }
-
-    @keyframes step5Loop {
-
-      0%,
-      77% {
-        opacity: 0;
-        transform: scale(1.05);
-        pointer-events: none;
-        z-index: 1;
-      }
-
-      80%,
-      97% {
-        opacity: 1;
-        transform: scale(1);
-        pointer-events: auto;
-        z-index: 2;
-      }
-
-      100% {
-        opacity: 0;
-        transform: scale(1.05);
-        pointer-events: none;
-        z-index: 1;
-      }
-    }
+    /* JS now handles the loops! */
 
     /* ── MINIATURE WORKER OVERLAY ── */
     .worker-overlay {
@@ -3909,7 +3762,7 @@
 
       <div class="container">
         <div class="hero-inner">
-          <div class="hero-content">
+          <div class="hero-content" data-aos="fade-right">
             <div class="hero-eyebrow">
               <span>25 Years of Trusted Experience</span>
               <span class="pill">Walk-ins Welcome</span>
@@ -3968,7 +3821,7 @@
           </div>
 
           <!-- Circuit Diagnostic Animation -->
-          <div class="hero-visual" aria-hidden="true">
+          <div class="hero-visual" aria-hidden="true" data-aos="fade-left">
             <div class="repair-hub">
 
               <!-- Glass reflections -->
@@ -4409,97 +4262,73 @@
           <div class="top-phones-track" id="top-phones-track">
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="pixel_10_pro_fold.png"
-                  alt="Google Pixel 10 Pro Fold">
+                <img loading="lazy" src="pixel_10_pro_fold.png" alt="Google Pixel 10 Pro Fold">
               </div>
               <div class="top-phone-title"><strong>Google</strong> Pixel 10 Pro Fold</div>
             </div>
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="iphone_17_pro_max.png"
-                  alt="iPhone 17 Pro Max">
+                <img loading="lazy" src="iphone_17_pro_max.png" alt="iPhone 17 Pro Max">
               </div>
               <div class="top-phone-title"><strong>iPhone</strong> 17 Pro Max</div>
             </div>
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="pixel_10_pro_xl.png"
-                  alt="Google Pixel 10 Pro XL">
+                <img loading="lazy" src="pixel_10_pro_xl.png" alt="Google Pixel 10 Pro XL">
               </div>
               <div class="top-phone-title"><strong>Google</strong> Pixel 10 Pro XL</div>
             </div>
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="galaxy_z_fold7.png"
-                  alt="Samsung Galaxy Z Fold7">
+                <img loading="lazy" src="galaxy_z_fold7.png" alt="Samsung Galaxy Z Fold7">
               </div>
               <div class="top-phone-title"><strong>Samsung</strong> Galaxy Z Fold7</div>
             </div>
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="galaxy_s25_ultra.png"
-                  alt="Samsung Galaxy S25 Ultra">
+                <img loading="lazy" src="galaxy_s25_ultra.png" alt="Samsung Galaxy S25 Ultra">
               </div>
               <div class="top-phone-title"><strong>Samsung</strong> Galaxy S25 Ultra</div>
             </div>
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="galaxy_s25_plus.png"
-                  alt="Samsung Galaxy S25 Plus">
+                <img loading="lazy" src="galaxy_s25_plus.png" alt="Samsung Galaxy S25 Plus">
               </div>
               <div class="top-phone-title"><strong>Samsung</strong> Galaxy S25 Plus</div>
             </div>
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="iphone_16_pro.png"
-                  alt="iPhone 16 Pro">
+                <img loading="lazy" src="iphone_16_pro.png" alt="iPhone 16 Pro">
               </div>
               <div class="top-phone-title"><strong>iPhone</strong> 16 Pro</div>
             </div>
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="galaxy_z_flip6.png"
-                  alt="Samsung Galaxy Z Flip6">
+                <img loading="lazy" src="galaxy_z_flip6.png" alt="Samsung Galaxy Z Flip6">
               </div>
               <div class="top-phone-title"><strong>Samsung</strong> Galaxy Z Flip6</div>
             </div>
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="iphone_16_plus.png"
-                  alt="iPhone 16 Plus">
+                <img loading="lazy" src="iphone_16_plus.png" alt="iPhone 16 Plus">
               </div>
               <div class="top-phone-title"><strong>iPhone</strong> 16 Plus</div>
             </div>
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="galaxy_s24_fe.png"
-                  alt="Samsung Galaxy S24 FE">
+                <img loading="lazy" src="galaxy_s24_fe.png" alt="Samsung Galaxy S24 FE">
               </div>
               <div class="top-phone-title"><strong>Samsung</strong> Galaxy S24 FE</div>
             </div>
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="pixel_9_pro.png"
-                  alt="Google Pixel 9 Pro">
+                <img loading="lazy" src="pixel_9_pro.png" alt="Google Pixel 9 Pro">
               </div>
               <div class="top-phone-title"><strong>Google</strong> Pixel 9 Pro</div>
             </div>
             <div class="top-phone-card">
               <div class="top-phone-image-wrapper">
-                <img loading="lazy"
-                  src="pixel_8a.png"
-                  alt="Google Pixel 8a">
+                <img loading="lazy" src="pixel_8a.png" alt="Google Pixel 8a">
               </div>
               <div class="top-phone-title"><strong>Google</strong> Pixel 8a</div>
             </div>
@@ -4662,33 +4491,25 @@
       </div>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img loading="lazy"
-            src="storefront_exterior.png"
-            alt="Best Mobile Storefront at Twilight">
+          <img loading="lazy" src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/storefront_exterior_v3_1782928137150.png" alt="Best Mobile Storefront at Twilight">
           <div class="gallery-overlay">
             <h3>Premium Location</h3>
           </div>
         </div>
         <div class="gallery-item">
-          <img loading="lazy"
-            src="shop_worker_customer.png"
-            alt="Shop worker helping a customer">
+          <img loading="lazy" src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/shop_worker_customer_v3_1782928146237.png" alt="Shop worker helping a customer">
           <div class="gallery-overlay">
             <h3>Expert Guidance</h3>
           </div>
         </div>
         <div class="gallery-item">
-          <img loading="lazy"
-            src="accessory_display.png"
-            alt="Mobile Accessories Display">
+          <img loading="lazy" src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/accessory_display_v3_1782928155936.png" alt="Mobile Accessories Display">
           <div class="gallery-overlay">
             <h3>Top-Tier Accessories</h3>
           </div>
         </div>
         <div class="gallery-item">
-          <img loading="lazy"
-            src="happy_unboxing.png"
-            alt="Happy customer unboxing new phone">
+          <img loading="lazy" src="file:///C:/Users/navee/.gemini/antigravity-ide/brain/8c6a9184-efba-4a7a-9c60-4f7e4c143e65/happy_unboxing_v3_1782928165320.png" alt="Happy customer unboxing new phone">
           <div class="gallery-overlay">
             <h3>Joy of New Tech</h3>
           </div>
@@ -4714,7 +4535,8 @@
             <a href="repair-service.html" class="service-card nm-card active" aria-labelledby="s1"
               style="cursor: pointer;">
               <div class="service-image-wrapper">
-                <img loading="lazy" src="Mobile Phone Repair.png" alt="Cell Phone Service &amp; Repair" class="service-card-img">
+                <img loading="lazy" src="Mobile Phone Repair.png" alt="Cell Phone Service &amp; Repair"
+                  class="service-card-img">
               </div>
               <div class="service-card-content">
                 <h3 id="s1">Cell Phone Service &amp; Repair</h3>
@@ -5631,6 +5453,55 @@
       updateCarousel();
       tickAutoScroll();
     })();
+  </script>
+
+  <script>
+    // --- LIVE STREAM BOARD SLIDESHOW (DYNAMIC + FALLBACK) ---
+    async function initLiveStreamBoard() {
+      const feedContainer = document.querySelector('.rh-screen-feed');
+      if (!feedContainer) return;
+      
+      try {
+        const res = await fetch('/api/images?type=live_stream');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.success && data.images && data.images.length > 0) {
+            // Keep watermark
+            const watermark = feedContainer.querySelector('.rh-watermark');
+            feedContainer.innerHTML = '';
+            if (watermark) feedContainer.appendChild(watermark);
+
+            // Inject dynamically fetched images
+            data.images.forEach((imgData) => {
+              const stepDiv = document.createElement('div');
+              stepDiv.className = 'rh-step';
+              const img = document.createElement('img');
+              img.src = imgData.url;
+              img.alt = imgData.alt_text || 'Live Stream Image';
+              stepDiv.appendChild(img);
+              feedContainer.appendChild(stepDiv);
+            });
+          }
+        }
+      } catch (err) {
+        console.log('API not found (Running locally). Using fallback hardcoded images.');
+      }
+
+      // Initialize JS Slideshow
+      const slides = feedContainer.querySelectorAll('.rh-step');
+      if (slides.length === 0) return;
+      
+      let currentSlide = 0;
+      slides[0].classList.add('active'); // Show first slide immediately
+      
+      setInterval(() => {
+        slides.forEach(s => s.classList.remove('active'));
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 5000); // 5 seconds per slide
+    }
+    
+    document.addEventListener('DOMContentLoaded', initLiveStreamBoard);
   </script>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
