@@ -3864,7 +3864,7 @@
                 </div>
                 <!-- STEP 4: Happy Customer -->
                 <div class="rh-step step-sim">
-                  <img src="happy_customer_mobile.png" alt="Happy customer with brand new mobile phone">
+                  <img src="happy_customer_mobile.png?v=3" alt="Happy customer with brand new mobile phone">
                 </div>
                 <!-- STEP 5: Repairing Mobile -->
                 <div class="rh-step step-repairing">
@@ -4261,78 +4261,7 @@
         <button class="top-phones-nav prev" onclick="moveTopPhones(-1)">&#10094;</button>
         <div class="top-phones-track-wrapper">
           <div class="top-phones-track" id="top-phones-track">
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="pixel_10_pro_fold.png" alt="Google Pixel 10 Pro Fold">
-              </div>
-              <div class="top-phone-title"><strong>Google</strong> Pixel 10 Pro Fold</div>
-            </div>
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="iphone_17_pro_max.png" alt="iPhone 17 Pro Max">
-              </div>
-              <div class="top-phone-title"><strong>iPhone</strong> 17 Pro Max</div>
-            </div>
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="pixel_10_pro_xl.png" alt="Google Pixel 10 Pro XL">
-              </div>
-              <div class="top-phone-title"><strong>Google</strong> Pixel 10 Pro XL</div>
-            </div>
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="galaxy_z_fold7.png" alt="Samsung Galaxy Z Fold7">
-              </div>
-              <div class="top-phone-title"><strong>Samsung</strong> Galaxy Z Fold7</div>
-            </div>
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="galaxy_s25_ultra.png" alt="Samsung Galaxy S25 Ultra">
-              </div>
-              <div class="top-phone-title"><strong>Samsung</strong> Galaxy S25 Ultra</div>
-            </div>
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="galaxy_s25_plus.png" alt="Samsung Galaxy S25 Plus">
-              </div>
-              <div class="top-phone-title"><strong>Samsung</strong> Galaxy S25 Plus</div>
-            </div>
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="iphone_16_pro.png" alt="iPhone 16 Pro">
-              </div>
-              <div class="top-phone-title"><strong>iPhone</strong> 16 Pro</div>
-            </div>
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="galaxy_z_flip6.png" alt="Samsung Galaxy Z Flip6">
-              </div>
-              <div class="top-phone-title"><strong>Samsung</strong> Galaxy Z Flip6</div>
-            </div>
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="iphone_16_plus.png" alt="iPhone 16 Plus">
-              </div>
-              <div class="top-phone-title"><strong>iPhone</strong> 16 Plus</div>
-            </div>
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="galaxy_s24_fe.png" alt="Samsung Galaxy S24 FE">
-              </div>
-              <div class="top-phone-title"><strong>Samsung</strong> Galaxy S24 FE</div>
-            </div>
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="pixel_9_pro.png" alt="Google Pixel 9 Pro">
-              </div>
-              <div class="top-phone-title"><strong>Google</strong> Pixel 9 Pro</div>
-            </div>
-            <div class="top-phone-card">
-              <div class="top-phone-image-wrapper">
-                <img loading="lazy" src="pixel_8a.png" alt="Google Pixel 8a">
-              </div>
-              <div class="top-phone-title"><strong>Google</strong> Pixel 8a</div>
-            </div>
+            <!-- Dynamic phone cards will be loaded here from Cloudflare D1 -->
           </div>
         </div>
         <button class="top-phones-nav next" onclick="moveTopPhones(1)">&#10095;</button>
@@ -4395,7 +4324,48 @@
         updateTopPhonesSlider();
       });
       // Initial setup
-      document.addEventListener('DOMContentLoaded', updateTopPhonesSlider);
+      async function initTopPhones() {
+        const track = document.getElementById('top-phones-track');
+        if (!track) return;
+
+        try {
+          const res = await fetch('https://best-mobile-backend.naveenkumar05.workers.dev/api/images?type=top_selling');
+          if (res.ok) {
+            const data = await res.json();
+            if (data.success && data.images && data.images.length > 0) {
+              track.innerHTML = ''; // Clear fallback if any
+              
+              data.images.forEach(imgData => {
+                const card = document.createElement('div');
+                card.className = 'top-phone-card';
+                
+                // Try to bold the first word for style (e.g. "iPhone 16 Pro" -> "<strong>iPhone</strong> 16 Pro")
+                let titleHtml = imgData.alt_text || 'Phone';
+                if(titleHtml.includes(' ')) {
+                   const firstSpace = titleHtml.indexOf(' ');
+                   titleHtml = `<strong>${titleHtml.substring(0, firstSpace)}</strong>${titleHtml.substring(firstSpace)}`;
+                } else {
+                   titleHtml = `<strong>${titleHtml}</strong>`;
+                }
+
+                card.innerHTML = `
+                  <div class="top-phone-image-wrapper">
+                    <img loading="lazy" src="${imgData.url}" alt="${imgData.alt_text}">
+                  </div>
+                  <div class="top-phone-title">${titleHtml}</div>
+                `;
+                track.appendChild(card);
+              });
+            }
+          }
+        } catch (err) {
+          console.error("Failed to load top phones:", err);
+        }
+
+        updateTopPhonesSlider();
+      }
+
+      document.addEventListener('DOMContentLoaded', initTopPhones);
     </script>
 
     <!-- ══════════════════════════════════════
@@ -5463,7 +5433,7 @@
       if (!feedContainer) return;
 
       try {
-        const res = await fetch('/api/images?type=live_stream');
+        const res = await fetch('https://best-mobile-backend.naveenkumar05.workers.dev/api/images?type=live_stream');
         if (res.ok) {
           const data = await res.json();
           if (data.success && data.images && data.images.length > 0) {

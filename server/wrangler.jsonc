@@ -1,0 +1,16 @@
+{
+  "name": "best-mobile-backend",
+  "main": "src/index.js",
+  "compatibility_date": "2024-03-20",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "best-mobile",
+      "database_id": "e4fe1482-7d71-42a0-ad58-6b03c2dd5299",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "ADMIN_PASSWORD": "securepassword123"
+  }
+}
