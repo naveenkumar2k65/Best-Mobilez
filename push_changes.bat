@@ -1,25 +1,18 @@
 @echo off
-echo Copying showroom images to workspace...
-copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\f358fe7d-246c-4a94-99c3-0141c5da20b7\iphone_front_1782666783818.png" "iphone_front.png"
-copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\f358fe7d-246c-4a94-99c3-0141c5da20b7\iphone_back_1782666804231.png" "iphone_back.png"
-copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\f358fe7d-246c-4a94-99c3-0141c5da20b7\samsung_front_1782666821569.png" "samsung_front.png"
-copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\f358fe7d-246c-4a94-99c3-0141c5da20b7\samsung_back_1782666838968.png" "samsung_back.png"
-copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\f358fe7d-246c-4a94-99c3-0141c5da20b7\family_buying_mobile_1782665921478.png" "family_buying_mobile.png"
-copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\f358fe7d-246c-4a94-99c3-0141c5da20b7\happy_customer_mobile_1782665945110.png" "happy_customer_mobile.png"
-copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\f358fe7d-246c-4a94-99c3-0141c5da20b7\repairing_mobile_1782666855584.png" "repairing_mobile.png"
-copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\f358fe7d-246c-4a94-99c3-0141c5da20b7\shop_worker_customer_1782667379403.png" "shop_worker_customer.png"
-copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\f358fe7d-246c-4a94-99c3-0141c5da20b7\storefront_exterior_1782667396349.png" "storefront_exterior.png"
-copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\f358fe7d-246c-4a94-99c3-0141c5da20b7\accessory_display_1782667415910.png" "accessory_display.png"
-copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\f358fe7d-246c-4a94-99c3-0141c5da20b7\happy_unboxing_1782667433186.png" "happy_unboxing.png"
+cd /d "%~dp0"
+echo Copying ALL new correctly branded images...
 
-echo Staging changes...
+copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\718e9ff0-83bf-42f1-a9f6-eb345b4a772d\storefront_exterior_new_1782971019055.png" "storefront_exterior.png"
+copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\718e9ff0-83bf-42f1-a9f6-eb345b4a772d\repairing_mobile_new_1782971032850.png" "repairing_mobile.png"
+copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\718e9ff0-83bf-42f1-a9f6-eb345b4a772d\shop_worker_customer_new_1782971145174.png" "shop_worker_customer.png"
+copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\718e9ff0-83bf-42f1-a9f6-eb345b4a772d\accessory_display_new_1782971158279.png" "accessory_display.png"
+copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\718e9ff0-83bf-42f1-a9f6-eb345b4a772d\happy_unboxing_new_1782971057876.png" "happy_unboxing.png"
+copy /Y "C:\Users\navee\.gemini\antigravity-ide\brain\718e9ff0-83bf-42f1-a9f6-eb345b4a772d\family_buying_mobile_new_1782971089827.png" "family_buying_mobile.png"
+
+echo Images copied! Now pushing to GitHub...
 git add .
-
-echo Committing changes...
-git commit -m "Add Premium Showroom Gallery and new generated images"
-
-echo Pushing to GitHub...
+git commit -m "Regenerate all images with exact BEST MOBILE purple+pink logo branding"
 git push
 
-echo Done!
+echo DONE! Wait 2 minutes then refresh the live website.
 pause
